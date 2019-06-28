@@ -27,7 +27,13 @@ Uno de los primeros problemas con que nos planteamos fue que la etapa de salida 
 ![Etapa de VAS][Etapa VAS]
 
 #### Etapa de salida
+Tiro un par de valores de polarizacion y explico como funciona. Explico lo del audio y la relacion pico a promedio. Limitacion de corriente
 ![Etapa de Salida][Etapa salida]
+
+
+#### Switches y conmutación
+explico como funciona y pongo una imagen que muestre como conmuta y se apaga uno y conduce el otro. explicar tension de referencia
+
 ### Elección de las tecnologías utilizadas.
 Nuestro primer requisito para seleccionar los transistores necesarios fue que la etapa de entrada tenía que ser de montaje superficial y que los transistores de salida debían poder aguantar la corriente a entregar a la carga y pudieran ser montados en un disipador.  
 * [**BC860C**](https://assets.nexperia.com/documents/data-sheet/BC849_BC850.pdf) y [**BC850C**](https://assets.nexperia.com/documents/data-sheet/BC859_BC860.pdf)  
@@ -39,6 +45,17 @@ Nuestro primer requisito para seleccionar los transistores necesarios fue que la
 
 * [**MJE340**](https://www.onsemi.com/pub/Collateral/MJE340-D.PDF) y  [**MJE350**](https://www.onsemi.com/pub/Collateral/MJE350-D.PDF)  
   Para el multiplicador de Vbe, que debe estar acoplado térmicamente a los transistores de salida, se eligió un transistor que pudiera ser montado en un disipador. Para este propósito se eligió el transistor **MJE340**(NPN). Además, se eligió la misma tecnología para los transistores que forman el la base del Darlington a la salida de alta potencia. Si bien para este último propósito se podría haber utilizado los transistores de potencia, los transistores elegidos cumplieron con los requerimientos a un costo menor que los de potencia. Esto se debe a que la corriente que manejan estos es mucho menor a la que entregan los transistores de potencia. 
+
+
+### Compensación del circuito y calidad de la señal
+Como compensamos y rta en frecuencia
+
+### Potencia y eficiencia del amplificador
+
+### Ensayos variando la carga. 
+
+
+### Diseño del PCB
   
 [kenwood]: Imagenes/kenwood.png
 [Nuestro Circuito]: Imagenes/Circuito_completo.png
