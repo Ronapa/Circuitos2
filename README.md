@@ -71,6 +71,11 @@ Nuestro primer requisito para seleccionar los transistores necesarios fue que la
 Como compensamos y rta en frecuencia
 
 ### Potencia y eficiencia del amplificador
+Las especificaciones de potencia planteadas en un prinicpio era de 100Watts sobre una carga de 8Ohms. Para lograr esto tendríamos que  llegar a una excursión de 28Vp sobre la carga. Con las simulaciones, la amplitud máxima a la salida antes que se recortara la señal que logramos es de 25V. Esto significa una potencia de 78Watts. Si bien no es lo que nos planteamos en un principio consideramos que es un valor adecuado para un amplificador de audio.   
+
+La eficiencia que logramos en la carga
+
+![Potencia 1k][Potencia 1k]
 
 ### Ensayos variando la carga. 
 
