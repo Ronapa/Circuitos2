@@ -102,7 +102,7 @@ Las tres imágenes anteriores fueron simuladas con una señal de entrada senoida
 [Etapa Entrada]: Imagenes/Etapa_entrada.png
 [Etapa VAS]: Imagenes/Etapa_VAS.png
 [Etapa Salida]: Imagenes/Etapa_salida.png
-[Etapa Switches]: Imagenes/Etapa_switches.png
+[Etapa Switches]: Imagenes/switch.png
 [Conmutación circuitos]: Imagenes/Conmutacion.png
 [Eficiencia amplitud maxima]: Imagenes/Amplitud_maxima.png
 [Potencia 1k]: Imagenes/Potencia_1k.png
