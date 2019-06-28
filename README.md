@@ -17,6 +17,8 @@ El circuito fue diseñado en base al amplificador [Kenwood KA-7X](http://materia
 Nuestro circuito simulado se encuentra a continuación:
 ![Circuito LTSpice][Nuestro Circuito]
 
+##### Etapa de entrada del circuito
+La etapa de entrada del circuito es un amplificador diferencial con carga activa, estabilizado mediante realimentación por emisor para las diferencias entre los _betas_ de los transistores. Cada rama del par diferencial está polarizada con 500uA, y por Q5 circula una corriente de 1mA. El capacitor C1 se encuentra para filtrar la tensión de continua de la entrada, de este modo el circuito solo amplfica tensiones de señal. 
 ##### Elección de las tecnologías utilizadas.
 Nuestro primer requisito para seleccionar los transistores necesarios fue que la etapa de entrada tenía que ser de montaje superficial y que los transistores de salida debían poder aguantar la corriente a entregar a la carga y pudieran ser montados en un disipador.  
 * [**BC860C**](https://assets.nexperia.com/documents/data-sheet/BC849_BC850.pdf) y [**BC850C**](https://assets.nexperia.com/documents/data-sheet/BC859_BC860.pdf)  
