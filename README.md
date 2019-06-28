@@ -71,11 +71,26 @@ Nuestro primer requisito para seleccionar los transistores necesarios fue que la
 Como compensamos y rta en frecuencia
 
 ### Potencia y eficiencia del amplificador
-Las especificaciones de potencia planteadas en un prinicpio era de 100Watts sobre una carga de 8Ohms. Para lograr esto tendríamos que  llegar a una excursión de 28Vp sobre la carga. Con las simulaciones, la amplitud máxima a la salida antes que se recortara la señal que logramos es de 25V. Esto significa una potencia de 78Watts. Si bien no es lo que nos planteamos en un principio consideramos que es un valor adecuado para un amplificador de audio.   
-
-La eficiencia que logramos en la carga
+#### Potencia en la carga
+Las especificaciones de potencia planteadas en un prinicpio era de 100Watts sobre una carga de 8Ohms. Para lograr esto tendríamos que  llegar a una excursión de 28Vp sobre la carga. Con las simulaciones, la amplitud máxima a la salida antes que se recortara la señal que logramos es de 25V. Esto significa una potencia de 78Watts. Si bien no es lo que nos planteamos en un principio consideramos que es un valor adecuado para un amplificador de audio. Sin embargo, una diferencia del 22% en el valor de la potencia equivale a 1dB de diferencia, por lo que al oído esto no presenta una grán distancia.   
 
 ![Potencia 1k][Potencia 1k]
+#### Eficiencia del circuito
+La eficiencia a la que llegamos, como era de esperarse, depende de la amplitud a la salida. Con la amplitud máxima a la salida logramos una eficiencia de 75%. Sin embargo, como planteamos antes, los picos de señal en audio son de corta duración, por lo que en la mayor parte de la amplificación los valores serán menores a estos. De este modo se llega a una eficicencia aún mayor.    
+
+![Eficiencia amplitud maxima][Eficiencia amplitud maxima]  
+
+La eficiencia máxima se logra con una señal de salida de xxVp, y esta vale xx%, y se muestra a continuación.
+
+![Eficiencia maxima][Eficiencia maxima]
+
+Por otro lado la eficiencia con la salida en un valor más bajo empeora. A modo de ejemplo se simuló la eficiencia con la salida a 5Vp, que se muestra a continuación.
+
+![Eficiencia 5Vp][Eficiencia 5Vp]
+
+Las tres imágenes anteriores fueron simuladas con una señal de entrada senoidal de 1kHz. Fueron simuladas otras frecuencias y los resultados fueron equivalentes. 
+
+#### Potencia disipada por los transistores
 
 ### Ensayos variando la carga. 
 
