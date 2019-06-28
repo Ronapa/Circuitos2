@@ -17,6 +17,8 @@ El circuito fue diseñado en base al amplificador [Kenwood KA-7X](http://materia
 Nuestro circuito simulado se encuentra a continuación:
 ![Circuito LTSpice][Nuestro Circuito]
 
+Elegimos hacer un circuito clase G porque con este logra una elevada eficiencia en amplificación de audio. Esto se debe a que, en audio, los transistores de mayor tensión funcionan en intervalos cortos de tiempo, siendo los de menor señal los que conducen la mayor parte. Esto se debe a que las señales de audio que se reproducen generalmente tienen un alto cociente de valor pico a valor medio, esto es, los momentos de señales altas son breves y pocos. Además, al plantear la etapa de salida con los transistores en paralelo, logramos aumentar aún más la eficiencia, ya que en cualquier momento solo está conduciendo un transistor. En cambio, si la salida estuviera en serie, en los momentos de alta señal conducirían los dos transistores de salida. 
+
 ### Polarización y funcionamiento del circuito
 #### Etapa de entrada del circuito
 La etapa de entrada del circuito es un amplificador diferencial con carga activa, estabilizado mediante realimentación por emisor para las diferencias entre los _betas_ de los transistores. Cada rama del par diferencial está polarizada con 500uA, y por Q5 circula una corriente de 1mA. El capacitor C1 se encuentra para filtrar la tensión de continua de la entrada, de este modo el circuito solo amplfica tensiones de señal.  
@@ -24,11 +26,19 @@ En una base del diferencial se encuentra la señal de entrada mientras que en la
 ![Etapa de entrada][Etapa Entrada]
 
 #### Etapa VAS y multiplicador de Vbe
-Uno de los primeros problemas con que nos planteamos fue que la etapa de salida estaba pidiendo demasiada corriente de la etapa de entrada, lo que causaba que los transistores de la segunda etapa entraran en corte y distorsionaran la señal. Resolvimos esto poniendo un Darlinton a la salida del par diferencial, de este modo consumía menos corriente de la etapa de entrada. Por la malla del multiplicador de Vbe y por Q8 circula una corriente de 43mA de polarización. En señal, esta corriente no varía mucho, ya que la corriente que entrega la señal a etapa de salida está dada por los dos seguidores formados por Q25-Q26 y Q24-Q27. 
+Uno de los primeros problemas con que nos planteamos fue que la etapa de salida estaba pidiendo demasiada corriente de la etapa de entrada, lo que causaba que los transistores de la segunda etapa entraran en corte y distorsionaran la señal. Resolvimos esto poniendo un Darlinton a la salida del par diferencial, de este modo consumía menos corriente de la etapa de entrada. Por la malla del multiplicador de Vbe y por Q8 circula una corriente de 43mA de polarización. En señal, esta corriente no varía mucho, ya que la corriente que entrega la señal a etapa de salida está dada por los dos seguidores formados por Q25-Q26 y Q24-Q27.  
+
+
 ![Etapa de VAS][Etapa VAS]
 
 #### Etapa de salida
-Tiro un par de valores de polarizacion y explico como funciona. Explico lo del audio y la relacion pico a promedio. Limitacion de corriente
+La etapa de salida, como se ve en la imagen, es simétrica para el camino de señal del semicilco positivo y del negativo. A continuación se hará un analisis del camino de señal positiva de esta etapa siendo los resultados análogos para el camino de señal negativa.  
+Primero, Q11 y Q12 funcionan como llaves, controladas por los circuitos de conmutación. Q11 permanece sin conducir hasta que se lo indica la señal _S\_HIGH_. Una vez que Q11 conduce la tensión en su colector es mayor a la del emisor de Q12, por lo que Q12 entra en corto. De este modo solo conduce una rama a la vez. Esta topología de tener los transistores en paralelo mejora la efciencia, ya que no se tiene conduciendo constantemente al transistor de baja tensión como en un amplificador clase G serie.   
+Para la salida de tensión alta se planteó un Darlington, esto es porque sino los transistores de tensión alta estaban demandando demasiada corriente sobre por su base, lo que producía que los transistores de etapas anteriores distorsionaran la señal. Esto se debe a que la corriente de colector de estos transistores es grande y su _beta_ es chico. Planteando el darlington se resuelve esta problemática.   
+Para la entrada sin señal se obtuvo un valor de -5mV a la salida. Si bien este valor debería ser cero, consideramos que entra dentro de las especificaciones planteadas.  
+Por otro lado, el transistor Q29 funciona como un limitador de corriente. Este mide la corriente que va a la carga mediante R15 y cuando ésta toma un valor suficientemente elevado el transistor desvía corriente que iría a la etapa de salida. El valor de esta corriente máxima se encuentra más adelante en la sección de ensayos con distintas cargas. 
+
+
 ![Etapa de Salida][Etapa salida]
 
 
