@@ -104,3 +104,7 @@ Las tres imágenes anteriores fueron simuladas con una señal de entrada senoida
 [Etapa Salida]: Imagenes/Etapa_salida.png
 [Etapa Swicthes]: Imagenes/Etapa_switches.png
 [Conmutación circuitos]: Imagenes/Conmutacion.png
+[Eficiencia amplitud maxima]: Imagenes/Amplitud_maxima.png
+[Potencia 1k]: Imagenes/Potencia_1k.png
+[Eficiencia 5Vp]: Imagenes/Eficiencia_5vp.png
+[Eficiencia maxima]: Imagenes/Eficiencia_maxima.png
