@@ -30,5 +30,7 @@ Nuestro primer requisito para seleccionar los transistores necesarios fue que la
 
 * [**MJE340**](https://www.onsemi.com/pub/Collateral/MJE340-D.PDF) y  [**MJE350**](https://www.onsemi.com/pub/Collateral/MJE350-D.PDF)  
   Para el multiplicador de Vbe, que debe estar acoplado térmicamente a los transistores de salida, se eligió un transistor que pudiera ser montado en un disipador. Para este propósito se eligió el transistor **MJE340**(NPN). Además, se eligió la misma tecnología para los transistores que forman el la base del Darlington a la salida de alta potencia. Si bien para este último propósito se podría haber utilizado los transistores de potencia, los transistores elegidos cumplieron con los requerimientos a un costo menor que los de potencia. Esto se debe a que la corriente que manejan estos es mucho menor a la que entregan los transistores de potencia. 
-[kenwood]: imagenes/kenwood.png
-[Nuestro Circuito]:
+  
+[kenwood]: Imagenes/kenwood.png
+[Nuestro Circuito]: Imagenes/Circuito_completo.png
+[Etapa Entrada]: Imagenes/Etapa_entrada.png
