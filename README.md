@@ -52,7 +52,7 @@ explico como funciona y pongo una imagen que muestre como conmuta y se apaga uno
 Primero se plantea un divisor resistivo con R17 y R18, de donde se obtiene una tensión de referencia. La tensión de referencia simulada es de 11.95V. Elegimos este valor para que la señal no se acerque demasiado a 15V antes de conmutar, dado que esto podía producir que algún transistor sature deformando la señal. Cuando la salida supera este valor, Q13 entra en conducción. Cuando esto ocurre, empieza a circular una corriente sobre  R19 y R20, que a su vez polariza a Q14. Este último es el que toma corriente de la base del switch y así cambiando el circuito de señal.  
 La resistencia R26 es un realimentador que muestrea la tensión de la referencia y entrega corriente al transistor Q14 para estabilizar la señal. Finalmente, la rama de C3 y R43 filtra componentes de alta frecuencia dadas por la conmutación rápida. 
 
-![Etapa de Salida][Conmutación circuitos]
+![Conmutacion][Conmutación circuitos]
 
 ### Elección de las tecnologías utilizadas.
 Nuestro primer requisito para seleccionar los transistores necesarios fue que la etapa de entrada tenía que ser de montaje superficial y que los transistores de salida debían poder aguantar la corriente a entregar a la carga y pudieran ser montados en un disipador.  
