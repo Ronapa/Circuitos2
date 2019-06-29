@@ -9,7 +9,7 @@
 ##### Edgardo Marchi - email: [edgardo.marchi@gmail.com](mailto:edgardo.marchi@gmail.com)
 
 #### Índice
-* [Resumen]()  
+* [Resumen](https://github.com/Ronapa/Circuitos2/blob/master/README.md#resumen)  
 * [Diseño]()  
   * [Polarización y funcionamiento del circuito]()  
     * [Etapa de entrada]()  
@@ -21,7 +21,7 @@
   * [Potencia y eficiencia del generador]()
     * [Potencia en la carga]()
     * [Eficiencia del circuito]()
-    * Potencia disipada en los transistores
+    * [Potencia disipada en los transistores]()
   * [Ensayos variando la carga]()
   * [Mediciones sobre el amplificador]()
     * [Impedancia de entrada y salida]()
