@@ -15,7 +15,7 @@
     * [Etapa de entrada](https://github.com/Ronapa/Circuitos2/blob/master/README.md#etapa-de-entrada)  
     * [Etapa VAS y multiplicador de Vbe](https://github.com/Ronapa/Circuitos2/blob/master/README.md#etapa-vas-y-multiplicador-de-vbe)
     * [Etapa de salida](https://github.com/Ronapa/Circuitos2/blob/master/README.md#etapa-de-salida)
-    * [Switches y conmutación](https://github.com/Ronapa/Circuitos2/blob/master/README.md#-switches-y-conmutación)
+    * [Switches y conmutación](https://github.com/Ronapa/Circuitos2/blob/master/README.md#switches-y-conmutación)
   * [Elección de las tencologías utilizadas](https://github.com/Ronapa/Circuitos2/blob/master/README.md#elección-de-las-tecnologías-utilizadas)
   * [Compensación del circuito y calidad de la señal](https://github.com/Ronapa/Circuitos2/blob/master/README.md#compensación-del-circuito-y-calidad-de-la-señal)
   * [Potencia y eficiencia](https://github.com/Ronapa/Circuitos2/blob/master/README.md#potencia-y-eficiencia)
