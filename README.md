@@ -10,12 +10,12 @@
 
 #### Índice
 * [Resumen](https://github.com/Ronapa/Circuitos2/blob/master/README.md#resumen)  
-* [Diseño]()  
-  * [Polarización y funcionamiento del circuito]()  
-    * [Etapa de entrada]()  
-    * [Etapa VAS y multiplicador de Vbe]()
-    * [Etapa de salida]()
-    * [Switches y conmutación]()
+* [Diseño](https://github.com/Ronapa/Circuitos2/blob/master/README.md#dieno)  
+  * [Polarización y funcionamiento del circuito](https://github.com/Ronapa/Circuitos2/blob/master/README.md#polarizacion-y-funcionamiento-del-circuito)  
+    * [Etapa de entrada](https://github.com/Ronapa/Circuitos2/blob/master/README.md#etapa-de-entrada)  
+    * [Etapa VAS y multiplicador de Vbe](https://github.com/Ronapa/Circuitos2/blob/master/README.md#etapa-vas-y-multiplicador-de-vbe)
+    * [Etapa de salida](https://github.com/Ronapa/Circuitos2/blob/master/README.md#etapa-de-salida)
+    * [Switches y conmutación](https://github.com/Ronapa/Circuitos2/blob/master/README.md#-switches-y-conmutacion)
   * [Elección de las tencologías utilizadas]()
   * [Compensación del circuito y calidad de la señal]()
   * [Potencia y eficiencia del generador]()
