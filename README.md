@@ -1,9 +1,10 @@
 # Trabajo Práctico de Diseño
 ## Diseño de Circuitos Electronicos (86.10)
 ## Diseño de un Circuito amplificador clase G paralelo.
-#####  Rodrigo Nahuel Parra
-#####  Gonzalo Gilces Duran
-#####  Segundo Molina Abeniacar
+#### Integrantes: 
+#####  Rodrigo Nahuel Parra - Padrón: 98785 - email: [ro.nahuel95@gmail.com](mailto:ro.nahuel95@gmail.com)
+#####  Gonzalo Gilces Duran - Padrón: 99074 - email: [gonzalo.gilces@hotmail.com](mailto:gonzalo.gilces@hotmail.com)
+#####  Segundo Molina Abeniacar - Padrón: 99306 - email: [segun_m@hotmail.com](mailto:segun_m@hotmail.com)
 
 
 ### Resumen
