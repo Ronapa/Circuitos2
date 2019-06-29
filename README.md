@@ -10,32 +10,32 @@
 
 #### Índice
 * [Resumen](https://github.com/Ronapa/Circuitos2/blob/master/README.md#resumen)  
-* [Diseño](https://github.com/Ronapa/Circuitos2/blob/master/README.md#dieno)  
-  * [Polarización y funcionamiento del circuito](https://github.com/Ronapa/Circuitos2/blob/master/README.md#polarizacion-y-funcionamiento-del-circuito)  
+* [Diseño](https://github.com/Ronapa/Circuitos2/blob/master/README.md#diseño)  
+  * [Polarización y funcionamiento del circuito](https://github.com/Ronapa/Circuitos2/blob/master/README.md#polarización-y-funcionamiento-del-circuito)  
     * [Etapa de entrada](https://github.com/Ronapa/Circuitos2/blob/master/README.md#etapa-de-entrada)  
     * [Etapa VAS y multiplicador de Vbe](https://github.com/Ronapa/Circuitos2/blob/master/README.md#etapa-vas-y-multiplicador-de-vbe)
     * [Etapa de salida](https://github.com/Ronapa/Circuitos2/blob/master/README.md#etapa-de-salida)
-    * [Switches y conmutación](https://github.com/Ronapa/Circuitos2/blob/master/README.md#-switches-y-conmutacion)
-  * [Elección de las tencologías utilizadas]()
-  * [Compensación del circuito y calidad de la señal]()
-  * [Potencia y eficiencia del generador]()
-    * [Potencia en la carga]()
-    * [Eficiencia del circuito]()
-    * [Potencia disipada en los transistores]()
-  * [Ensayos variando la carga]()
-  * [Mediciones sobre el amplificador]()
-    * [Impedancia de entrada y salida]()
-    * [Limitación de corriente y protecciones]()
-    * [Slew Rate]()
-    * [Rechazo de ruido de la fuente]()
-    * [Limitaciones sobre los valores de alimentación]()
-  * [Diseño del PCB]()
-* [Construcción]()
+    * [Switches y conmutación](https://github.com/Ronapa/Circuitos2/blob/master/README.md#-switches-y-conmutación)
+  * [Elección de las tencologías utilizadas](https://github.com/Ronapa/Circuitos2/blob/master/README.md#elección-de-las-tecnologías-utilizadas)
+  * [Compensación del circuito y calidad de la señal](https://github.com/Ronapa/Circuitos2/blob/master/README.md#compensación-del-circuito-y-calidad-de-la-señal)
+  * [Potencia y eficiencia](https://github.com/Ronapa/Circuitos2/blob/master/README.md#potencia-y-eficiencia)
+    * [Potencia en la carga](https://github.com/Ronapa/Circuitos2/blob/master/README.md#potencia-en-la-carga)
+    * [Eficiencia del circuito](https://github.com/Ronapa/Circuitos2/blob/master/README.md#eficiencia-del-circuito)
+    * [Potencia disipada en los transistores](https://github.com/Ronapa/Circuitos2/blob/master/README.md#potencia-disipada-en-los-transistores)
+  * [Ensayos variando la carga](https://github.com/Ronapa/Circuitos2/blob/master/README.md#ensayos-variando-la-carga)
+  * [Mediciones sobre el amplificador](https://github.com/Ronapa/Circuitos2/blob/master/README.md#mediciones-sobre-el-amplificador)
+    * [Impedancia de entrada y salida](https://github.com/Ronapa/Circuitos2/blob/master/README.md#impedancia-de-entrada-y-salida)
+    * [Limitación de corriente y protecciones](https://github.com/Ronapa/Circuitos2/blob/master/README.md#limitación-de-corriente-y-protecciones)
+    * [Slew Rate](https://github.com/Ronapa/Circuitos2/blob/master/README.md#slew-rate)
+    * [Rechazo de ruido de la fuente](https://github.com/Ronapa/Circuitos2/blob/master/README.md#rechazo-de-ruido-de-la-fuente)
+    * [Limitaciones sobre los valores de alimentación](https://github.com/Ronapa/Circuitos2/blob/master/README.md#limitaciones-sobre-los-valores-de-alimentación)
+  * [Diseño del PCB](https://github.com/Ronapa/Circuitos2/blob/master/README.md#diseño-del-pcb)
+* [Construcción](https://github.com/Ronapa/Circuitos2/blob/master/README.md#construcción)
 
 ### Resumen
 El objetivo de este trabajo fue diseñar un amplificador de audio clase G con la etapa de salida conmutada en paralelo. Se logró diseñar un circuito que amplifica una señal de 1Vp a una de 25Vp para una carga de hasta 8Ohms. El circuito simulado entrega una potencia máxima al parlante de 78 Watts, con una distorsión menor al 0.1%. El circuito cuenta con un LED de encendido, una limitación de corriente que protege al circuito y a la carga y protecciones que protegen al circuito de una conexión de tensión a la salida. La tensión de salida con entrada nula se simuló y se obtuvo un valor de 3mV. Al tener los transistores de la etapa de potencia en paralelo se logró aumentar la eficiencia, logrando que se conduzca un solo transistor a la vez. Esto se logró con un circuito de control que conmuta los transistores según una tensión de referencia. El circuito del amplificador es alimentado con una fuente de ±30V y una de ±15V. Estos valores de tensión se logran con una fuente de laboratorio de ±30V y una fuente switching que otorga los valores de ±15 necesarios. 
 
-## Desarrollo
+## Diseño
 El circuito fue diseñado en base al amplificador [Kenwood KA-7X](http://materias.fi.uba.ar/6610/Manuales%20de%20servicio%20tecnico/Clase%20G%20y%20H/Kenwood/KA-7X/hfe_kenwood_ka_7x_service.pdf). Este es un amplificador _stereo_ clase G con etapa de salida en paralelo. Nuestro amplificador, en cambio, es de tipo _mono_. A continuación en la imagen se muestra una parte de la etapa de salida del amplificador Kenwood.
 
 ![Amplificador Kenwood][kenwood]
