@@ -119,7 +119,7 @@ Por otro lado la eficiencia con la salida en un valor más bajo empeora. A modo 
 
 Las tres imágenes anteriores fueron simuladas con una señal de entrada senoidal de 1kHz. Fueron simuladas otras frecuencias y los resultados fueron equivalentes. 
 
-#### Potencia disipada por los transistores
+#### Potencia disipada en los transistores
 
 ### Ensayos variando la carga. 
 
