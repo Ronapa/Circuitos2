@@ -1,11 +1,36 @@
 # Trabajo Práctico de Diseño
-## Diseño de Circuitos Electronicos (86.10)
+## Diseño de Circuitos Electronicos (86.10) - Primer cuatrimestre 2019
 ## Diseño de un Circuito amplificador clase G paralelo.
 #### Integrantes: 
 #####  Rodrigo Nahuel Parra - Padrón: 98785 - email: [ro.nahuel95@gmail.com](mailto:ro.nahuel95@gmail.com)
 #####  Gonzalo Gilces Duran - Padrón: 99074 - email: [gonzalo.gilces@hotmail.com](mailto:gonzalo.gilces@hotmail.com)
 #####  Segundo Molina Abeniacar - Padrón: 99306 - email: [segun_m@hotmail.com](mailto:segun_m@hotmail.com)
+#### Tutor:
+##### Edgardo Marchi - email: [edgardo.marchi@gmail.com](mailto:edgardo.marchi@gmail.com)
 
+#### Índice
+* [Resumen]()  
+* [Diseño]()  
+  * [Polarización y funcionamiento del circuito]()  
+    * [Etapa de entrada]()  
+    * [Etapa VAS y multiplicador de Vbe]()
+    * [Etapa de salida]()
+    * [Switches y conmutación]()
+  * [Elección de las tencologías utilizadas]()
+  * [Compensación del circuito y calidad de la señal]()
+  * [Potencia y eficiencia del generador]()
+    * [Potencia en la carga]()
+    * [Eficiencia del circuito]()
+    * Potencia disipada en los transistores
+  * [Ensayos variando la carga]()
+  * [Mediciones sobre el amplificador]()
+    * [Impedancia de entrada y salida]()
+    * [Limitación de corriente y protecciones]()
+    * [Slew Rate]()
+    * [Rechazo de ruido de la fuente]()
+    * [Limitaciones sobre los valores de alimentación]()
+  * [Diseño del PCB]()
+* [Construcción]()
 
 ### Resumen
 El objetivo de este trabajo fue diseñar un amplificador de audio clase G con la etapa de salida conmutada en paralelo. Se logró diseñar un circuito que amplifica una señal de 1Vp a una de 25Vp para una carga de hasta 8Ohms. El circuito simulado entrega una potencia máxima al parlante de 78 Watts, con una distorsión menor al 0.1%. El circuito cuenta con un LED de encendido, una limitación de corriente que protege al circuito y a la carga y protecciones que protegen al circuito de una conexión de tensión a la salida. La tensión de salida con entrada nula se simuló y se obtuvo un valor de 3mV. Al tener los transistores de la etapa de potencia en paralelo se logró aumentar la eficiencia, logrando que se conduzca un solo transistor a la vez. Esto se logró con un circuito de control que conmuta los transistores según una tensión de referencia. El circuito del amplificador es alimentado con una fuente de ±30V y una de ±15V. Estos valores de tensión se logran con una fuente de laboratorio de ±30V y una fuente switching que otorga los valores de ±15 necesarios. 
@@ -23,7 +48,7 @@ Nuestro circuito simulado se encuentra a continuación:
 Elegimos hacer un circuito clase G porque con este logra una elevada eficiencia en amplificación de audio. Esto se debe a que, en audio, los transistores de mayor tensión funcionan en intervalos cortos de tiempo, siendo los de menor señal los que conducen la mayor parte. Esto se debe a que las señales de audio que se reproducen generalmente tienen un alto cociente de valor pico a valor medio, esto es, los momentos de señales altas son breves y pocos. Además, al plantear la etapa de salida con los transistores en paralelo, logramos aumentar aún más la eficiencia, ya que en cualquier momento solo está conduciendo un transistor. En cambio, si la salida estuviera en serie, en los momentos de alta señal conducirían los dos transistores de salida. 
 
 ### Polarización y funcionamiento del circuito
-#### Etapa de entrada del circuito
+#### Etapa de entrada
 La etapa de entrada del circuito es un amplificador diferencial con carga activa, estabilizado mediante realimentación por emisor para las diferencias entre los _betas_ de los transistores. Cada rama del par diferencial está polarizada con 500uA, y por Q5 circula una corriente de 1mA. El capacitor C1 se encuentra para filtrar la tensión de continua de la entrada, de este modo el circuito solo amplfica tensiones de señal.  
 En una base del diferencial se encuentra la señal de entrada mientras que en la otra se encuentra la realimentación dada por R39 que se conecta a la salida. La elección del valor de R39 se basó en un compromiso de amplificación contra calidad de señal. Con valores más altos de resistencia la amplificación era mayor pero se reducía el ancho de banda y empeoraba la distorsión. Por otro lado, con valores menores de resistencia la realimentación era mayor y se lograba una menor distorsión pero también una menor amplificación. Finalmente logramos reducir la distorsión compensando al circuito y amplificamos para tener una señal máxima que no produjera recorte a la salida.
 
