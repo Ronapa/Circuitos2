@@ -1,15 +1,41 @@
 # Trabajo Práctico de Diseño
-## Diseño de Circuitos Electronicos (86.10)
+## Diseño de Circuitos Electronicos (86.10) - Primer cuatrimestre 2019
 ## Diseño de un Circuito amplificador clase G paralelo.
-#####  Rodrigo Nahuel Parra
-#####  Gonzalo Gilces Duran
-#####  Segundo Molina Abeniacar
+#### Integrantes: 
+#####  Rodrigo Nahuel Parra - Padrón: 98785 - email: [ro.nahuel95@gmail.com](mailto:ro.nahuel95@gmail.com)
+#####  Gonzalo Gilces Duran - Padrón: 99074 - email: [gonzalo.gilces@hotmail.com](mailto:gonzalo.gilces@hotmail.com)
+#####  Segundo Molina Abeniacar - Padrón: 99306 - email: [segun_m@hotmail.com](mailto:segun_m@hotmail.com)
+#### Tutor:
+##### Edgardo Marchi - email: [edgardo.marchi@gmail.com](mailto:edgardo.marchi@gmail.com)
 
+#### Índice
+* [Resumen](https://github.com/Ronapa/Circuitos2/#resumen)  
+* [Diseño](https://github.com/Ronapa/Circuitos2/#diseño)  
+  * [Polarización y funcionamiento del circuito](https://github.com/Ronapa/Circuitos2/#polarización-y-funcionamiento-del-circuito)  
+    * [Etapa de entrada](https://github.com/Ronapa/Circuitos2/#etapa-de-entrada)  
+    * [Etapa VAS y multiplicador de Vbe](https://github.com/Ronapa/Circuitos2/#etapa-vas-y-multiplicador-de-vbe)
+    * [Etapa de salida](https://github.com/Ronapa/Circuitos2/#etapa-de-salida)
+    * [Switches y conmutación](https://github.com/Ronapa/Circuitos2/#switches-y-conmutación)
+  * [Elección de las tencologías utilizadas](https://github.com/Ronapa/Circuitos2/#elección-de-las-tecnologías-utilizadas)
+  * [Compensación del circuito y calidad de la señal](https://github.com/Ronapa/Circuitos2/#compensación-del-circuito-y-calidad-de-la-señal)
+  * [Potencia y eficiencia](https://github.com/Ronapa/Circuitos2/#potencia-y-eficiencia)
+    * [Potencia en la carga](https://github.com/Ronapa/Circuitos2/#potencia-en-la-carga)
+    * [Eficiencia del circuito](https://github.com/Ronapa/Circuitos2/#eficiencia-del-circuito)
+    * [Potencia disipada en los transistores](https://github.com/Ronapa/Circuitos2/#potencia-disipada-en-los-transistores)
+  * [Ensayos variando la carga](https://github.com/Ronapa/Circuitos2/#ensayos-variando-la-carga)
+  * [Mediciones sobre el amplificador](https://github.com/Ronapa/Circuitos2/#mediciones-sobre-el-amplificador)
+    * [Impedancia de entrada y salida](https://github.com/Ronapa/Circuitos2/#impedancia-de-entrada-y-salida)
+    * [Limitación de corriente y protecciones](https://github.com/Ronapa/Circuitos2/#limitación-de-corriente-y-protecciones)
+    * [Slew Rate](https://github.com/Ronapa/Circuitos2/#slew-rate)
+    * [Rechazo de ruido de la fuente](https://github.com/Ronapa/Circuitos2/#rechazo-de-ruido-de-la-fuente)
+    * [Limitaciones sobre los valores de alimentación](https://github.com/Ronapa/Circuitos2/#limitaciones-sobre-los-valores-de-alimentación)
+  * [Diseño del PCB](https://github.com/Ronapa/Circuitos2/#diseño-del-pcb)
+* [Construcción](https://github.com/Ronapa/Circuitos2/#construcción)
 
 ### Resumen
 El objetivo de este trabajo fue diseñar un amplificador de audio clase G con la etapa de salida conmutada en paralelo. Se logró diseñar un circuito que amplifica una señal de 1Vp a una de 25Vp para una carga de hasta 8Ohms. El circuito simulado entrega una potencia máxima al parlante de 78 Watts, con una distorsión menor al 0.1%. El circuito cuenta con un LED de encendido, una limitación de corriente que protege al circuito y a la carga y protecciones que protegen al circuito de una conexión de tensión a la salida. La tensión de salida con entrada nula se simuló y se obtuvo un valor de 3mV. Al tener los transistores de la etapa de potencia en paralelo se logró aumentar la eficiencia, logrando que se conduzca un solo transistor a la vez. Esto se logró con un circuito de control que conmuta los transistores según una tensión de referencia. El circuito del amplificador es alimentado con una fuente de ±30V y una de ±15V. Estos valores de tensión se logran con una fuente de laboratorio de ±30V y una fuente switching que otorga los valores de ±15 necesarios. 
 
-## Desarrollo
+## Diseño
 El circuito fue diseñado en base al amplificador [Kenwood KA-7X](http://materias.fi.uba.ar/6610/Manuales%20de%20servicio%20tecnico/Clase%20G%20y%20H/Kenwood/KA-7X/hfe_kenwood_ka_7x_service.pdf). Este es un amplificador _stereo_ clase G con etapa de salida en paralelo. Nuestro amplificador, en cambio, es de tipo _mono_. A continuación en la imagen se muestra una parte de la etapa de salida del amplificador Kenwood.
 
 ![Amplificador Kenwood][kenwood]
@@ -22,7 +48,7 @@ Nuestro circuito simulado se encuentra a continuación:
 Elegimos hacer un circuito clase G porque con este logra una elevada eficiencia en amplificación de audio. Esto se debe a que, en audio, los transistores de mayor tensión funcionan en intervalos cortos de tiempo, siendo los de menor señal los que conducen la mayor parte. Esto se debe a que las señales de audio que se reproducen generalmente tienen un alto cociente de valor pico a valor medio, esto es, los momentos de señales altas son breves y pocos. Además, al plantear la etapa de salida con los transistores en paralelo, logramos aumentar aún más la eficiencia, ya que en cualquier momento solo está conduciendo un transistor. En cambio, si la salida estuviera en serie, en los momentos de alta señal conducirían los dos transistores de salida. 
 
 ### Polarización y funcionamiento del circuito
-#### Etapa de entrada del circuito
+#### Etapa de entrada
 La etapa de entrada del circuito es un amplificador diferencial con carga activa, estabilizado mediante realimentación por emisor para las diferencias entre los _betas_ de los transistores. Cada rama del par diferencial está polarizada con 500uA, y por Q5 circula una corriente de 1mA. El capacitor C1 se encuentra para filtrar la tensión de continua de la entrada, de este modo el circuito solo amplfica tensiones de señal.  
 En una base del diferencial se encuentra la señal de entrada mientras que en la otra se encuentra la realimentación dada por R39 que se conecta a la salida. La elección del valor de R39 se basó en un compromiso de amplificación contra calidad de señal. Con valores más altos de resistencia la amplificación era mayor pero se reducía el ancho de banda y empeoraba la distorsión. Por otro lado, con valores menores de resistencia la realimentación era mayor y se lograba una menor distorsión pero también una menor amplificación. Finalmente logramos reducir la distorsión compensando al circuito y amplificamos para tener una señal máxima que no produjera recorte a la salida.
 
@@ -73,7 +99,7 @@ Nuestro primer requisito para seleccionar los transistores necesarios fue que la
 ### Compensación del circuito y calidad de la señal
 Como compensamos y rta en frecuencia
 
-### Potencia y eficiencia del amplificador
+### Potencia y eficiencia
 #### Potencia en la carga
 Las especificaciones de potencia planteadas en un prinicpio era de 100Watts sobre una carga de 8Ohms. Para lograr esto tendríamos que  llegar a una excursión de 28Vp sobre la carga. Con las simulaciones, la amplitud máxima a la salida antes que se recortara la señal que logramos es de 25V. Esto significa una potencia de 78Watts. Si bien no es lo que nos planteamos en un principio consideramos que es un valor adecuado para un amplificador de audio. Sin embargo, una diferencia del 22% en el valor de la potencia equivale a 1dB de diferencia, por lo que al oído esto no presenta una grán distancia.   
 
@@ -93,7 +119,7 @@ Por otro lado la eficiencia con la salida en un valor más bajo empeora. A modo 
 
 Las tres imágenes anteriores fueron simuladas con una señal de entrada senoidal de 1kHz. Fueron simuladas otras frecuencias y los resultados fueron equivalentes. 
 
-#### Potencia disipada por los transistores
+#### Potencia disipada en los transistores
 
 ### Ensayos variando la carga. 
 
