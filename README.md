@@ -128,6 +128,18 @@ Las tres imágenes anteriores fueron simuladas con una señal de entrada senoida
 
 ### Ensayos variando la carga. 
 
+### Mediciones sobres el amplificador
+
+#### Impedancia de entrada y salida
+
+#### Limitación de corriente y protecciones
+
+#### Slew Rate
+
+#### Rechazo de ruido de la fuente
+
+#### Limitaciones sobre los valores de alimentación
+
 
 ### Diseño del PCB
   
