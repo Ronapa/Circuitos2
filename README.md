@@ -141,4 +141,4 @@ Las tres imágenes anteriores fueron simuladas con una señal de entrada senoida
 [Potencia 1k]: Imagenes/Potencia_1k.png
 [Eficiencia 5Vp]: Imagenes/Eficiencia_5vp.png
 [Eficiencia maxima]: Imagenes/Eficiencia_maxima.png
-[Circuito en bloques]: Imagenes/Circuito_en_bloques.png
+[Circuito en bloques]: Imagenes/Bloques.png
