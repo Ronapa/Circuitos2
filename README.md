@@ -36,11 +36,11 @@
 El objetivo de este trabajo fue diseñar un amplificador de audio clase G con la etapa de salida conmutada en paralelo. Se logró diseñar un circuito que amplifica una señal de 1Vp a una de 25Vp para una carga de hasta 8Ohms. El circuito simulado entrega una potencia máxima al parlante de 78 Watts, con una distorsión menor al 0.1%. El circuito cuenta con un LED de encendido, una limitación de corriente que protege al circuito y a la carga y protecciones que protegen al circuito de una conexión de tensión a la salida. La tensión de salida con entrada nula se simuló y se obtuvo un valor de 3mV. Al tener los transistores de la etapa de potencia en paralelo se logró aumentar la eficiencia, logrando que se conduzca un solo transistor a la vez. Esto se logró con un circuito de control que conmuta los transistores según una tensión de referencia. El circuito del amplificador es alimentado con una fuente de ±30V y una de ±15V. Estos valores de tensión se logran con una fuente de laboratorio de ±30V y una fuente switching que otorga los valores de ±15 necesarios. 
 
 ## Diseño
-El circuito fue diseñado en base al amplificador [Kenwood KA-7X](http://materias.fi.uba.ar/6610/Manuales%20de%20servicio%20tecnico/Clase%20G%20y%20H/Kenwood/KA-7X/hfe_kenwood_ka_7x_service.pdf). Este es un amplificador _stereo_ clase G con etapa de salida en paralelo. Nuestro amplificador, en cambio, es de tipo _mono_. El circuito en bloques en el que nos basamos se encuentra a continuación. 
+El circuito fue diseñado en base al amplificador [Kenwood KA-7X](http://materias.fi.uba.ar/6610/Manuales%20de%20servicio%20tecnico/Clase%20G%20y%20H/Kenwood/KA-7X/hfe_kenwood_ka_7x_service.pdf). Este es un amplificador _stereo_ clase G con etapa de salida en paralelo. Nuestro amplificador, en cambio, es de tipo _mono_. El circuito diseñado está basado en etapas definidas por el circuito en bloques de la siguiente figura.
 
 ![Circuito en bloques][Circuito en bloques]
 
-A continuación en la imagen se muestra una parte de la etapa de salida del amplificador Kenwood.
+A continuación en la imagen se muestra una parte de la etapa de salida del amplificador Kenwood, del cual tomamos características circuitales para implementar en nuestro diseño. 
 
 ![Amplificador Kenwood][kenwood]
 
@@ -78,7 +78,6 @@ Por otro lado, el transistor Q29 funciona como un limitador de corriente. Este m
 #### Switches y conmutación
 A continuación se encuentra el circuito que controla la conmutación entre el camino de señal alta y el de baja. La salida de este circuito se conecta a la base de Q11 como se planteó en la sección anterior. 
 
-explico como funciona y pongo una imagen que muestre como conmuta y se apaga uno y conduce el otro. explicar tension de referencia
 
 ![Etapa conmutacion][Etapa Switches]
 
@@ -113,7 +112,7 @@ La eficiencia a la que llegamos, como era de esperarse, depende de la amplitud a
 
 ![Eficiencia amplitud maxima][Eficiencia amplitud maxima]  
 
-La eficiencia máxima se logra con una señal de salida de xxVp, y esta vale xx%, y se muestra a continuación.
+La eficiencia máxima se logra con una señal de salida de 18Vp, y esta vale 83%, y se muestra a continuación.
 
 ![Eficiencia maxima][Eficiencia maxima]
 
