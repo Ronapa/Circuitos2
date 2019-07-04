@@ -64,6 +64,8 @@ Uno de los primeros problemas con que nos planteamos fue que la etapa de salida 
 
 ![Etapa de VAS][Etapa VAS]
 
+La tensión a la salida de esta etapa, tiene un desnivel de 2Vbe por la caida en los transistores de los seguidores, sin embargo, ajustando el valor de la resistencia R12 logramos que el multiplicador de Vbe equipare este desnivel.
+
 #### Etapa de salida
 La etapa de salida, como se ve en la imagen, es simétrica para el camino de señal del semicilco positivo y del negativo. A continuación se hará un analisis del camino de señal positiva de esta etapa siendo los resultados análogos para el camino de señal negativa.  
 Primero, Q11 y Q12 funcionan como llaves, controladas por los circuitos de conmutación. Q11 permanece sin conducir hasta que se lo indica la señal _S\_HIGH_. Una vez que Q11 conduce la tensión en su colector es mayor a la del emisor de Q12, por lo que Q12 entra en corto. De este modo solo conduce una rama a la vez. Esta topología de tener los transistores en paralelo mejora la efciencia, ya que no se tiene conduciendo constantemente al transistor de baja tensión como en un amplificador clase G serie.   
