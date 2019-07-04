@@ -143,6 +143,10 @@ Las tres imágenes anteriores fueron simuladas con una señal de entrada senoida
 
 ### Diseño del PCB
   
+  
+## Construcción
+
+
 [kenwood]: Imagenes/kenwood.png
 [Nuestro Circuito]: Imagenes/Circuito_completo.png
 [Etapa Entrada]: Imagenes/Etapa_entrada.png
