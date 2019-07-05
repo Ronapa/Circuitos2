@@ -17,7 +17,7 @@
     * [Etapa de salida](https://github.com/Ronapa/Circuitos2/#etapa-de-salida)
     * [Switches y conmutación](https://github.com/Ronapa/Circuitos2/#switches-y-conmutación)
   * [Elección de las tencologías utilizadas](https://github.com/Ronapa/Circuitos2/#elección-de-las-tecnologías-utilizadas)
-  * [Compensación del circuito y respuesta en frecuencia](https://github.com/Ronapa/Circuitos2/#compensación-del-circuito-y-calidad-de-la-señal)
+  * [Compensación del circuito y respuesta en frecuencia](https://github.com/Ronapa/Circuitos2/#compensación-del-circuito-y-respuesta-en-frecuencia)
   * [Potencia y eficiencia](https://github.com/Ronapa/Circuitos2/#potencia-y-eficiencia)
     * [Potencia en la carga](https://github.com/Ronapa/Circuitos2/#potencia-en-la-carga)
     * [Eficiencia del circuito](https://github.com/Ronapa/Circuitos2/#eficiencia-del-circuito)
@@ -106,11 +106,11 @@ Nuestro primer requisito para seleccionar los transistores necesarios fue que la
 ### Compensación del circuito y respuesta en frecuencia
 Para la compensación del circuito se abrió el lazo realimentador y se clocó una inductancia de un valor muy grande al igual que un capacitor de gran valor en serie con la uente. A partir de un analisis de recuencia se obtuvo la ganancia de lazo, la cual permitió determinar si el sistema era estable.
 
-![Esquematico margen fase][Esquematido de margen de fase]
+![Esquematico margen fase][Imagenes/esquematico_margen_fase.PNG]
 
-![grafico compensacion][Resultado margen de fase]
+![grafico compensacion][Imagenes/grafico_compensacion.PNG]
 
-![respuesta en frecuencia][Diagrama de respuesta en frecuencia]
+![respuesta en frecuencia][Imagenes/respuesta_en_frecuencia.PNG]
 
 
 
