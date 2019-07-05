@@ -17,7 +17,7 @@
     * [Etapa de salida](https://github.com/Ronapa/Circuitos2/#etapa-de-salida)
     * [Switches y conmutación](https://github.com/Ronapa/Circuitos2/#switches-y-conmutación)
   * [Elección de las tencologías utilizadas](https://github.com/Ronapa/Circuitos2/#elección-de-las-tecnologías-utilizadas)
-  * [Compensación del circuito y calidad de la señal](https://github.com/Ronapa/Circuitos2/#compensación-del-circuito-y-calidad-de-la-señal)
+  * [Compensación del circuito y respuesta en frecuencia](https://github.com/Ronapa/Circuitos2/#compensación-del-circuito-y-calidad-de-la-señal)
   * [Potencia y eficiencia](https://github.com/Ronapa/Circuitos2/#potencia-y-eficiencia)
     * [Potencia en la carga](https://github.com/Ronapa/Circuitos2/#potencia-en-la-carga)
     * [Eficiencia del circuito](https://github.com/Ronapa/Circuitos2/#eficiencia-del-circuito)
@@ -96,15 +96,23 @@ Nuestro primer requisito para seleccionar los transistores necesarios fue que la
   Para la etapa de entrada se eligieron los transistores **MMBTA56**(PNP) y **MMBTA06**(NPN) de Fairchild. Estos son transistores de montaje superficial que cumplen con los requerimientos de corriente y tensión planteados en el circuito. Si bien estos transistores son de propósito general, son de bajo ruido, requisito indispensable para la etapa de entrada. Además, por su capacidad de conmutar entre conducción y corte rapidamente fueron también elegidos para los _switches_ que conmutan los transistores de salida. El _beta_ mínimo de estos transistores es 100, pero el fabricante no otorga valores típicos o máximos. Para asegurar un buen funcionamiento se tuvo que realimentar por emisor en el par diferencia y en al carga activa para apaciguar posibles diferencias en los _betas_. Se ensayaron simulaciones con diferencias de los _beta_ de hasta un 50% e igual se cumplieron las especificaciones planteadas. No obstante, en el armado del circuito se le medirá los valores de _beta_ y se acoplaran aquellos que tengan las menores diferencias. 
 
 * [**2N3055** y **MJ2955**](https://www.onsemi.com/pub/Collateral/2N3055-D.PDF)  
-  Para los tranistores de potencia se buscó unos que fueran montados en un disipador y que soportaran los valores de corriente que entrega el circuito. Finalmente elegimos los transistores **2N3055**(NPN) y **MJ2955**(PNP). La elección de estos transistores se basó en que cumplian las especificaciones, su modelo de Spice era accesible y se podía simular, se puede comprar en el país, y su precio no era tan elevado como otros transistores de aplicación especifica para audio. Antes de decidirnos por esta tecnología simulamos el circuito y comprobamos que cumpliera el circuito con las especificaciones. 
+  Para los tranistores de potencia se buscó unos que fueran montados en un disipador y que soportaran los valores de corriente que entrega el circuito. Finalmente elegimos los transistores **2SC5200**(NPN) y **2SA1943**(PNP). La elección de estos transistores se basó en que cumplian las especificaciones, su modelo de Spice era accesible y se podía simular, se puede comprar en el país, y su precio no era tan elevado como otros transistores de aplicación especifica para audio. Antes de decidirnos por esta tecnología simulamos el circuito y comprobamos que cumpliera el circuito con las especificaciones. 
 
 
 * [**MJE340**](https://www.onsemi.com/pub/Collateral/MJE340-D.PDF) y  [**MJE350**](https://www.onsemi.com/pub/Collateral/MJE350-D.PDF)  
   Para el multiplicador de Vbe, que debe estar acoplado térmicamente a los transistores de salida, se eligió un transistor que pudiera ser montado en un disipador. Para este propósito se eligió el transistor **MJE340**(NPN). Además, se eligió la misma tecnología para los transistores que forman el la base del Darlington a la salida de alta potencia. Si bien para este último propósito se podría haber utilizado los transistores de potencia, los transistores elegidos cumplieron con los requerimientos a un costo menor que los de potencia. Esto se debe a que la corriente que manejan estos es mucho menor a la que entregan los transistores de potencia. 
 
 
-### Compensación del circuito y calidad de la señal
-Como compensamos y rta en frecuencia
+### Compensación del circuito y respuesta en frecuencia
+Para la compensación del circuito se abrió el lazo realimentador y se clocó una inductancia de un valor muy grande al igual que un capacitor de gran valor en serie con la uente. A partir de un analisis de recuencia se obtuvo la ganancia de lazo, la cual permitió determinar si el sistema era estable.
+
+![Esquematico margen fase][Esquematido de margen de fase]
+
+![grafico compensacion][Resultado margen de fase]
+
+![respuesta en frecuencia][Diagrama de respuesta en frecuencia]
+
+
 
 ### Potencia y eficiencia
 #### Potencia en la carga
