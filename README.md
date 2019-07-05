@@ -26,7 +26,6 @@
   * [Mediciones sobre el amplificador](https://github.com/Ronapa/Circuitos2/#mediciones-sobre-el-amplificador)
     * [Impedancia de entrada y salida](https://github.com/Ronapa/Circuitos2/#impedancia-de-entrada-y-salida)
     * [Limitación de corriente y protecciones](https://github.com/Ronapa/Circuitos2/#limitación-de-corriente-y-protecciones)
-    * [Slew Rate](https://github.com/Ronapa/Circuitos2/#slew-rate)
     * [Rechazo de ruido de la fuente](https://github.com/Ronapa/Circuitos2/#rechazo-de-ruido-de-la-fuente)
     * [Limitaciones sobre los valores de alimentación](https://github.com/Ronapa/Circuitos2/#limitaciones-sobre-los-valores-de-alimentación)
   * [Diseño del PCB](https://github.com/Ronapa/Circuitos2/#diseño-del-pcb)
@@ -145,6 +144,28 @@ Las tres imágenes anteriores fueron simuladas con una señal de entrada senoida
 
 ### Mediciones sobres el amplificador
 
+### Distorsión
+
+Otro parámetro muy importante en un amplificador es la distorsión armónica que presenta. Par ellos se utilizó el comando del LTSpice .FOUR en el cual se le especifica la frecuencia y la cantidad de armónicas que son tenidas en cuenta para el cálculo de la distorsión. El comando arroja dos valores, de los cuales en todos los casos se tomó el de mayor valor. El valor más bajo corresponde solo a la distorsión armónica mientras que el otro tiene en cuenta todas las otras componentes ajenas a la señal de entrada que son amplificadas. A continuación se encuentran los valores obtenidos para 2 valores de carga y 2 frecuencias distintas. Las potencias indicadas son RMS para la señal pico indicada como Vin.
+
+4 Ohms 
+
+Vin = 167mV | Vout = 2V | THD 1kHz= 0.012% | THD 10kHz= 0.017% | P = 1W
+Vin = 526mV | Vout = 9V | THD 1kHz= 0.012% | THD 10kHz= 0.036% | P = 10W
+Vin = 832mV |Vout = 14V | THD 1kHz= 0.072% | THD 10kHz= 0.23% | P = 25W
+Vin = 1.27V | Vout = 21.3V | THD 1kHz= 0.063% | THD 10kHz= 0.18% | P = 58W
+Vin = 1.41V | Vout = 23.65V | THD 1kHz= 0.058% | THD 10kHz= 0.16% | P = 70W
+
+8 Ohms 
+
+Vin = 167mV | Vout = 2V | THD 1kHz= 0.012% | THD 10kHz= 0.015% | P = 0.5W
+Vin = 526mV | Vout = 9V | THD 1kHz= 0.012% | THD 10kHz= 0.005% | P = 5W
+Vin = 832mV |Vout = 14V | THD 1kHz= 0.074% | THD 10kHz= 0.21% | P = 12.5W
+Vin = 1.27V | Vout = 21.3V | THD 1kHz= 0.061% | THD 10kHz= 0.17% | P = 29W
+Vin = 1.41V | Vout = 23.65V | THD 1kHz= 0.056% | THD 10kHz= 0.16% | P = 35W
+
+En todos los casos se puede observar que para una tensión de entrada de 830mV aproximadamente la distorsión aumenta notablemente. Esto se debe a que comienza a actuar la conmutación de la etapa de salida. También se aprecia que a medida que aumenta la frecuencia la distorsión introducida por este subcircuito es mayor, ya que se producen más cantidad de transiciones entre los transistores. Se trabajó para eliminar lo más posible los transitorios de conmutación pero no se pudo mejorar más. Es posible que si se hubiese tenido en cuenta una tecnología MOS para la conmutación se pudieran haber obtenido mejores resultados.
+
 #### Impedancia de entrada y salida
 
 Para obtener la impedancia de entrada del amplificador se decidió realizar un barrido en frecuencia y obtener la impedancia de entrada para todas las frecuencias. En la siguiente figura se observa la impedancia de entrada para frecuencias entre 0.1Hz y 10GHz. Se puede apreciar que la impedancia de entrada es 20 kOhms para todo el rango entre los 10 y los 100kHz, lo cual abarca toda la banda de audio. Resulta importante destacar que es una característica deseada en un amplificador de audio.
@@ -167,8 +188,6 @@ Para el caso de que se produzca un corto en la salida se aprecia que la corrient
 
 
 ![Limitacion corriente corto](/Imagenes/limitador_corriente_corto.PNG)
-
-#### Slew Rate
 
 #### Rechazo de ruido de la fuente
 
