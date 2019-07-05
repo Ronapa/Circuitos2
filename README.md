@@ -104,19 +104,24 @@ Nuestro primer requisito para seleccionar los transistores necesarios fue que la
 
 
 ### Compensación del circuito y respuesta en frecuencia
-Para la compensación del circuito se abrió el lazo realimentador y se clocó una inductancia de un valor muy grande al igual que un capacitor de gran valor en serie con la uente. A partir de un analisis de recuencia se obtuvo la ganancia de lazo, la cual permitió determinar si el sistema era estable.
+Para la compensación del circuito se abrió el lazo realimentador y se clocó una inductancia de un valor muy grande al igual que un capacitor de gran valor en serie con la uente. A partir de un analisis de recuencia se obtuvo la ganancia de lazo, la cual permitió determinar si el sistema era estable. A continuación se presenta el esquemático detallando lo anterior:
 
-![Esquematico margen fase][/Imagenes/esquematico_margen_fase.PNG]
+![Esquematico margen fase](/Imagenes/esquematico_margen_fase.PNG)
 
-![grafico compensacion][/Imagenes/grafico_compensacion.PNG]
+El gráfico obtenido es el siguiente:
 
-![respuesta en frecuencia][/Imagenes/respuesta_en_frecuencia.PNG]
+![grafico compensacion](/Imagenes/grafico_compensacion.PNG)
 
+Posteriormente se graficó la respuesta en frecuencia para el amplificador diseñado. Se realizó un ACSweep con la fuente de señal configurada con 1V AC. Como se puede ver en el gráfico, el amplificador presenta una respuesta plana entre los 20Hz y los 200kHz para el caso de la ganancia. En cuanto a la fase, en los 20 Hz se produce un adelanto de fase de 10° lo cual si bien no es ideal, debido a que se trata de bajas frecuancias este adelanto de fase no representaría mayores inconvenientes. Para el otro extremo de la banda de audio, para los 20kHz se produce un atraso de fase de menos de 10°, el cual es considerablemente bajo por lo que no se percibirá.
+
+![respuesta en frecuencia](/Imagenes/respuesta_en_frecuencia.PNG)
+
+En resumen, la respuesta en frecuencia resulta adecuada para la aplicación que se planteó.
 
 
 ### Potencia y eficiencia
 #### Potencia en la carga
-Las especificaciones de potencia planteadas en un prinicpio era de 100Watts sobre una carga de 8Ohms. Para lograr esto tendríamos que  llegar a una excursión de 28Vp sobre la carga. Con las simulaciones, la amplitud máxima a la salida antes que se recortara la señal que logramos es de 25V. Esto significa una potencia de 78Watts. Si bien no es lo que nos planteamos en un principio consideramos que es un valor adecuado para un amplificador de audio. Sin embargo, una diferencia del 22% en el valor de la potencia equivale a 1dB de diferencia, por lo que al oído esto no presenta una grán distancia.   
+Las especificaciones de potencia planteadas en un prinicpio eran de alrededor de 100Watts sobre una carga de 8Ohms. Para lograr esto tendríamos que  llegar a una excursión de 28Vp sobre la carga. Luego del desarrollo de las etapas y por medio de las simulaciones, la amplitud máxima a la salida previo al recorte de la señal que se logró fue de 24V. Esto equivale a una potencia de 72Watts. Si bien no es lo que nos planteamos en un principio consideramos que es un valor adecuado para un amplificador de audio, más aún teniendo en cuenta que una diferencia del 22% en el valor de la potencia equivale a 1dB de diferencia, por lo que al oído esto no será tan perceptible como uno creería.  
 
 ![Potencia 1k][Potencia 1k]
 #### Eficiencia del circuito
