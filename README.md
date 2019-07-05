@@ -147,7 +147,26 @@ Las tres imágenes anteriores fueron simuladas con una señal de entrada senoida
 
 #### Impedancia de entrada y salida
 
+Para obtener la impedancia de entrada del amplificador se decidió realizar un barrido en frecuencia y obtener la impedancia de entrada para todas las frecuencias. En la siguiente figura se observa la impedancia de entrada para frecuencias entre 0.1Hz y 10GHz. Se puede apreciar que la impedancia de entrada es 20 kOhms para todo el rango entre los 10 y los 100kHz, lo cual abarca toda la banda de audio. Resulta importante destacar que es una característica deseada en un amplificador de audio.
+
+![Impedancia de entrada](/Imagenes/Rin frecuencia.PNG)
+
+Para el caso de la impedancia de salida, el método fue muy similar al de la impedancia de entrada. Se simuló para distintos casos en los cuales se conectaron cargas de 4 u 8 Omhs y también con el amplificador sin carga. Debido a que el amplificador se encuentra realimentado, no hubo grandes variaciones. En este caso la impedancia no mantiene un valor constante sino que decae con la frecuencia, desde los 5mOmhs a 20Hz hasta unos 5uOmhs para 20kHz.
+
+![Impedancia de entrada](/Imagenes/Rout frecuencia.PNG)
+
 #### Limitación de corriente y protecciones
+
+Para el dimensionamiento de la protección de limitación de corrriente se debió considerar las condiciones sobre las que debía operar el amplificador. Como el diseño debe funcinar tanto para 4 como para 8 Omhs, la protección no debía interferir con estas condiciones. Como para una carga de 4Omhs se generaban corrientes de alrededor de 6A, se consideró como valor apropiado una limitación de corriente de 7,5 u 8 A. Como ya se mencionó anteriormente esto se logró polarizando un transistor que toma corriente desde la base de la etapa de salida. A continuación se muestra la corriente que circula por la carga para un valor de 2 Omhs.
+
+![Limitacion corriente](/Imagenes/limitador corriente 2 omhs.PNG)
+
+Efectivamente se verifica que el limitador de corriente funciona para casos donde la impedancia es menor a la esperada.
+
+Para el caso de que se produzca un corto en la salida se aprecia que la corriente máxima es mayor a 7A, aunque no de manera considerable. Igualmente para estos casos se colocará un fusible en serie con la fuente de manera de proteger el equipo, ya que los transistores se encontrarán disipando potencia de manera constante. Cabe destacar que para que el limitador funcione debe existir una señal a la entrada que provoque en la salida una corriente de alrededor de 8A, ya que en ausencia de señal no circulará corriente a la salida.
+
+
+![Limitacion corriente corto](/Imagenes/limitador corriente corto.PNG)
 
 #### Slew Rate
 
