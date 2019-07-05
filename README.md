@@ -106,11 +106,11 @@ Nuestro primer requisito para seleccionar los transistores necesarios fue que la
 ### Compensación del circuito y respuesta en frecuencia
 Para la compensación del circuito se abrió el lazo realimentador y se clocó una inductancia de un valor muy grande al igual que un capacitor de gran valor en serie con la uente. A partir de un analisis de recuencia se obtuvo la ganancia de lazo, la cual permitió determinar si el sistema era estable.
 
-![Esquematico margen fase][Imagenes/esquematico_margen_fase.PNG]
+![Esquematico margen fase][/Imagenes/esquematico_margen_fase.PNG]
 
-![grafico compensacion][Imagenes/grafico_compensacion.PNG]
+![grafico compensacion][/Imagenes/grafico_compensacion.PNG]
 
-![respuesta en frecuencia][Imagenes/respuesta_en_frecuencia.PNG]
+![respuesta en frecuencia][/Imagenes/respuesta_en_frecuencia.PNG]
 
 
 
