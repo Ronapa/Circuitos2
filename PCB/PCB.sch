@@ -329,17 +329,6 @@ F 3 "~" H 4150 3700 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:Q_PNP_BCE Q6
-U 1 1 5D1BD236
-P 3600 2300
-F 0 "Q6" H 3790 2254 50  0000 L CNN
-F 1 "Q_PNP_BCE" H 3790 2345 50  0000 L CNN
-F 2 "Package_TO_SOT_SMD:SOT-23_Handsoldering" H 3800 2400 50  0001 C CNN
-F 3 "~" H 3600 2300 50  0001 C CNN
-	1    3600 2300
-	1    0    0    1   
-$EndComp
-$Comp
 L Device:Q_PNP_BCE Q7
 U 1 1 5D1BDD16
 P 4150 2000
@@ -440,9 +429,6 @@ Wire Wire Line
 Wire Wire Line
 	4250 2500 4250 2850
 Connection ~ 4250 2500
-Wire Wire Line
-	3400 2300 3400 2850
-Connection ~ 3400 2300
 $Comp
 L Device:R R1
 U 1 1 5D23111A
@@ -1650,4 +1636,18 @@ Wire Wire Line
 	8950 1850 9450 1850
 Wire Wire Line
 	9050 1350 9050 3500
+Connection ~ 3400 2300
+Wire Wire Line
+	3400 2300 3400 2850
+$Comp
+L Device:Q_PNP_BCE Q6
+U 1 1 5D1BD236
+P 3600 2300
+F 0 "Q6" H 3790 2254 50  0000 L CNN
+F 1 "Q_PNP_BCE" H 3790 2345 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23_Handsoldering" H 3800 2400 50  0001 C CNN
+F 3 "~" H 3600 2300 50  0001 C CNN
+	1    3600 2300
+	1    0    0    1   
+$EndComp
 $EndSCHEMATC
