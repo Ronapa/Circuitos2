@@ -48,17 +48,6 @@ F 3 "~" H 1750 1750 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L Device:Q_PNP_BCE Q4
-U 1 1 5D170E10
-P 2700 1750
-F 0 "Q4" H 2890 1704 50  0000 L CNN
-F 1 "Q_PNP_BCE" H 2890 1795 50  0000 L CNN
-F 2 "Package_TO_SOT_SMD:SOT-23_Handsoldering" H 2900 1850 50  0001 C CNN
-F 3 "~" H 2700 1750 50  0001 C CNN
-	1    2700 1750
-	1    0    0    1   
-$EndComp
-$Comp
 L Device:R R7
 U 1 1 5D16906F
 P 2800 1100
@@ -1761,5 +1750,16 @@ F 2 "Resistors_SMD:R_0805_HandSoldering" V 9280 2700 50  0001 C CNN
 F 3 "~" H 9350 2700 50  0001 C CNN
 	1    9350 2700
 	0    1    1    0   
+$EndComp
+$Comp
+L Device:Q_PNP_BCE Q4
+U 1 1 5D170E10
+P 2700 1750
+F 0 "Q4" H 2890 1704 50  0000 L CNN
+F 1 "Q_PNP_BCE" H 2890 1795 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23_Handsoldering" H 2900 1850 50  0001 C CNN
+F 3 "~" H 2700 1750 50  0001 C CNN
+	1    2700 1750
+	1    0    0    1   
 $EndComp
 $EndSCHEMATC
