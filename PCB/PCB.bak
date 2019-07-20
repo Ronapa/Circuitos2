@@ -1031,7 +1031,7 @@ F 1 "R" H 10020 2855 50  0000 L CNN
 F 2 "Resistor_THT:R_Axial_Power_L25.0mm_W9.0mm_P7.62mm_Vertical" V 9880 2900 50  0001 C CNN
 F 3 "~" H 9950 2900 50  0001 C CNN
 	1    9950 2900
-	1    0    0    -1  
+	-1   0    0    1   
 $EndComp
 Wire Wire Line
 	9950 2750 9950 2700
@@ -1213,23 +1213,23 @@ Wire Wire Line
 $Comp
 L Device:D_Schottky D6
 U 1 1 5D3B2CA6
-P 7200 4950
-F 0 "D6" V 7246 4871 50  0000 R CNN
-F 1 "D_Sch" V 7155 4871 50  0000 R CNN
-F 2 "Diode_SMD:D_SOT-23_ANK" H 7200 4950 50  0001 C CNN
-F 3 "~" H 7200 4950 50  0001 C CNN
-	1    7200 4950
+P 7200 4600
+F 0 "D6" V 7246 4521 50  0000 R CNN
+F 1 "D_Sch" V 7155 4521 50  0000 R CNN
+F 2 "Diode_SMD:D_SOT-23_ANK" H 7200 4600 50  0001 C CNN
+F 3 "~" H 7200 4600 50  0001 C CNN
+	1    7200 4600
 	0    -1   -1   0   
 $EndComp
 $Comp
 L Device:R R20
 U 1 1 5D3B3972
-P 7200 4600
-F 0 "R20" H 7270 4646 50  0000 L CNN
-F 1 "R" H 7270 4555 50  0000 L CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 7130 4600 50  0001 C CNN
-F 3 "~" H 7200 4600 50  0001 C CNN
-	1    7200 4600
+P 7200 5100
+F 0 "R20" H 7270 5146 50  0000 L CNN
+F 1 "R" H 7270 5055 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 7130 5100 50  0001 C CNN
+F 3 "~" H 7200 5100 50  0001 C CNN
+	1    7200 5100
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -1271,9 +1271,7 @@ Wire Wire Line
 	7200 4450 7200 4350
 Connection ~ 7200 4350
 Wire Wire Line
-	7200 4750 7200 4800
-Wire Wire Line
-	7200 5100 7200 5450
+	7200 5250 7200 5450
 Wire Wire Line
 	7200 5450 8500 5450
 Wire Wire Line
@@ -1468,11 +1466,6 @@ F 3 "~" H 8800 4800 50  0001 C CNN
 	1    8800 4800
 	0    -1   -1   0   
 $EndComp
-Wire Wire Line
-	8650 4800 7200 4800
-Connection ~ 7200 4800
-Wire Wire Line
-	7200 4800 6700 4800
 Wire Wire Line
 	8950 4800 9150 4800
 Wire Wire Line
@@ -1762,4 +1755,8 @@ F 3 "~" H 3250 6700 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	3250 6850 3250 7050
+Wire Wire Line
+	6700 4800 8650 4800
+Wire Wire Line
+	7200 4750 7200 4950
 $EndSCHEMATC
