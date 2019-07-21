@@ -131,7 +131,10 @@ Las especificaciones de potencia planteadas en un prinicpio eran de alrededor de
 
 Por otro lado, el circuito consume aproximadamente 500mW cuando no hay senal a la entrada. 
 
+
 ![Potencia 0V][Potencia 0V]
+
+
 #### Eficiencia del circuito
 La eficiencia a la que llegamos, como era de esperarse, depende de la amplitud a la salida y al valor de la carga. Con la amplitud máxima a la salida y una carga de 8Ohms logramos una eficiencia de 77%. Sin embargo, como planteamos antes, los picos de señal en audio son de corta duración, por lo que en la mayor parte de la amplificación los valores serán menores a estos. De este modo se llega a una eficicencia aún mayor. Para una senal senoidal pura, se logra la eficiencia m'axima cuando la amplitud es maxima a la salida, donde se aprovecha la conmutacion entre las dos v'ias de ditinta tension.     
 
@@ -225,7 +228,8 @@ Para el caso de que se produzca un corto en la salida se aprecia que la corrient
 [Etapa Switches]: Imagenes/switch.png
 [Conmutación circuitos]: Imagenes/Conmutacion.PNG
 [Eficiencia amplitud maxima]: Imagenes/Amplitud_maxima.png
-[Potencia 1k]: Imagenes/Potencia_1k.png
-[Eficiencia 5Vp]: Imagenes/Eficiencia_5vp.png
+[Potencia 1k]: Imagenes/Potencia1k.PNG
+[Eficiencia 5Vp]: Imagenes/Potencia_5V.PNG
 [Eficiencia maxima]: Imagenes/Eficiencia_maxima.png
 [Circuito en bloques]: Imagenes/Bloques.png
+[Potencia 0V]: Imagenes/Potencia_0V.PNG
