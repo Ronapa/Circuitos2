@@ -223,7 +223,7 @@ Para el caso de que se produzca un corto en la salida se aprecia que la corrient
 [Etapa VAS]: Imagenes/Etapa_VAS.png
 [Etapa Salida]: Imagenes/Etapa_salida.png
 [Etapa Switches]: Imagenes/switch.png
-[Conmutación circuitos]: Imagenes/Conmutacion.png
+[Conmutación circuitos]: Imagenes/Conmutacion.PNG
 [Eficiencia amplitud maxima]: Imagenes/Amplitud_maxima.png
 [Potencia 1k]: Imagenes/Potencia_1k.png
 [Eficiencia 5Vp]: Imagenes/Eficiencia_5vp.png
