@@ -1064,7 +1064,7 @@ F 3 "" H 10350 3700 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	10350 3600 10350 3700
+	10350 3600 10350 3650
 $Comp
 L Device:Q_NPN_BCE Q16
 U 1 1 5D3833F0
@@ -1332,7 +1332,7 @@ F 3 "" H 10550 5100 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	10550 5100 9450 5100
+	10550 5100 10450 5100
 $Comp
 L power:GND #PWR0110
 U 1 1 5D437E68
@@ -1759,24 +1759,11 @@ Wire Wire Line
 	6700 4800 8650 4800
 Wire Wire Line
 	7200 4750 7200 4950
-$Comp
-L Connector:Conn_01x02_Female J3
-U 1 1 5D3536FE
-P 950 850
-F 0 "J3" H 978 826 50  0000 L CNN
-F 1 "Conn_01x02_Female" H 978 735 50  0000 L CNN
-F 2 "Connector:JWT_A3963_1x02_P3.96mm_Vertical" H 950 850 50  0001 C CNN
-F 3 "~" H 950 850 50  0001 C CNN
-	1    950  850 
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	950  850  950  750 
 Wire Wire Line
 	950  750  1650 750 
 Connection ~ 1650 750 
-Wire Wire Line
-	950  950  1050 950 
 Wire Wire Line
 	1050 950  1050 4250
 Wire Wire Line
@@ -1786,27 +1773,92 @@ Wire Wire Line
 Wire Wire Line
 	850  5150 950  5150
 Connection ~ 950  5150
-$Comp
-L Connector:Conn_01x02_Female J4
-U 1 1 5D375B30
-P 1000 7050
-F 0 "J4" H 1028 7026 50  0000 L CNN
-F 1 "Conn_01x02_Female" H 1028 6935 50  0000 L CNN
-F 2 "Connector:JWT_A3963_1x02_P3.96mm_Vertical" H 1000 7050 50  0001 C CNN
-F 3 "~" H 1000 7050 50  0001 C CNN
-	1    1000 7050
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	1000 7050 1200 7050
 Wire Wire Line
 	1200 7050 1200 5150
 Connection ~ 1200 5150
 Wire Wire Line
 	1200 5150 1300 5150
 Wire Wire Line
-	1000 7150 2250 7150
-Wire Wire Line
 	2250 7150 2250 7050
 Connection ~ 2250 7050
+$Comp
+L Connector:Screw_Terminal_01x02 J4
+U 1 1 5D35D2AD
+P 700 7150
+F 0 "J4" H 618 6825 50  0000 C CNN
+F 1 "Screw_Terminal_01x02" H 618 6916 50  0000 C CNN
+F 2 "Connector:JWT_A3963_1x02_P3.96mm_Vertical" H 700 7150 50  0001 C CNN
+F 3 "~" H 700 7150 50  0001 C CNN
+	1    700  7150
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	900  7050 1200 7050
+Wire Wire Line
+	900  7150 2250 7150
+$Comp
+L Connector:Screw_Terminal_01x02 J3
+U 1 1 5D3A1EE3
+P 600 950
+F 0 "J3" H 518 625 50  0000 C CNN
+F 1 "Screw_Terminal_01x02" H 518 716 50  0000 C CNN
+F 2 "Connector:JWT_A3963_1x02_P3.96mm_Vertical" H 600 950 50  0001 C CNN
+F 3 "~" H 600 950 50  0001 C CNN
+	1    600  950 
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	950  850  800  850 
+Wire Wire Line
+	800  950  1050 950 
+$Comp
+L Connector:Screw_Terminal_01x02 J5
+U 1 1 5D3DCE43
+P 10850 5100
+F 0 "J5" H 10930 5092 50  0000 L CNN
+F 1 "Screw_Terminal_01x02" H 10930 5001 50  0000 L CNN
+F 2 "Connector:JWT_A3963_1x02_P3.96mm_Vertical" H 10850 5100 50  0001 C CNN
+F 3 "~" H 10850 5100 50  0001 C CNN
+	1    10850 5100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Screw_Terminal_01x02 J6
+U 1 1 5D3DDFAC
+P 10900 1850
+F 0 "J6" H 10980 1842 50  0000 L CNN
+F 1 "Screw_Terminal_01x02" H 10980 1751 50  0000 L CNN
+F 2 "Connector:JWT_A3963_1x02_P3.96mm_Vertical" H 10900 1850 50  0001 C CNN
+F 3 "~" H 10900 1850 50  0001 C CNN
+	1    10900 1850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10550 1850 10700 1850
+Connection ~ 10550 1850
+Wire Wire Line
+	10700 1950 10600 1950
+Wire Wire Line
+	10600 3150 10800 3150
+Wire Wire Line
+	10800 3150 10800 3650
+Wire Wire Line
+	10600 1950 10600 3150
+Connection ~ 10350 3650
+Wire Wire Line
+	10350 3650 10350 3700
+Wire Wire Line
+	10650 5200 10450 5200
+Wire Wire Line
+	10450 5200 10450 5100
+Connection ~ 10450 5100
+Wire Wire Line
+	10450 5100 9450 5100
+Wire Wire Line
+	10650 5100 10650 3650
+Wire Wire Line
+	10350 3650 10650 3650
+Connection ~ 10650 3650
+Wire Wire Line
+	10650 3650 10800 3650
 $EndSCHEMATC
