@@ -1,120 +1,183 @@
-26516107204939
-Connector
-Banana_Jack_1Pin
-Single banana socket, footprint - 6mm drill
-banana socket
-0
-1
-1
-Connector
-Banana_Jack_2Pin
-Dual banana socket, footprint - 2 x 6mm drills
-banana socket
-0
-2
-2
-Connector
-Banana_Jack_3Pin
-Triple banana socket, footprint - 3 x 6mm drills
-banana socket
+40554046313714
+Potentiometer_SMD
+Potentiometer_ACP_CA6-VSMD_Vertical
+Potentiometer, vertical, ACP CA6-VSMD, http://www.acptechnologies.com/wp-content/uploads/2017/06/01-ACP-CA6.pdf
+Potentiometer vertical ACP CA6-VSMD
 0
 3
 3
-Connector
-CalTest_CT3151
-Right-angle standard banana jack, http://www.caltestelectronics.com/images/attachments/P315100rH_drawing.pdf
-banana jack horizontal
-0
-4
-1
-Connector
-CUI_PD-30
-3 pin connector, PD-30, http://www.cui.com/product/resource/pd-30.pdf
-connector 3-pin PD-30 power DIN
-0
-4
-4
-Connector
-DTF13-12Px
-http://www.te.com/usa-en/product-DTF13-12PA-G003.html
-DEUTSCH DT header 12 pin 
-0
-12
-12
-Connector
-FanPinHeader_1x03_P2.54mm_Vertical
-3-pin CPU fan Through hole pin header, see http://www.formfactors.org/developer%5Cspecs%5Crev1_2_public.pdf
-pin header 3-pin CPU fan
+Potentiometer_SMD
+Potentiometer_ACP_CA6-VSMD_Vertical_Hole
+Potentiometer, vertical, shaft hole, ACP CA6-VSMD, http://www.acptechnologies.com/wp-content/uploads/2017/06/01-ACP-CA6.pdf
+Potentiometer vertical hole ACP CA6-VSMD
 0
 3
 3
-Connector
-FanPinHeader_1x04_P2.54mm_Vertical
-4-pin CPU fan Through hole pin header, e.g. for Wieson part number 2366C888-007 Molex 47053-1000, Foxconn HF27040-M1, Tyco 1470947-1 or equivalent, see http://www.formfactors.org/developer%5Cspecs%5Crev1_2_public.pdf
-pin header 4-pin CPU fan
+Potentiometer_SMD
+Potentiometer_ACP_CA9-VSMD_Vertical
+Potentiometer, vertical, ACP CA9-VSMD, http://www.acptechnologies.com/wp-content/uploads/2017/05/02-ACP-CA9-CE9.pdf
+Potentiometer vertical ACP CA9-VSMD
 0
-4
-4
-Connector
-GB042-34S-H10
-http://www.lsmtron.com/pdf/Connector&Antenna_catalog.PDF
-34pin SMD connector 
+3
+3
+Potentiometer_SMD
+Potentiometer_ACP_CA9-VSMD_Vertical_Hole
+Potentiometer, vertical, shaft hole, ACP CA9-VSMD, http://www.acptechnologies.com/wp-content/uploads/2017/05/02-ACP-CA9-CE9.pdf
+Potentiometer vertical hole ACP CA9-VSMD
 0
-34
-34
-Connector
-IHI_B6A-PCB-45_Vertical
-https://lugsdirect.com/PDF_Webprint/B6A-PCB-45-XX(-X).pdf
-connector IHI B6A-PCB-45
+3
+3
+Potentiometer_SMD
+Potentiometer_ACP_CA14-VSMD_Vertical
+Potentiometer, vertical, ACP CA14-VSMD, http://www.acptechnologies.com/wp-content/uploads/2017/10/03-ACP-CA14-CE14.pdf
+Potentiometer vertical ACP CA14-VSMD
 0
-49
-1
-Connector
-JWT_A3963_1x02_P3.96mm_Vertical
-JWT A3963, 3.96mm pitch Pin head connector (http://www.jwt.com.tw/pro_pdf/A3963.pdf)
-connector JWT A3963 pinhead
+3
+3
+Potentiometer_SMD
+Potentiometer_ACP_CA14-VSMD_Vertical_Hole
+Potentiometer, vertical, shaft hole, ACP CA14-VSMD, http://www.acptechnologies.com/wp-content/uploads/2017/10/03-ACP-CA14-CE14.pdf
+Potentiometer vertical hole ACP CA14-VSMD
 0
-2
-2
-Connector
-NS-Tech_Grove_1x04_P2mm_Vertical
-https://statics3.seeedstudio.com/images/opl/datasheet/3470130P1.pdf
-Grove-1x04
+3
+3
+Potentiometer_SMD
+Potentiometer_Bourns_3214G_Horizontal
+Potentiometer, horizontal, Bourns 3214G, https://www.bourns.com/docs/Product-Datasheets/3214.pdf
+Potentiometer horizontal Bourns 3214G
 0
-4
-4
-Connector
-Tag-Connect_TC2030-IDC-FP_2x03_P1.27mm_Vertical
-Tag-Connect programming header; http://www.tag-connect.com/Materials/TC2030-IDC.pdf
-tag connect programming header pogo pins
+3
+3
+Potentiometer_SMD
+Potentiometer_Bourns_3214J_Horizontal
+Potentiometer, horizontal, Bourns 3214J, https://www.bourns.com/docs/Product-Datasheets/3214.pdf
+Potentiometer horizontal Bourns 3214J
 0
-6
-6
-Connector
-Tag-Connect_TC2030-IDC-NL_2x03_P1.27mm_Vertical
-Tag-Connect programming header; http://www.tag-connect.com/Materials/TC2030-IDC-NL.pdf
-tag connect programming header pogo pins
+3
+3
+Potentiometer_SMD
+Potentiometer_Bourns_3214W_Vertical
+Potentiometer, vertical, Bourns 3214W, https://www.bourns.com/docs/Product-Datasheets/3214.pdf
+Potentiometer vertical Bourns 3214W
 0
-6
-6
-Connector
-Tag-Connect_TC2050-IDC-FP_2x05_P1.27mm_Vertical
-Tag-Connect programming header; http://www.tag-connect.com/Materials/TC2050-IDC-430%20Datasheet.pdf
-tag connect programming header pogo pins
+3
+3
+Potentiometer_SMD
+Potentiometer_Bourns_3214X_Vertical
+Potentiometer, vertical, Bourns 3214X, https://www.bourns.com/docs/Product-Datasheets/3214.pdf
+Potentiometer vertical Bourns 3214X
 0
-10
-10
-Connector
-Tag-Connect_TC2050-IDC-NL_2x05_P1.27mm_Vertical
-Tag-Connect programming header; http://www.tag-connect.com/Materials/TC2050-IDC-NL%20Datasheet.pdf
-tag connect programming header pogo pins
+3
+3
+Potentiometer_SMD
+Potentiometer_Bourns_3224G_Horizontal
+Potentiometer, horizontal, Bourns 3224G, https://www.bourns.com/docs/Product-Datasheets/3224.pdf
+Potentiometer horizontal Bourns 3224G
 0
-10
-10
-Connector
-Tag-Connect_TC2070-IDC-FP_2x07_P1.27mm_Vertical
-Tag-Connect programming header; http://www.tag-connect.com/Materials/TC2070-IDC%20Datasheet.pdf
-tag connect programming header pogo pins
+3
+3
+Potentiometer_SMD
+Potentiometer_Bourns_3224J_Horizontal
+Potentiometer, horizontal, Bourns 3224J, https://www.bourns.com/docs/Product-Datasheets/3224.pdf
+Potentiometer horizontal Bourns 3224J
 0
-14
-14
+3
+3
+Potentiometer_SMD
+Potentiometer_Bourns_3224W_Vertical
+Potentiometer, vertical, Bourns 3224W, https://www.bourns.com/docs/Product-Datasheets/3224.pdf
+Potentiometer vertical Bourns 3224W
+0
+3
+3
+Potentiometer_SMD
+Potentiometer_Bourns_3224X_Vertical
+Potentiometer, vertical, Bourns 3224X, https://www.bourns.com/docs/Product-Datasheets/3224.pdf
+Potentiometer vertical Bourns 3224X
+0
+3
+3
+Potentiometer_SMD
+Potentiometer_Bourns_3269P_Horizontal
+Potentiometer, horizontal, Bourns 3269P, https://www.bourns.com/docs/Product-Datasheets/3269.pdf
+Potentiometer horizontal Bourns 3269P
+0
+3
+3
+Potentiometer_SMD
+Potentiometer_Bourns_3269W_Vertical
+Potentiometer, vertical, Bourns 3269W, https://www.bourns.com/docs/Product-Datasheets/3269.pdf
+Potentiometer vertical Bourns 3269W
+0
+3
+3
+Potentiometer_SMD
+Potentiometer_Bourns_3269X_Horizontal
+Potentiometer, horizontal, Bourns 3269X, https://www.bourns.com/docs/Product-Datasheets/3269.pdf
+Potentiometer horizontal Bourns 3269X
+0
+3
+3
+Potentiometer_SMD
+Potentiometer_Bourns_3314G_Vertical
+Potentiometer, vertical, Bourns 3314G, http://www.bourns.com/docs/Product-Datasheets/3314.pdf
+Potentiometer vertical Bourns 3314G
+0
+3
+3
+Potentiometer_SMD
+Potentiometer_Bourns_3314J_Vertical
+Potentiometer, vertical, Bourns 3314J, http://www.bourns.com/docs/Product-Datasheets/3314.pdf
+Potentiometer vertical Bourns 3314J
+0
+3
+3
+Potentiometer_SMD
+Potentiometer_Bourns_3314R-1_Vertical_Hole
+Potentiometer, vertical, shaft hole, Bourns 3314R-1, http://www.bourns.com/docs/Product-Datasheets/3314.pdf
+Potentiometer vertical hole Bourns 3314R-1
+0
+3
+3
+Potentiometer_SMD
+Potentiometer_Bourns_3314R-GM5_Vertical
+Potentiometer, vertical, Bourns 3314R-GM5, http://www.bourns.com/docs/Product-Datasheets/3314.pdf
+Potentiometer vertical Bourns 3314R-GM5
+0
+3
+3
+Potentiometer_SMD
+Potentiometer_Bourns_3314S_Horizontal
+Potentiometer, horizontal, Bourns 3314S, http://www.bourns.com/docs/Product-Datasheets/3314.pdf
+Potentiometer horizontal Bourns 3314S
+0
+3
+3
+Potentiometer_SMD
+Potentiometer_Bourns_PRS11S_Vertical
+Potentiometer, vertical, Bourns PRS11S, http://www.bourns.com/docs/Product-Datasheets/PRS11S.pdf
+Potentiometer vertical Bourns PRS11S
+0
+5
+5
+Potentiometer_SMD
+Potentiometer_Bourns_TC33X_Vertical
+Potentiometer, Bourns, TC33X, Vertical, https://www.bourns.com/pdfs/TC33.pdf
+Potentiometer Bourns TC33X Vertical
+0
+3
+3
+Potentiometer_SMD
+Potentiometer_Vishay_TS53YJ_Vertical
+Potentiometer, vertical, Vishay TS53YJ, https://www.vishay.com/docs/51008/ts53.pdf
+Potentiometer vertical Vishay TS53YJ
+0
+3
+3
+Potentiometer_SMD
+Potentiometer_Vishay_TS53YL_Vertical
+Potentiometer, vertical, Vishay TS53YL, https://www.vishay.com/docs/51008/ts53.pdf
+Potentiometer vertical Vishay TS53YL
+0
+3
+3
