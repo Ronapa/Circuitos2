@@ -58,7 +58,7 @@ El rol de la etapa de entrada es obtener la diferencia entre la entrada y la rea
 
 En una base del diferencial se encuentra la señal de entrada mientras que en la otra se encuentra la realimentación dada por R39 que se conecta a la salida. La elección del valor de R39 se basó en un compromiso de amplificación contra calidad de señal. Con valores más altos de resistencia la amplificación era mayor pero se reducía el ancho de banda y empeoraba la distorsión. Por otro lado, con valores menores de resistencia la realimentación era mayor y se lograba una menor distorsión pero también una menor amplificación. Finalmente se logró reducir la distorsión compensando al circuito y amplificamos para tener una señal máxima que no produjera recorte a la salida.
 
-La etapa de entrada esta cargada con la etapa del VAS, conectado mediante la base de Q23. Este transistor está polarizado con 721uA, lo del cual obtenemos una r_{pi}
+La etapa de entrada esta cargada con la etapa del VAS, conectado mediante la base de Q23. Este transistor está polarizado con 721uA, lo del cual obtenemos una r_{pi} = 100x26mV/721uA = 3600 Ohms, la cual está en serie con el paralelo de R42 y r_{pi} de Q6. Finalmente, la etapa de entrada está cargada con 4kOhms. 
 
 ![Etapa de entrada][Etapa Entrada]
 
