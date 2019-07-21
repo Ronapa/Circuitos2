@@ -53,7 +53,12 @@ Se optó hacer un circuito clase G porque con este logra una elevada eficiencia 
 ### Polarización y funcionamiento del circuito
 #### Etapa de entrada
 La etapa de entrada del circuito es un amplificador diferencial con carga activa, estabilizado mediante realimentación por emisor para las diferencias entre los _betas_ de los transistores. Cada rama del par diferencial está polarizada con 500uA, y por Q5 circula una corriente de 1mA. El capacitor C1 se encuentra para filtrar la tensión de continua de la entrada, de este modo el circuito solo amplfica tensiones de señal.  
+
+El rol de la etapa de entrada es obtener la diferencia entre la entrada y la realimentación y generar la señal error que se amplifica en el circuito hasta llegar a la salida. Esta es una etapa de amplificación de transconductancia, que según la entrada diferencial impone una corriente en la base de Q23, la etapa de VAS. Es primordial que en esta etapa no se distorsione la señal, y para esto tenemos poder linealizar respecto de nuestro punto de polarización. Con esto en mente justificamos la carga activa para asegurar corrientes iguales de polarización en el par. Si bien existen mejores modelos de fuentes espejo, el resultado obtenido con una fuente espejo simple hacía que no se justificara implementar modelos que dificultarían su implementación y aumentaría el costo del proyecto.  
+
 En una base del diferencial se encuentra la señal de entrada mientras que en la otra se encuentra la realimentación dada por R39 que se conecta a la salida. La elección del valor de R39 se basó en un compromiso de amplificación contra calidad de señal. Con valores más altos de resistencia la amplificación era mayor pero se reducía el ancho de banda y empeoraba la distorsión. Por otro lado, con valores menores de resistencia la realimentación era mayor y se lograba una menor distorsión pero también una menor amplificación. Finalmente se logró reducir la distorsión compensando al circuito y amplificamos para tener una señal máxima que no produjera recorte a la salida.
+
+La etapa de entrada esta cargada con la etapa del VAS, conectado mediante la base de Q23. Este transistor está polarizado con 721uA, lo del cual obtenemos una r_{pi}
 
 ![Etapa de entrada][Etapa Entrada]
 
