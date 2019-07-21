@@ -63,22 +63,22 @@ La etapa de entrada esta cargada con la etapa del VAS, conectado mediante la bas
 ![Etapa de entrada][Etapa Entrada]
 
 #### Etapa VAS y multiplicador de Vbe
-Una vez definida preliminarmente la etapa de salida se prosiguió con el VAS, o Voltage Amplifier Stage. Uno de los primeros inconvenientes encontrados fue que la etapa de salida consumía una corriente excesiva de la etapa de entrada, lo que causaba que los transistores de la segunda etapa entraran en corte y distorsionaran la señal. La solución planteada fue agregar un Darlinton a la salida del par diferencial, de este modo consumía menos corriente de la etapa de entrada. Por la malla del multiplicador de Vbe y por Q8 circula una corriente de 43mA de polarización. En señal, esta corriente no varía mucho, ya que la corriente que entrega la señal a etapa de salida está dada por los dos seguidores formados por Q25-Q26 y Q24-Q27.  
+Una vez definida preliminarmente la etapa de salida se prosiguió con el VAS, o Voltage Amplifier Stage. Uno de los primeros inconvenientes encontrados fue que la etapa de salida consumía una corriente excesiva de la etapa de entrada, lo que causaba que los transistores de la segunda etapa entraran en corte y distorsionaran la señal. La solución planteada fue agregar un Darlinton a la salida del par diferencial, de este modo consumía menos corriente de la etapa de entrada. Por la malla del multiplicador de Vbe y por Q8 circula una corriente de 4.4mA de polarización. En señal, esta corriente varía en menos de 20uA, ya que la corriente que entrega la señal a la  etapa de salida está dada por los dos seguidores formados por Q25-Q26 y Q24-Q27. 
 
 
 ![Etapa de VAS][Etapa VAS]
 
-La tensión a la salida de esta etapa, tiene un desnivel de 2Vbe por la caida en los transistores de los seguidores, sin embargo, ajustando el valor de la resistencia R12 logramos que el multiplicador de Vbe equipare este desnivel.
+La tensión a la salida de esta etapa, tiene un desnivel de 2Vbe por la caida en los transistores de los seguidores, sin embargo, ajustando el valor de la resistencia R12 logramos que el multiplicador de Vbe equipare este desnivel. Esto se ve en la siguiente imagen, donde se aprecia que esta etapa amplifica tensión y copia la señal a las dos ramas de la salida, con la diferencia de los Vbe necesarios para obtener una señal sin distorsión. 
 
 #### Etapa de salida
 La etapa de salida, como se ve en la imagen, es simétrica para el camino de señal del semicilco positivo y del negativo. A continuación se hará un analisis del camino de señal positiva de esta etapa siendo los resultados análogos para el camino de señal negativa.  
 Primero, Q11 y Q12 funcionan como llaves, controladas por los circuitos de conmutación. Q11 permanece sin conducir hasta que se lo indica la señal _S\_HIGH_. Una vez que Q11 conduce la tensión en su colector es mayor a la del emisor de Q12, por lo que Q12 entra en corto. De este modo solo conduce una rama a la vez. Esta topología de tener los transistores en paralelo mejora la efciencia, ya que no se tiene conduciendo constantemente al transistor de baja tensión como en un amplificador clase G serie.   
 Para la salida de tensión alta se planteó un Darlington, de manera de reducir la corriente consumida por la etapa de salida, lo que producía que los transistores de etapas anteriores distorsionaran la señal. Esto se debe a que la corriente de colector de estos transistores es grande y su _beta_ es chico, del orden de 50, ya que se trata de transistores de potencia. Planteando el darlington se resuelve esta problemática.   
-Para la entrada sin señal se obtuvo un valor de -3mV a la salida el cual es más que aceptable.
+Para la entrada sin señal se obtuvo un valor de -1.6mV a la salida, lo cual es más que aceptable.
 
 Una vez determinada la etapa de salida y con un resultado dentro de los márgenes esperados se agregó una protección de sobrecorriente para proteger a los transistores de corrientes elevadas. Esta protección sensa la tensión sobre el resistor R15 y al superar el valor de aproximadamente 0.7V se enciende el transistor Q29, tomande corriente de la base de la etapa de salida, disminuyendo la corriente de base y por lo tanto la que se dirige a la carga. Como el amplificador esta diseñado para cargas de 4 y 8 Omhs se buscó limitar la corriente a alrededor de 8A. Además el transistor se encuentra polarizado con un LED lo que permite tener un indicador visual de si la protección esta siendo activada. Como se mencionó anteriormente, la etapa del semiciclo negativo fuinciona de manera análoga.
 
-Si bien esta protección resulta útil para proteger los transistores frente a una carga de bajo valor, como por ejemplo 2 Omhs, no resulta del todo eficiente para un corto a la salida. El objetivo es que si se coloca un amplificador de una impedancia incorrecta, o en su defecto 2 amplificadores de 4 Omhs en paralelo, el amplificador no trate de entregar toda la potencia a la carga quemando la etapa de salida. Por como se diseño la protección, frente a un corto en la salida se produce una limitación a una corriente de 16A, lo cual es destructivo para el transistor. Sin embargo, según la hoja de datos el transistor puede tolerar picos de hasta 30A por menos de 1ms. Es por esto que además se colocará en la alimentación un fusible de manera de que llegado el caso de que se produzca un corto a la salida el amplificador no se destruya. Una mejora posible sería plantear un circuito con un rele que habra el circuito de manera de no tener que cambiar un fusible.
+Si bien esta protección resulta útil para proteger los transistores frente a una carga de bajo valor, como por ejemplo 2 Omhs, no resulta del todo eficiente para un corto a la salida. El objetivo es que si se coloca un amplificador de una impedancia incorrecta, o en su defecto 2 amplificadores de 4 Omhs en paralelo, el amplificador no trate de entregar toda la potencia a la carga quemando la etapa de salida. Por como se diseño la protección, frente a un corto en la salida se produce una limitación a una corriente de 16A, lo cual es destructivo para el transistor. Sin embargo, según la hoja de datos el transistor puede tolerar picos de hasta 30A por menos de 1ms. Es por esto que además se colocará en la alimentación un fusible de manera de que llegado el caso de que se produzca un corto a la salida el amplificador no se destruya. Una mejora posible sería plantear un circuito con un rele que abra el circuito de manera de no tener que cambiar un fusible.
 
 ![Etapa de Salida][Etapa salida]
 
@@ -125,17 +125,19 @@ En resumen, la respuesta en frecuencia resulta adecuada para la aplicación que 
 
 ### Potencia y eficiencia
 #### Potencia en la carga
-Las especificaciones de potencia planteadas en un prinicpio eran de alrededor de 100Watts sobre una carga de 8Ohms. Para lograr esto tendríamos que  llegar a una excursión de 28Vp sobre la carga. Luego del desarrollo de las etapas y por medio de las simulaciones, la amplitud máxima a la salida previo al recorte de la señal que se logró fue de 24V. Esto equivale a una potencia de 72Watts. Si bien no es lo que nos planteamos en un principio consideramos que es un valor adecuado para un amplificador de audio, más aún teniendo en cuenta que una diferencia del 22% en el valor de la potencia equivale a 1dB de diferencia, por lo que al oído esto no será tan perceptible como uno creería.  
+Las especificaciones de potencia planteadas en un prinicpio eran de alrededor de 50Watts sobre una carga de 8Ohms. Para lograr esto tendríamos que  llegar a una excursión de 28Vp sobre la carga. Luego del desarrollo de las etapas y por medio de las simulaciones, la amplitud máxima a la salida previo al recorte de la señal que se logró fue de 24V. Esto equivale a una potencia de 36Watts. Si bien no es lo que nos planteamos en un principio consideramos que es un valor adecuado para un amplificador de audio, más aún teniendo en cuenta que una diferencia del 22% en el valor de la potencia equivale a 1dB de diferencia, por lo que al oído esto no será tan perceptible como uno creería.  
 
 ![Potencia 1k][Potencia 1k]
+
+Por otro lado, el circuito consume aproximadamente 500mW cuando no hay senal a la entrada. 
+
+![Potencia 0V][Potencia 0V]
 #### Eficiencia del circuito
-La eficiencia a la que llegamos, como era de esperarse, depende de la amplitud a la salida. Con la amplitud máxima a la salida logramos una eficiencia de 75%. Sin embargo, como planteamos antes, los picos de señal en audio son de corta duración, por lo que en la mayor parte de la amplificación los valores serán menores a estos. De este modo se llega a una eficicencia aún mayor.    
+La eficiencia a la que llegamos, como era de esperarse, depende de la amplitud a la salida y al valor de la carga. Con la amplitud máxima a la salida y una carga de 8Ohms logramos una eficiencia de 77%. Sin embargo, como planteamos antes, los picos de señal en audio son de corta duración, por lo que en la mayor parte de la amplificación los valores serán menores a estos. De este modo se llega a una eficicencia aún mayor. Para una senal senoidal pura, se logra la eficiencia m'axima cuando la amplitud es maxima a la salida, donde se aprovecha la conmutacion entre las dos v'ias de ditinta tension.     
 
 ![Eficiencia amplitud maxima][Eficiencia amplitud maxima]  
 
-La eficiencia máxima se logra con una señal de salida de 18Vp, y esta vale 83%, y se muestra a continuación.
 
-![Eficiencia maxima][Eficiencia maxima]
 
 Por otro lado la eficiencia con la salida en un valor más bajo empeora. A modo de ejemplo se simuló la eficiencia con la salida a 5Vp, que se muestra a continuación.
 
