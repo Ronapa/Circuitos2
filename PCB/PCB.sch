@@ -1492,7 +1492,7 @@ Connection ~ 1300 4550
 Wire Wire Line
 	950  4650 950  5150
 Wire Wire Line
-	950  5150 1300 5150
+	950  5150 1200 5150
 Connection ~ 1300 5150
 Wire Wire Line
 	1300 5150 1300 5050
@@ -1759,4 +1759,54 @@ Wire Wire Line
 	6700 4800 8650 4800
 Wire Wire Line
 	7200 4750 7200 4950
+$Comp
+L Connector:Conn_01x02_Female J3
+U 1 1 5D3536FE
+P 950 850
+F 0 "J3" H 978 826 50  0000 L CNN
+F 1 "Conn_01x02_Female" H 978 735 50  0000 L CNN
+F 2 "Connector:JWT_A3963_1x02_P3.96mm_Vertical" H 950 850 50  0001 C CNN
+F 3 "~" H 950 850 50  0001 C CNN
+	1    950  850 
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	950  850  950  750 
+Wire Wire Line
+	950  750  1650 750 
+Connection ~ 1650 750 
+Wire Wire Line
+	950  950  1050 950 
+Wire Wire Line
+	1050 950  1050 4250
+Wire Wire Line
+	1050 4250 850  4250
+Wire Wire Line
+	850  4250 850  5150
+Wire Wire Line
+	850  5150 950  5150
+Connection ~ 950  5150
+$Comp
+L Connector:Conn_01x02_Female J4
+U 1 1 5D375B30
+P 1000 7050
+F 0 "J4" H 1028 7026 50  0000 L CNN
+F 1 "Conn_01x02_Female" H 1028 6935 50  0000 L CNN
+F 2 "Connector:JWT_A3963_1x02_P3.96mm_Vertical" H 1000 7050 50  0001 C CNN
+F 3 "~" H 1000 7050 50  0001 C CNN
+	1    1000 7050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1000 7050 1200 7050
+Wire Wire Line
+	1200 7050 1200 5150
+Connection ~ 1200 5150
+Wire Wire Line
+	1200 5150 1300 5150
+Wire Wire Line
+	1000 7150 2250 7150
+Wire Wire Line
+	2250 7150 2250 7050
+Connection ~ 2250 7050
 $EndSCHEMATC
