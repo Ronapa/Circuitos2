@@ -145,7 +145,7 @@ Por otro lado la eficiencia con la salida en un valor más bajo empeora. A modo 
 Las tres imágenes anteriores fueron simuladas con una señal de entrada senoidal de 1kHz. Fueron simuladas otras frecuencias y los resultados fueron equivalentes. 
 
 #### Potencia disipada en los transistores
-Según la hoja de datos de los transistores de potencia, estos pueden aguantar hasta 150 grados centígrados antes de quemarse.
+Según la hoja de datos de los transistores de potencia, estos pueden aguantar hasta 150 grados centígrados antes de quemarse, y una potencia máxima de 150W. Con una temperatura ambiente de 25°C, obtenemos una resistencia térmica R_{t}  = (Tj_{max}-Tamb)/P_{max} = (150°C-25°C)/150W = 0.833°C/W.
 
 ### Ensayos variando la carga. 
 
