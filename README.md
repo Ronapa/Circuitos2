@@ -189,9 +189,9 @@ Para obtener la impedancia de entrada del amplificador se decidió realizar un b
 
 ![Impedancia de entrada](/Imagenes/Rin_frecuencia.PNG)
 
-Para el caso de la impedancia de salida, el método fue muy similar al de la impedancia de entrada. Se simuló para distintos casos en los cuales se conectaron cargas de 4 u 8 Omhs y también con el amplificador sin carga. Debido a que el amplificador se encuentra realimentado, no hubo grandes variaciones. En este caso la impedancia no mantiene un valor constante sino que decae con la frecuencia, desde los 5mOmhs a 20Hz hasta unos 5uOmhs para 20kHz.
+Para el caso de la impedancia de salida, el método fue muy similar al de la impedancia de entrada, solo que esta vez se conectó una fuente de corriente en paralelo con la carga. Se simuló para distintos casos en los cuales se conectaron cargas de 4 u 8 Omhs y también con el amplificador sin carga. Debido a que el amplificador se encuentra realimentado, no hubo grandes variaciones. En este caso la impedancia mantiene un valor de aproximadamente 10 mOhms entre los 20Hz y 1kHz, y luego aumenta a 340mOhms para los 20 kHz.
 
-![Impedancia de entrada](/Imagenes/Rout_frecuencia.PNG)
+![Impedancia de salida](/Imagenes/Rout_frecuencia.PNG)
 
 #### Limitación de corriente y protecciones
 
@@ -208,10 +208,19 @@ Para el caso de que se produzca un corto en la salida se aprecia que la corrient
 
 #### Rechazo de ruido de la fuente
 
+Para el rechazo de ruido de la fuente se agregaron en serie con cada una de las fuentes una tensión de riple de 1V para las fuentes de 30V y 0.5V para el caso de las fuentes de 15. Este sería un caso muy desfavorable debido a que una variación en la tensión de de alimentación de la fuente switching de 1V se reflejaría como un ripple mucho menor a la salida. Sin embargo, las simulaciones para estos casos mostraron un ripple menor a 1.6mV, lo cual para valores de señal se podría considerar despreciable. Especialmente si la señal hiciera trabajar al amplificador solo con la fuente de baja tensión por lo mencionado anteriormente.
+
 #### Limitaciones sobre los valores de alimentación
 
+HABRIA QUE VER QUE PASA CON LOS VCEMAX
 
 ### Diseño del PCB
+
+mañana subo algunas imagenes
+
+### Implementación de la etapa de entrada
+
+Dejo las fotos en el git y mañana veo si lo puedo adelantar en el laburo.
   
   
 ## Construcción
