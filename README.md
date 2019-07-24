@@ -145,7 +145,13 @@ Por otro lado la eficiencia con la salida en un valor más bajo empeora. A modo 
 Las tres imágenes anteriores fueron simuladas con una señal de entrada senoidal de 1kHz. Fueron simuladas otras frecuencias y los resultados fueron equivalentes. 
 
 #### Potencia disipada en los transistores
-Según la hoja de datos de los transistores de potencia, estos pueden aguantar hasta 150 grados centígrados antes de quemarse, y una potencia máxima de colector de 150W. Con una temperatura ambiente de 25°C, obtenemos una resistencia térmica de juntura a carcasa R_{t}  = (Tj_{max}-Tamb)/P_{max} = (150°C-25°C)/150W = 0.833°C/W. Para asegurar de no quemar los transistores tenemos que disipar la potencia, para esto debemos agregar disipadores térmicos que logren disipar la potencia necesaria en todos los casos. El caso crítico, cuando más potencia disipan los transistores, es cuando se limita la corriente. De este caso obtuvimos la siguiente imagen: 
+Según la hoja de datos de los transistores de potencia, estos pueden aguantar hasta 150 grados centígrados antes de quemarse, y una potencia máxima de colector de 150W. Con una temperatura ambiente de 25°C, obtenemos una resistencia térmica de juntura a carcasa R_{t}  = (Tj_{max}-Tamb)/P_{max} = (150°C-25°C)/150W = 0.833°C/W. Para asegurar de no quemar los transistores tenemos que disipar la potencia, para esto debemos agregar disipadores térmicos que logren disipar la potencia necesaria en todos los casos. El caso crítico, cuando más potencia disipan los transistores, es cuando se limita la corriente. De este caso obtuvimos las siguientes imagenes. Primero la disipación en cada transistor de potencia, 
+
+![potencia max2][potencia max2]
+
+y luego la disipación total por todos los transistores. 
+
+![potencia max1][potencia max1]
 
 ### Ensayos variando la carga. 
 
@@ -239,3 +245,5 @@ Dejo las fotos en el git y mañana veo si lo puedo adelantar en el laburo.
 [Eficiencia maxima]: Imagenes/Eficiencia_maxima.png
 [Circuito en bloques]: Imagenes/Bloques.png
 [Potencia 0V]: Imagenes/Potencia_0V.PNG
+[potencia max1]: Imagenes/Potencia_max1.PNG
+[potencia max2]: Imagenes/Potencia_max2.PNG
