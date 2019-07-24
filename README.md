@@ -153,6 +153,7 @@ y luego la disipación total por todos los transistores.
 
 ![potencia max1][potencia max1]
 
+Tenemos, entonces, para el caso más extremo los transistores disipan 106Watts de potencia. Con este valor, para lograr obtener una temperatura menor a 150°C en la juntura, se necesita una resistencia térmica de carcasa a ambiente menor a R_{ca} = (150°C- 106W\*0.833°C/W - 25°C)/106W = 0.35°C/W.  Este valor incluye la pasta térmica, la arandela dielectrica y el disipador.
 ### Ensayos variando la carga. 
 
 ### Mediciones sobres el amplificador
