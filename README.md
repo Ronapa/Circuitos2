@@ -219,7 +219,13 @@ Para el rechazo de ruido de la fuente se agregaron en serie con cada una de las 
 
 #### Limitaciones sobre los valores de alimentación
 
-HABRIA QUE VER QUE PASA CON LOS VCEMAX
+En las simulaciones variamos los valores de la alimentación del circuito, para conocer lo límites del funcionamiento de nuestro amplificador. Por un lado, para la alimentación de ±15V encontramos que el funcionamiento del circuito no varía de manera significativa cuando esta varía. Si bien esta alimentación es la que alimenta a los transistores de potencia y aporta a la polarización de los ciruitos switches, cuando cambia este valor lo único que produce es que se cambie la tensión a la que conmutan los transistores de potencia. El problema de bajar mucho o subir mucho el valor de esta tensión produce que el circuito funcione más como un amplificador Clase B, bajando la eficiencia. 
+
+Por otro lado, cambiando los valores de las fuentes de ±30V sí afecta a la polarización de nuestro circuito, y el circuito deja de comportarse como especificado. Por un lado, bajando los valores de estas fuentes produce que entren en corte los transistores de potencia. En las simulaciones, con las fuentes en ±27.5V se producía un recorte a la salida antes de llegar a los 24V, lo cual distorsionaba la señal. Si bien no es un comportamiento destructivo, causa que el amplificador no cumpla las especificaciones de amplitud máxima a la salida, pero puede funcionar si a la entrada se baja la amplitud de la señal. Reduciendo aún más el valor de esta tensión sigue andando el circuito, cortando la señal a la salida siempre en aproximadamente 3V antes de llegar a el valor de esta tensión.
+
+Por otro lado, al incrementar el valor de estas fuentes se corre el riesgo de que alguno de los componentes del circuito se quemen.
+
+HABRIA QUE VER QUE PASA CON LOS VCEMAX <- ???
 
 ### Diseño del PCB
 
