@@ -245,6 +245,8 @@ Adicionalmente se agregó un render de como podría verse la placa una vez const
 
 ![PCB_render](/Imagenes/PCB_render.PNG)
 
+Una consideración importante que no se evidencia en las imágenes del PCB es que el transistor del multiplicador de Vbe se encontrará conectado por cables y acoplado térmicamente a los transistores de salida uniendoló al mismo disipador. Esta desición se tomó debido a que se consideró que no se justificaba complicar el diseño del PCB para acercar este transistor a la etapa de salida.
+
 ### Implementación de la etapa de entrada
 
 Una vez finalizado el diseño del amplificador se realizó la implementación de la etapa de entrada y el VAS en una placa expertimental para hacer una validación parcial del diseño. Para ello se compraron los componentes equivalentes a los SMD en su versión discreta y se analizó la polarización del circuito. A continuación se presenta la imagen de la placa experimental sobre las que se realizaron algunas mediciones.
