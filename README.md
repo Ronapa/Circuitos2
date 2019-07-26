@@ -32,7 +32,7 @@
 * [Construcción](https://github.com/Ronapa/Circuitos2/#construcción)
 
 ### Resumen
-El objetivo de este trabajo fue diseñar un amplificador de audio clase G con la etapa de salida conmutada en paralelo. La principal motivación fué la de mejorar la eficiencia del amplificador ya que el amplificador clase G clásico, posee los dos transistores de ssalida en serie, lo que provoca que cuando está activada la etapa del riel de mayor tensión, la señal también debe circular a través del otro transistor, generando pérdidas de potencia y excursión. Se puso como objetivo diseñar un circuito que amplifica una señal de audio estándar 1VRMS a la máxima tensión posible para cargas de 4 y 8 Ohms. Otra especificación fue la de la potencia, la cual se estimó alrededor de los 75W. El amplificador es alimentado con una fuente de ±30V y una de ±15V. Estos valores de tensión se logran con una fuente de laboratorio de ±30V y una fuente switching que otorga los valores de ±15 necesarios. El circuito cuenta con un LED de encendido, y una protección por sobrecorriente. 
+El objetivo de este trabajo fue diseñar un amplificador de audio clase G con la etapa de salida conmutada en paralelo. La principal motivación fué la de mejorar la eficiencia del amplificador ya que el amplificador clase G clásico, posee los dos transistores de salida en serie, lo que provoca que cuando está activada la etapa del riel de mayor tensión, la señal también debe circular a través del otro transistor, generando pérdidas de potencia y excursión. Se puso como objetivo diseñar un circuito que amplifica una señal de audio estándar 1VRMS a la máxima tensión posible para cargas de 4 y 8 Ohms. Otra especificación fue la de la potencia, la cual se estimó alrededor de los 45-50W. El amplificador es alimentado con una fuente de ±30V y una de ±15V. Estos valores de tensión se logran con una fuente de laboratorio de ±30V y una fuente switching que otorga los valores de ±15 necesarios. El circuito cuenta con un LED de encendido, y una protección por sobrecorriente. 
 
 ## Diseño
 El circuito fue diseñado en base al amplificador [Kenwood KA-7X](http://materias.fi.uba.ar/6610/Manuales%20de%20servicio%20tecnico/Clase%20G%20y%20H/Kenwood/KA-7X/hfe_kenwood_ka_7x_service.pdf). Este es un amplificador _stereo_ clase G con etapa de salida en paralelo. Nuestro amplificador, en cambio, es de tipo _mono_. El circuito diseñado está basado en etapas definidas por el circuito en bloques de la siguiente figura.
@@ -225,15 +225,33 @@ Por otro lado, cambiando los valores de las fuentes de ±30V sí afecta a la pol
 
 Por otro lado, al incrementar el valor de estas fuentes se corre el riesgo de que alguno de los componentes del circuito se quemen.
 
-HABRIA QUE VER QUE PASA CON LOS VCEMAX <- ???
-
 ### Diseño del PCB
 
 mañana subo algunas imagenes
 
 ### Implementación de la etapa de entrada
 
-Dejo las fotos en el git y mañana veo si lo puedo adelantar en el laburo.
+Una vez finalizado el diseño del amplificador se realizó la implementación de la etapa de entrada y el VAS en una placa expertimental para hacer una validación parcial del diseño. Para ello se compraron los componentes equivalentes a los SMD en su versión discreta y se analizó la polarización del circuito. A continuación se presenta la imagen de la placa experimental sobre las que se realizaron algunas mediciones.
+
+![Etapa_entrada_PCB](/Imagenes/etapa_entrada_PCB.PNG)
+
+Como primera medición se verificó la tensión en algunos nodos del par diferencial para verificar su funcionamiento y se obtuvieron lecturas dentro de lo esperado. Luego se midieron las tensiones sobre los resistores que se encontraban en la etapa VAS. A partir de los valores de tensión y conociendo el valor de los resistores se estimó la corriente de polarización. Según la simulación esta corriente era de alrededor de 45mA.
+
+La imagen a continuación muestra una tensión de 470mV, lo cual teniendo en cuenta que el resistor era de 10 Omhs, la corriente de polarización resultaba ser de 47mA. También se corroboró esto con la medición de la tensión sobre la resistencia de emisor de la fuente de corriente del VAS, la cual arrojó un valor de 2.27V. En este caso la resistencia era de 47 Omhs por lo que la corriente también rondaba los 48mA.
+
+![Corriente_VAS](/Imagenes/Etapa_entrada_medicion_corrienteVAS.PNG)
+
+![Corriente_VAS2](/Imagenes/Etapa_entrada_medicion_corrienteVAS2.PNG)
+
+Una vez verificada la polarización se colocó un generador de señales a la entrada del amplificador para verificar el valor de la ganancia total. A partir del analisis de realimentación se obtuvo que la ganancia del amplificador era de 16.66, por lo que frente a la señal de entrada de 200mV pico se debería obtener una tensión a la salida de 3.35V. Esto se verificó mediante las mediciones a continuación.
+
+![Corriente_VAS](/Imagenes/Etapa_entrada_medicion_Vin.PNG)
+
+![Corriente_VAS2](/Imagenes/Etapa_entrada_medicion_Vout.PNG)
+
+Si bien en la medición el valor obtenido es de alrededor de 3.5V, se verificó que el funcionamiento de la etapa de entrada y VAS era acorde a lo esperado.
+
+La implementación de esta etapa de entrada nos permitió percatarnos de un error en el dimensionamiento de los transistores del VAS, los cuales no eran capaces de disipar lo necesario. Esto finalmente se solucionó para el modelo definitivo disminuyendo la corriente de polarización de esta etapa, ya que la diferencia de distorsión no justificaba mantener una corriente de polarización de 45mA. Esta corriente de polarización se modificó mediante el reemplazo del resistor de emisor de la fuente de corriente por uno de 470 Omhs.
   
   
 ## Construcción
