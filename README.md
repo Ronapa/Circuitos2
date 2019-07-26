@@ -174,9 +174,7 @@ R_{ca} = (150°C- 30W\*0.833°C/W - 40°C)/30W = 2.83°C/W  .
 Este valor incluye la pasta térmica, la arandela dieléctrica y el disipador. De acuerdo a esto, tomando una resistencia térmica de la pasta de [0,48°C/W](http://disipadores.com/accesorios.php#) obtenemos que el valor de los disipadores debe ser menor a [2,35°C/W](http://disipadores.com/media_potencia.php).  
 
 
-### Ensayos variando la carga. 
-
-### Mediciones sobres el amplificador
+## Mediciones sobres el amplificador
 
 ### Distorsión
 
@@ -245,6 +243,8 @@ Por otro lado, cambiando los valores de las fuentes de ±30V sí afecta a la pol
 
 Por otro lado, al incrementar el valor de estas fuentes se corre el riesgo de que alguno de los componentes del circuito se queme. Los transistores que más se exigen, fuera de los de potencia, son los de los pares Darlington que entregan la señal a los de mayor potencia, y los de los seguidores, que unen la etapa de salida con la del VAS. Los transistores que forman parte de los Darlington de la etapa de salida son los MJE340, que soportan potencias de hasta 20W, mucho mayor que las potencias que entregan estos transistores. Los de la etapa de seguidor, los MMBTA06/56, en cambio, están elegidos para soportar la potencia debida cuando se los polariza con 30V. Estos transistores pueden disipar hasta 310mW, y con las fuentes en 30V disipan 150mW. Sin embargo, con las fuentes en ±40V estos disipan 250mW. 
 Por otro lado, viendo a los transistores de potencia, vemos que estos son mucho más sensibles a los cambios en los valores de la fuente. Cambiando los valores de las fuentes a ±40V se ve que estos transistores disipan casi el doble (180%), para lo cual, si bien funcionaría, habría que cambiar los disipadores para evitar que se queme. Por estas razones, proponemos que la fuentes funcionen en ±30V, con una desviación menor a los 2V para evitar problemas de distorsión o peor, que se queme el circuito. 
+
+
 ### Diseño del PCB
 
 Para el diseño del PCB se debió pasar el esquemático realizado en LTSpice a el programa usado para diseñar el PCB; en este caso el Kicad. En este diseño se agregaron los conectores para las fuentes de alimentación así como también para lo bornes de salida para el parlante.
@@ -266,6 +266,8 @@ Adicionalmente se agregó un render de como podría verse la placa una vez const
 ![PCB_render](/Imagenes/PCB_render.PNG)
 
 Una consideración importante que no se evidencia en las imágenes del PCB es que el transistor del multiplicador de Vbe se encontrará conectado por cables y acoplado térmicamente a los transistores de salida uniendoló al mismo disipador. Esta desición se tomó debido a que se consideró que no se justificaba complicar el diseño del PCB para acercar este transistor a la etapa de salida.
+
+## Construcción
 
 ### Implementación de la etapa de entrada
 
@@ -292,7 +294,7 @@ Si bien en la medición el valor obtenido es de alrededor de 3.5V, se verificó 
 La implementación de esta etapa de entrada nos permitió percatarnos de un error en el dimensionamiento de los transistores del VAS, los cuales no eran capaces de disipar lo necesario. Esto finalmente se solucionó para el modelo definitivo disminuyendo la corriente de polarización de esta etapa, ya que la diferencia de distorsión no justificaba mantener una corriente de polarización de 45mA. Esta corriente de polarización se modificó mediante el reemplazo del resistor de emisor de la fuente de corriente por uno de 470 Omhs.
   
   
-## Construcción
+
 
 
 [kenwood]: Imagenes/kenwood.png
@@ -310,3 +312,4 @@ La implementación de esta etapa de entrada nos permitió percatarnos de un erro
 [Potencia 0V]: Imagenes/Potencia_0V.PNG
 [potencia max1]: Imagenes/Potencia_max1.PNG
 [potencia max2]: Imagenes/Potencia_max2.PNG
+[Realimentador]: Imagenes/Realimentador.PNG
