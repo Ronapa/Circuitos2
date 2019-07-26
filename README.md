@@ -227,7 +227,11 @@ Por otro lado, al incrementar el valor de estas fuentes se corre el riesgo de qu
 
 ### Diseño del PCB
 
+![PCB_diseño](/Imagenes/PCB_diseño.png)
 
+![PCB](/Imagenes/PCB.PNG)
+
+![PCB_render](/Imagenes/PCB_render.PNG)
 
 ### Implementación de la etapa de entrada
 
