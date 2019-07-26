@@ -227,9 +227,21 @@ Por otro lado, al incrementar el valor de estas fuentes se corre el riesgo de qu
 
 ### Diseño del PCB
 
+Para el diseño del PCB se debió pasar el esquemático realizado en LTSpice a el programa usado para diseñar el PCB; en este caso el Kicad. En este diseño se agregaron los conectores para las fuentes de alimentación así como también para lo bornes de salida para el parlante.
+
 ![PCB_diseño](/Imagenes/PCB_diseño.png)
 
+Una vez importandos todos los componentes y habiendo elegido los modelos fisicos correspondientes se buscó la posición adecuada para cada uno de los mismos para el posterior ruteo. Se comenzó por ubicar los transistores de la etapa de potencia en un borde de la placa de manera de poder conectar el disipador sobre el borde de la placa. Posteriormente se ubicaron las resistencias para el envalamiento térmico y las limitaciones de corriente para ambos semiciclos. Luego se busco armar un subconjunto con los subcircuitos encargados de realizar la conmutación, así como también montar en forma cercana la etapa sobre la que actuaban los conmutadores o switches. Finalmente se armó el par diferencial junto con el VAS y se buscó comprimir lo más posible el tamaño del PCB.
+
+La desición de poner las borneras sobre la cara inferior de la placa se basó en que en esa zona se encontraría el disipador de los transistores, por lo que si se hubieran querido posicionar sobre la cara superior se deberían haber posicionado cerca de la etapa de entrada. Esto hubiera traído como consecuencia mayores pérdidas debido a que la etapa de potencia se encontraría más alejada de la alimentación. Además se tendrían lineas por la que circularía alta corriente sobre las pistas de señal que se encuentran en la cara contraria, lo cual no es lo más recomendable. También se realizó un esfuerzo por mantener la mayor parte de las pistas de señal de un solo lado, manteniendo las pistas de potencia del otro lado. En relación a esto, se debieron trazar pistas por entre algunos de los transistores SMD, especialmente en la etapa del semiciclo negativo, lo cual compromete en cierta medida el diseño debido a que el ancho de las pistas es de 0.3mm. Si bien las placas que se pueden fabricar en la Facultad admiten pistas de hasta 12mills de ancho con la misma distancia de separación, se estaría en el límite de esta cota.
+
+Otro aspecto fue el del diseño fue el ancho de las pistas encargadas de transportar la corriente para la etapa de salida, así como también las pistas hacia los bornes de salida. Mediante la calculadora provista por Kicad, se buscó un valor acorde para las pistas de potencia. En los casos que fuera posible se podrían utilizar pistas más anchas pero el objetivo era obtener una cota mínima. Teniendo en cuenta que la máxima corriente que puede circular es de alrededor de 7 amperes en condiciones normales de operación, se tomó como un valor conservador una corriente pico de 8A. Teniendo en cuenta que los cálculos de potencia se asumen para una señal senoidal y aplicando el factor para obtener el valor eficaz, la corriente eficaz sería de 5.7A. Para una variación térmica de 12°C se obtuvo un espesor de pista de 3mm, el cual fue el valor utilizado. 
+
+A continuación se muestra una imágen del PCB diseñado, con las pistas en rojo correspondientes a la etapa de entrada, VAS y la etapa de salida de baja potencia, y en verde la etapa de alta corriente.
+
 ![PCB](/Imagenes/PCB.PNG)
+
+Adicionalmente se agregó un render de como podría verse la placa una vez construida.
 
 ![PCB_render](/Imagenes/PCB_render.PNG)
 
