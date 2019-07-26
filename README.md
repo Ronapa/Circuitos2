@@ -62,7 +62,7 @@ La etapa de entrada esta cargada con la etapa del VAS, conectado mediante la bas
 
 r_{pi} = 100x26mV/721uA = 3600 Ohms , 
 
-la cual está en serie con el paralelo de R42 y r_{pi} de Q6, aproximadamente 400Ohms. Finalmente, la etapa de entrada está cargada con 4kOhms. 
+la cual está en serie con el paralelo de R42 y r_{pi} de Q6 multiplicado por beta, aproximadamente 40kOhms. Finalmente, la etapa de entrada está cargada con 43.6kOhms. 
 
 ![Etapa de entrada][Etapa Entrada]
 
@@ -98,7 +98,13 @@ La resistencia R26 es un realimentador que muestrea la tensión de la referencia
 
 ![Conmutacion][Conmutación circuitos]
 
-#### Realimentación
+#### Análisis de la amplificación
+
+Para hacer un análisis de la amplificación, primero separamos por etapas, según el diagrama en bloques de la [figura](https://github.com/Ronapa/Circuitos2#dise%C3%B1o). De acuerdo a esto obtuvimos la amplificación de las distintas etapas. Para empezar, la etapa de salida como gana corriente la amplificación en tensión es aproximadamente 1. La amplificación de la etapa de entrada se calcula como 
+
+a = -gm\*Rca  
+
+donde Rca es la resistencia que carga a la etapa de entrada. 
 
 La realimentación planteada en nuestro circuito es serie-paralelo, esto es, mide tensión y suma tensión. El realimentador consta de una resistencia conectada directamente a la salida, que se conecta con la terminal negativa del amplificador diferencial a través de un divisor resistivo. 
 
