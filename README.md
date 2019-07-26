@@ -94,6 +94,14 @@ La resistencia R26 es un realimentador que muestrea la tensión de la referencia
 
 ![Conmutacion][Conmutación circuitos]
 
+#### Realimentación
+
+La realimentación planteada en nuestro circuito es serie-paralelo, esto es, mide tensión y suma tensión. El realimentador consta de una resistencia conectada directamente a la salida, que se conecta con la terminal negativa del amplificador diferencial a través de un divisor resistivo. 
+
+![Realimentador][Realimentador]
+
+La elección de usar este tipo de realimentación fue por la motivación de querer estabilizar el valor de la tensión a la salida. De acuerdo a esto, podemos introducirle cargas al circuito menores a una carga límite y mantener una excursión de señal máxima y con la distorsión limitada. Los valores de la realimentación fueron planteado de la siguiente manera: Para empezar, R39 y R9 debían formar un divisor resistivo de modo de copiar el valor de la salida a la entrada con la misma amplitud. Además, para polarizar el circuito debía estar balanceado en las bases de los transistores. Finalmente, los valores de resistencia debían ser valores comerciales. Con esto planteado encontramos que la mejor solución fue elegir una resistencia de 19kOhms con una de 1.2kOhms. Con estos valores, y una salida máxima de 24V, llegamos a que el valor realimentado es de 24\*(1.2kOhms/(1.2kOhms + 19kOhms)) = 1.42V
+
 ### Elección de las tecnologías utilizadas.
 Nuestro primer requisito para seleccionar los transistores necesarios fue que la etapa de entrada tenía que ser de montaje superficial y que los transistores de salida debían poder soportar la corriente a entregar a la carga y pudieran ser montados en un disipador.  
 * [**MMBTA56**](https://www.mouser.com/ds/2/149/MMBTA56-889761.pdf) y [**MMBTA06**](https://www.diodes.com/assets/Datasheets/ds30037.pdf)  
