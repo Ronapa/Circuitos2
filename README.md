@@ -32,7 +32,7 @@
 * [Construcción](https://github.com/Ronapa/Circuitos2/#construcción)
 
 ### Resumen
-El objetivo de este trabajo fue diseñar un amplificador de audio clase G con la etapa de salida conmutada en paralelo. La principal motivación fué la de mejorar la eficiencia del amplificador ya que el amplificador clase G clásico, posee los dos transistores de ssalida en serie, lo que provoca que cuando está activada la etapa del riel de mayor tensión, la señal también debe circular a través del otro transistor, generando pérdidas de potencia y excursión. Se puso como objetivo diseñar un circuito que amplifica una señal de audio estándar 1VRMS a la máxima tensión posible para cargas de 4 y 8 Ohms. Otra especificación fue la de la potencia, la cual se estimó alrededor de los 75W. El amplificador es alimentado con una fuente de ±30V y una de ±15V. Estos valores de tensión se logran con una fuente de laboratorio de ±30V y una fuente switching que otorga los valores de ±15 necesarios. El circuito cuenta con un LED de encendido, y una protección por sobrecorriente. 
+El objetivo de este trabajo fue diseñar un amplificador de audio clase G con la etapa de salida conmutada en paralelo. La principal motivación fué la de mejorar la eficiencia del amplificador ya que el amplificador clase G clásico, posee los dos transistores de salida en serie, lo que provoca que cuando está activada la etapa del riel de mayor tensión, la señal también debe circular a través del otro transistor, generando pérdidas de potencia y excursión. Se puso como objetivo diseñar un circuito que amplifica una señal de audio estándar 1VRMS a la máxima tensión posible para cargas de 4 y 8 Ohms. Otra especificación fue la de la potencia, la cual se estimó alrededor de los 45-50W. El amplificador es alimentado con una fuente de ±30V y una de ±15V. Estos valores de tensión se logran con una fuente de laboratorio de ±30V y una fuente switching que otorga los valores de ±15 necesarios. El circuito cuenta con un LED de encendido, y una protección por sobrecorriente. 
 
 ## Diseño
 El circuito fue diseñado en base al amplificador [Kenwood KA-7X](http://materias.fi.uba.ar/6610/Manuales%20de%20servicio%20tecnico/Clase%20G%20y%20H/Kenwood/KA-7X/hfe_kenwood_ka_7x_service.pdf). Este es un amplificador _stereo_ clase G con etapa de salida en paralelo. Nuestro amplificador, en cambio, es de tipo _mono_. El circuito diseñado está basado en etapas definidas por el circuito en bloques de la siguiente figura.
@@ -219,15 +219,57 @@ Para el rechazo de ruido de la fuente se agregaron en serie con cada una de las 
 
 #### Limitaciones sobre los valores de alimentación
 
-HABRIA QUE VER QUE PASA CON LOS VCEMAX
+En las simulaciones variamos los valores de la alimentación del circuito, para conocer lo límites del funcionamiento de nuestro amplificador. Por un lado, para la alimentación de ±15V encontramos que el funcionamiento del circuito no varía de manera significativa cuando esta varía. Si bien esta alimentación es la que alimenta a los transistores de potencia y aporta a la polarización de los ciruitos switches, cuando cambia este valor lo único que produce es que se cambie la tensión a la que conmutan los transistores de potencia. El problema de bajar mucho o subir mucho el valor de esta tensión produce que el circuito funcione más como un amplificador Clase B, bajando la eficiencia. 
+
+Por otro lado, cambiando los valores de las fuentes de ±30V sí afecta a la polarización de nuestro circuito, y el circuito deja de comportarse como especificado. Por un lado, bajando los valores de estas fuentes produce que entren en corte los transistores de potencia. En las simulaciones, con las fuentes en ±27.5V se producía un recorte a la salida antes de llegar a los 24V, lo cual distorsionaba la señal. Si bien no es un comportamiento destructivo, causa que el amplificador no cumpla las especificaciones de amplitud máxima a la salida, pero puede funcionar si a la entrada se baja la amplitud de la señal. Reduciendo aún más el valor de esta tensión sigue andando el circuito, cortando la señal a la salida siempre en aproximadamente 3V antes de llegar a el valor de esta tensión.
+
+Por otro lado, al incrementar el valor de estas fuentes se corre el riesgo de que alguno de los componentes del circuito se quemen.
 
 ### Diseño del PCB
 
-mañana subo algunas imagenes
+Para el diseño del PCB se debió pasar el esquemático realizado en LTSpice a el programa usado para diseñar el PCB; en este caso el Kicad. En este diseño se agregaron los conectores para las fuentes de alimentación así como también para lo bornes de salida para el parlante.
+
+![PCB_diseño](/Imagenes/PCB_diseño.png)
+
+Una vez importandos todos los componentes y habiendo elegido los modelos fisicos correspondientes se buscó la posición adecuada para cada uno de los mismos para el posterior ruteo. Se comenzó por ubicar los transistores de la etapa de potencia en un borde de la placa de manera de poder conectar el disipador sobre el borde de la placa. Posteriormente se ubicaron las resistencias para el envalamiento térmico y las limitaciones de corriente para ambos semiciclos. Luego se busco armar un subconjunto con los subcircuitos encargados de realizar la conmutación, así como también montar en forma cercana la etapa sobre la que actuaban los conmutadores o switches. Finalmente se armó el par diferencial junto con el VAS y se buscó comprimir lo más posible el tamaño del PCB.
+
+La desición de poner las borneras sobre la cara inferior de la placa se basó en que en esa zona se encontraría el disipador de los transistores, por lo que si se hubieran querido posicionar sobre la cara superior se deberían haber posicionado cerca de la etapa de entrada. Esto hubiera traído como consecuencia mayores pérdidas debido a que la etapa de potencia se encontraría más alejada de la alimentación. Además se tendrían lineas por la que circularía alta corriente sobre las pistas de señal que se encuentran en la cara contraria, lo cual no es lo más recomendable. También se realizó un esfuerzo por mantener la mayor parte de las pistas de señal de un solo lado, manteniendo las pistas de potencia del otro lado. En relación a esto, se debieron trazar pistas por entre algunos de los transistores SMD, especialmente en la etapa del semiciclo negativo, lo cual compromete en cierta medida el diseño debido a que el ancho de las pistas es de 0.3mm. Si bien las placas que se pueden fabricar en la Facultad admiten pistas de hasta 12mills de ancho con la misma distancia de separación, se estaría en el límite de esta cota.
+
+Otro aspecto fue el del diseño fue el ancho de las pistas encargadas de transportar la corriente para la etapa de salida, así como también las pistas hacia los bornes de salida. Mediante la calculadora provista por Kicad, se buscó un valor acorde para las pistas de potencia. En los casos que fuera posible se podrían utilizar pistas más anchas pero el objetivo era obtener una cota mínima. Teniendo en cuenta que la máxima corriente que puede circular es de alrededor de 7 amperes en condiciones normales de operación, se tomó como un valor conservador una corriente pico de 8A. Teniendo en cuenta que los cálculos de potencia se asumen para una señal senoidal y aplicando el factor para obtener el valor eficaz, la corriente eficaz sería de 5.7A. Para una variación térmica de 12°C se obtuvo un espesor de pista de 3mm, el cual fue el valor utilizado. 
+
+A continuación se muestra una imágen del PCB diseñado, con las pistas en rojo correspondientes a la etapa de entrada, VAS y la etapa de salida de baja potencia, y en verde la etapa de alta corriente. Finalmente se tuvieron en cuenta los puntos de montaje, los cuales además de tener uno en cada esquina, también se agrego uno en la mitad de la placa aproximadamente y otro cerca de los transistores de potencia para aumentar la rigidez ya que en esta zona se encontrarán los disipadores.
+
+![PCB](/Imagenes/PCB.PNG)
+
+Adicionalmente se agregó un render de como podría verse la placa una vez construida.
+
+![PCB_render](/Imagenes/PCB_render.PNG)
+
+Una consideración importante que no se evidencia en las imágenes del PCB es que el transistor del multiplicador de Vbe se encontrará conectado por cables y acoplado térmicamente a los transistores de salida uniendoló al mismo disipador. Esta desición se tomó debido a que se consideró que no se justificaba complicar el diseño del PCB para acercar este transistor a la etapa de salida.
 
 ### Implementación de la etapa de entrada
 
-Dejo las fotos en el git y mañana veo si lo puedo adelantar en el laburo.
+Una vez finalizado el diseño del amplificador se realizó la implementación de la etapa de entrada y el VAS en una placa expertimental para hacer una validación parcial del diseño. Para ello se compraron los componentes equivalentes a los SMD en su versión discreta y se analizó la polarización del circuito. A continuación se presenta la imagen de la placa experimental sobre las que se realizaron algunas mediciones.
+
+![Etapa_entrada_PCB](/Imagenes/etapa_entrada_PCB.png)
+
+Como primera medición se verificó la tensión en algunos nodos del par diferencial para verificar su funcionamiento y se obtuvieron lecturas dentro de lo esperado. Luego se midieron las tensiones sobre los resistores que se encontraban en la etapa VAS. A partir de los valores de tensión y conociendo el valor de los resistores se estimó la corriente de polarización. Según la simulación esta corriente era de alrededor de 45mA.
+
+La imagen a continuación muestra una tensión de 470mV, lo cual teniendo en cuenta que el resistor era de 10 Omhs, la corriente de polarización resultaba ser de 47mA. También se corroboró esto con la medición de la tensión sobre la resistencia de emisor de la fuente de corriente del VAS, la cual arrojó un valor de 2.27V. En este caso la resistencia era de 47 Omhs por lo que la corriente también rondaba los 48mA.
+
+![Corriente_VAS](/Imagenes/Etapa_entrada_medicion_corrienteVAS.jpg)
+
+![Corriente_VAS2](/Imagenes/Etapa_entrada_medicion_corrienteVAS2.jpg)
+
+Una vez verificada la polarización se colocó un generador de señales a la entrada del amplificador para verificar el valor de la ganancia total. A partir del analisis de realimentación se obtuvo que la ganancia del amplificador era de 16.66, por lo que frente a la señal de entrada de 200mV pico se debería obtener una tensión a la salida de 3.35V. Esto se verificó mediante las mediciones a continuación.
+
+![Corriente_VAS](/Imagenes/Etapa_entrada_medicion_Vin.png)
+
+![Corriente_VAS2](/Imagenes/Etapa_entrada_medicion_Vout.png)
+
+Si bien en la medición el valor obtenido es de alrededor de 3.5V, se verificó que el funcionamiento de la etapa de entrada y VAS era acorde a lo esperado.
+
+La implementación de esta etapa de entrada nos permitió percatarnos de un error en el dimensionamiento de los transistores del VAS, los cuales no eran capaces de disipar lo necesario. Esto finalmente se solucionó para el modelo definitivo disminuyendo la corriente de polarización de esta etapa, ya que la diferencia de distorsión no justificaba mantener una corriente de polarización de 45mA. Esta corriente de polarización se modificó mediante el reemplazo del resistor de emisor de la fuente de corriente por uno de 470 Omhs.
   
   
 ## Construcción
