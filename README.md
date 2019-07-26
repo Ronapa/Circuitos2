@@ -237,7 +237,7 @@ La desición de poner las borneras sobre la cara inferior de la placa se basó e
 
 Otro aspecto fue el del diseño fue el ancho de las pistas encargadas de transportar la corriente para la etapa de salida, así como también las pistas hacia los bornes de salida. Mediante la calculadora provista por Kicad, se buscó un valor acorde para las pistas de potencia. En los casos que fuera posible se podrían utilizar pistas más anchas pero el objetivo era obtener una cota mínima. Teniendo en cuenta que la máxima corriente que puede circular es de alrededor de 7 amperes en condiciones normales de operación, se tomó como un valor conservador una corriente pico de 8A. Teniendo en cuenta que los cálculos de potencia se asumen para una señal senoidal y aplicando el factor para obtener el valor eficaz, la corriente eficaz sería de 5.7A. Para una variación térmica de 12°C se obtuvo un espesor de pista de 3mm, el cual fue el valor utilizado. 
 
-A continuación se muestra una imágen del PCB diseñado, con las pistas en rojo correspondientes a la etapa de entrada, VAS y la etapa de salida de baja potencia, y en verde la etapa de alta corriente.
+A continuación se muestra una imágen del PCB diseñado, con las pistas en rojo correspondientes a la etapa de entrada, VAS y la etapa de salida de baja potencia, y en verde la etapa de alta corriente. Finalmente se tuvieron en cuenta los puntos de montaje, los cuales además de tener uno en cada esquina, también se agrego uno en la mitad de la placa aproximadamente y otro cerca de los transistores de potencia para aumentar la rigidez ya que en esta zona se encontrarán los disipadores.
 
 ![PCB](/Imagenes/PCB.PNG)
 
