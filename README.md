@@ -233,21 +233,21 @@ mañana subo algunas imagenes
 
 Una vez finalizado el diseño del amplificador se realizó la implementación de la etapa de entrada y el VAS en una placa expertimental para hacer una validación parcial del diseño. Para ello se compraron los componentes equivalentes a los SMD en su versión discreta y se analizó la polarización del circuito. A continuación se presenta la imagen de la placa experimental sobre las que se realizaron algunas mediciones.
 
-![Etapa_entrada_PCB](/Imagenes/etapa_entrada_PCB.PNG)
+![Etapa_entrada_PCB](/Imagenes/etapa_entrada_PCB.png)
 
 Como primera medición se verificó la tensión en algunos nodos del par diferencial para verificar su funcionamiento y se obtuvieron lecturas dentro de lo esperado. Luego se midieron las tensiones sobre los resistores que se encontraban en la etapa VAS. A partir de los valores de tensión y conociendo el valor de los resistores se estimó la corriente de polarización. Según la simulación esta corriente era de alrededor de 45mA.
 
 La imagen a continuación muestra una tensión de 470mV, lo cual teniendo en cuenta que el resistor era de 10 Omhs, la corriente de polarización resultaba ser de 47mA. También se corroboró esto con la medición de la tensión sobre la resistencia de emisor de la fuente de corriente del VAS, la cual arrojó un valor de 2.27V. En este caso la resistencia era de 47 Omhs por lo que la corriente también rondaba los 48mA.
 
-![Corriente_VAS](/Imagenes/Etapa_entrada_medicion_corrienteVAS.PNG)
+![Corriente_VAS](/Imagenes/Etapa_entrada_medicion_corrienteVAS.png)
 
-![Corriente_VAS2](/Imagenes/Etapa_entrada_medicion_corrienteVAS2.PNG)
+![Corriente_VAS2](/Imagenes/Etapa_entrada_medicion_corrienteVAS2.png)
 
 Una vez verificada la polarización se colocó un generador de señales a la entrada del amplificador para verificar el valor de la ganancia total. A partir del analisis de realimentación se obtuvo que la ganancia del amplificador era de 16.66, por lo que frente a la señal de entrada de 200mV pico se debería obtener una tensión a la salida de 3.35V. Esto se verificó mediante las mediciones a continuación.
 
-![Corriente_VAS](/Imagenes/Etapa_entrada_medicion_Vin.PNG)
+![Corriente_VAS](/Imagenes/Etapa_entrada_medicion_Vin.png)
 
-![Corriente_VAS2](/Imagenes/Etapa_entrada_medicion_Vout.PNG)
+![Corriente_VAS2](/Imagenes/Etapa_entrada_medicion_Vout.png)
 
 Si bien en la medición el valor obtenido es de alrededor de 3.5V, se verificó que el funcionamiento de la etapa de entrada y VAS era acorde a lo esperado.
 
