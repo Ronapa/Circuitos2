@@ -227,7 +227,7 @@ Por otro lado, al incrementar el valor de estas fuentes se corre el riesgo de qu
 
 ### Diseño del PCB
 
-mañana subo algunas imagenes
+
 
 ### Implementación de la etapa de entrada
 
@@ -239,9 +239,9 @@ Como primera medición se verificó la tensión en algunos nodos del par diferen
 
 La imagen a continuación muestra una tensión de 470mV, lo cual teniendo en cuenta que el resistor era de 10 Omhs, la corriente de polarización resultaba ser de 47mA. También se corroboró esto con la medición de la tensión sobre la resistencia de emisor de la fuente de corriente del VAS, la cual arrojó un valor de 2.27V. En este caso la resistencia era de 47 Omhs por lo que la corriente también rondaba los 48mA.
 
-![Corriente_VAS](/Imagenes/Etapa_entrada_medicion_corrienteVAS.png)
+![Corriente_VAS](/Imagenes/Etapa_entrada_medicion_corrienteVAS.jpg)
 
-![Corriente_VAS2](/Imagenes/Etapa_entrada_medicion_corrienteVAS2.png)
+![Corriente_VAS2](/Imagenes/Etapa_entrada_medicion_corrienteVAS2.jpg)
 
 Una vez verificada la polarización se colocó un generador de señales a la entrada del amplificador para verificar el valor de la ganancia total. A partir del analisis de realimentación se obtuvo que la ganancia del amplificador era de 16.66, por lo que frente a la señal de entrada de 200mV pico se debería obtener una tensión a la salida de 3.35V. Esto se verificó mediante las mediciones a continuación.
 
