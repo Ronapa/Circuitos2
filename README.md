@@ -145,7 +145,7 @@ Por otro lado la eficiencia con la salida en un valor más bajo empeora. A modo 
 Las tres imágenes anteriores fueron simuladas con una señal de entrada senoidal de 1kHz. Fueron simuladas otras frecuencias y los resultados fueron equivalentes. 
 
 #### Potencia disipada en los transistores
-Según la hoja de datos de los transistores de potencia, estos pueden aguantar hasta 150 grados centígrados antes de quemarse, y una potencia máxima de colector de 150W. Con una temperatura ambiente de 25°C, obtenemos una resistencia térmica de juntura a carcasa R_{t}  = (Tj_{max}-Tamb)/P_{max} = (150°C-25°C)/150W = 0.833°C/W. Para asegurar de no quemar los transistores tenemos que disipar la potencia, para esto debemos agregar disipadores térmicos que logren disipar la potencia necesaria en todos los casos. El caso crítico, cuando más potencia disipan los transistores, es cuando se limita la corriente. De este caso obtuvimos las siguientes imagenes. Primero la disipación en cada transistor de potencia, 
+Según la hoja de datos de los transistores de potencia, estos pueden aguantar hasta 150 grados centígrados antes de quemarse, y una potencia máxima de colector de 150W. Con una temperatura ambiente de 25°C, obtenemos una resistencia térmica de juntura a carcasa R_{t}  = (Tj_{max}-Tamb)/P_{max} = (150°C-25°C)/150W = 0.833°C/W. Para asegurar de no quemar los transistores tenemos que disipar la potencia, para esto debemos agregar disipadores térmicos que logren disipar la potencia necesaria en todos los casos. El caso crítico, cuando más potencia disipan los transistores, es cuando la carga es de 4Ohms. De este caso obtuvimos las siguientes imágenes. Primero la disipación en cada transistor de potencia, 
 
 ![potencia max2][potencia max2]
 
@@ -153,7 +153,7 @@ y luego la disipación total por todos los transistores.
 
 ![potencia max1][potencia max1]
 
-Tenemos, entonces, para el caso más extremo los transistores disipan 106Watts de potencia. Con este valor, para lograr obtener una temperatura menor a 150°C en la juntura, se necesita una resistencia térmica de carcasa a ambiente menor a R_{ca} = (150°C- 106W\*0.833°C/W - 25°C)/106W = 0.35°C/W.  Este valor incluye la pasta térmica, la arandela dielectrica y el disipador.
+Tenemos, entonces, para el caso más extremo los transistores de mayor potencia disipan picos de 55Watts. Asumiendo el peor caso en el que disipen el máximo en un ciclo de trabajo del 50%, podemos tomar que éstos disipan 27.5W, redondeado a 30W para contemplar diferencias de las simulaciones. Con este valor, para lograr obtener una temperatura menor a 150°C en la juntura, se necesita una resistencia térmica de carcasa a ambiente menor a R_{ca} = (150°C- 30W\*0.833°C/W - 40°C)/30W = 2.83°C/W.  Este valor incluye la pasta térmica, la arandela dieléctrica y el disipador. De acuerdo a esto, tomando una resistencia térmica de la pasta de [0,48°C/W](http://disipadores.com/accesorios.php#) obtenemos que el valor de los disipadores debe ser menor a [2,35°C/W](http://disipadores.com/media_potencia.php).  
 ### Ensayos variando la carga. 
 
 ### Mediciones sobres el amplificador
