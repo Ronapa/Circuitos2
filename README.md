@@ -58,7 +58,11 @@ El rol de la etapa de entrada es obtener la diferencia entre la entrada y la rea
 
 En una base del diferencial se encuentra la señal de entrada mientras que en la otra se encuentra la realimentación dada por R39 que se conecta a la salida. La elección del valor de R39 se basó en un compromiso de amplificación contra calidad de señal. Con valores más altos de resistencia la amplificación era mayor pero se reducía el ancho de banda y empeoraba la distorsión. Por otro lado, con valores menores de resistencia la realimentación era mayor y se lograba una menor distorsión pero también una menor amplificación. Finalmente se logró reducir la distorsión compensando al circuito y amplificamos para tener una señal máxima que no produjera recorte a la salida.
 
-La etapa de entrada esta cargada con la etapa del VAS, conectado mediante la base de Q23. Este transistor está polarizado con 721uA, lo del cual obtenemos una r_{pi} = 100x26mV/721uA = 3600 Ohms, la cual está en serie con el paralelo de R42 y r_{pi} de Q6. Finalmente, la etapa de entrada está cargada con 4kOhms. 
+La etapa de entrada esta cargada con la etapa del VAS, conectado mediante la base de Q23. Este transistor está polarizado con 721uA, lo del cual obtenemos 
+
+r_{pi} = 100x26mV/721uA = 3600 Ohms , 
+
+la cual está en serie con el paralelo de R42 y r_{pi} de Q6 multiplicado por beta, aproximadamente 40kOhms. Finalmente, la etapa de entrada está cargada con 43.6kOhms. 
 
 ![Etapa de entrada][Etapa Entrada]
 
@@ -93,6 +97,22 @@ Primero se plantea un divisor resistivo con R17 y R18, de donde se obtiene una t
 La resistencia R26 es un realimentador que muestrea la tensión de la referencia y entrega corriente al transistor Q14 para estabilizar la señal. Finalmente, la rama de C3 y R43 filtra componentes de alta frecuencia dadas por la conmutación rápida. 
 
 ![Conmutacion][Conmutación circuitos]
+
+#### Análisis de la amplificación
+
+Para hacer un análisis de la amplificación, primero separamos por etapas, según el diagrama en bloques de la [figura](https://github.com/Ronapa/Circuitos2#dise%C3%B1o). De acuerdo a esto obtuvimos la amplificación de las distintas etapas. Para empezar, la etapa de salida como gana corriente la amplificación en tensión es aproximadamente 1. La amplificación de la etapa de entrada se calcula como 
+
+a = -gm\*Rca  
+
+donde Rca es la resistencia que carga a la etapa de entrada. 
+
+La realimentación planteada en nuestro circuito es serie-paralelo, esto es, mide tensión y suma tensión. El realimentador consta de una resistencia conectada directamente a la salida, que se conecta con la terminal negativa del amplificador diferencial a través de un divisor resistivo. 
+
+![Realimentador][Realimentador]
+
+La elección de usar este tipo de realimentación fue por la motivación de querer estabilizar el valor de la tensión a la salida. De acuerdo a esto, podemos introducirle cargas al circuito menores a una carga límite y mantener una excursión de señal máxima y con la distorsión limitada. Los valores de la realimentación fueron planteado de la siguiente manera: Para empezar, R39 y R9 debían formar un divisor resistivo de modo de copiar el valor de la salida a la entrada con la misma amplitud. Además, para polarizar el circuito debía estar balanceado en las bases de los transistores. Finalmente, los valores de resistencia debían ser valores comerciales. Con esto planteado encontramos que la mejor solución fue elegir una resistencia de 19kOhms con una de 1.2kOhms. Con estos valores, y una salida máxima de 24V, llegamos a que el valor realimentado es de
+
+24\*(1.2kOhms/(1.2kOhms + 19kOhms)) = 1.42V  .
 
 ### Elección de las tecnologías utilizadas.
 Nuestro primer requisito para seleccionar los transistores necesarios fue que la etapa de entrada tenía que ser de montaje superficial y que los transistores de salida debían poder soportar la corriente a entregar a la carga y pudieran ser montados en un disipador.  
@@ -145,7 +165,7 @@ Por otro lado la eficiencia con la salida en un valor más bajo empeora. A modo 
 Las tres imágenes anteriores fueron simuladas con una señal de entrada senoidal de 1kHz. Fueron simuladas otras frecuencias y los resultados fueron equivalentes. 
 
 #### Potencia disipada en los transistores
-Según la hoja de datos de los transistores de potencia, estos pueden aguantar hasta 150 grados centígrados antes de quemarse, y una potencia máxima de colector de 150W. Con una temperatura ambiente de 25°C, obtenemos una resistencia térmica de juntura a carcasa R_{t}  = (Tj_{max}-Tamb)/P_{max} = (150°C-25°C)/150W = 0.833°C/W. Para asegurar de no quemar los transistores tenemos que disipar la potencia, para esto debemos agregar disipadores térmicos que logren disipar la potencia necesaria en todos los casos. El caso crítico, cuando más potencia disipan los transistores, es cuando se limita la corriente. De este caso obtuvimos las siguientes imagenes. Primero la disipación en cada transistor de potencia, 
+Según la hoja de datos de los transistores de potencia, estos pueden aguantar hasta 150 grados centígrados antes de quemarse, y una potencia máxima de colector de 150W. Con una temperatura ambiente de 25°C, obtenemos una resistencia térmica de juntura a carcasa R_{t}  = (Tj_{max}-Tamb)/P_{max} = (150°C-25°C)/150W = 0.833°C/W. Para asegurar de no quemar los transistores tenemos que disipar la potencia, para esto debemos agregar disipadores térmicos que logren disipar la potencia necesaria en todos los casos. El caso crítico, cuando más potencia disipan los transistores, es cuando la carga es de 4Ohms. De este caso obtuvimos las siguientes imágenes. Primero la disipación en cada transistor de potencia, 
 
 ![potencia max2][potencia max2]
 
@@ -153,10 +173,14 @@ y luego la disipación total por todos los transistores.
 
 ![potencia max1][potencia max1]
 
-Tenemos, entonces, para el caso más extremo los transistores disipan 106Watts de potencia. Con este valor, para lograr obtener una temperatura menor a 150°C en la juntura, se necesita una resistencia térmica de carcasa a ambiente menor a R_{ca} = (150°C- 106W\*0.833°C/W - 25°C)/106W = 0.35°C/W.  Este valor incluye la pasta térmica, la arandela dielectrica y el disipador.
-### Ensayos variando la carga. 
+Tenemos, entonces, para el caso más extremo los transistores de mayor potencia disipan picos de 55Watts. Asumiendo el peor caso en el que disipen el máximo en un ciclo de trabajo del 50%, podemos tomar que éstos disipan 27.5W, redondeado a 30W para contemplar diferencias de las simulaciones. Con este valor, para lograr obtener una temperatura menor a 150°C en la juntura, se necesita una resistencia térmica de carcasa a ambiente menor a
 
-### Mediciones sobres el amplificador
+R_{ca} = (150°C- 30W\*0.833°C/W - 40°C)/30W = 2.83°C/W  .
+
+Este valor incluye la pasta térmica, la arandela dieléctrica y el disipador. De acuerdo a esto, tomando una resistencia térmica de la pasta de [0,48°C/W](http://disipadores.com/accesorios.php#) obtenemos que el valor de los disipadores debe ser menor a [2,35°C/W](http://disipadores.com/media_potencia.php).  
+
+
+## Mediciones sobres el amplificador
 
 ### Distorsión
 
@@ -223,7 +247,9 @@ En las simulaciones variamos los valores de la alimentación del circuito, para 
 
 Por otro lado, cambiando los valores de las fuentes de ±30V sí afecta a la polarización de nuestro circuito, y el circuito deja de comportarse como especificado. Por un lado, bajando los valores de estas fuentes produce que entren en corte los transistores de potencia. En las simulaciones, con las fuentes en ±27.5V se producía un recorte a la salida antes de llegar a los 24V, lo cual distorsionaba la señal. Si bien no es un comportamiento destructivo, causa que el amplificador no cumpla las especificaciones de amplitud máxima a la salida, pero puede funcionar si a la entrada se baja la amplitud de la señal. Reduciendo aún más el valor de esta tensión sigue andando el circuito, cortando la señal a la salida siempre en aproximadamente 3V antes de llegar a el valor de esta tensión.
 
-Por otro lado, al incrementar el valor de estas fuentes se corre el riesgo de que alguno de los componentes del circuito se quemen.
+Por otro lado, al incrementar el valor de estas fuentes se corre el riesgo de que alguno de los componentes del circuito se queme. Los transistores que más se exigen, fuera de los de potencia, son los de los pares Darlington que entregan la señal a los de mayor potencia, y los de los seguidores, que unen la etapa de salida con la del VAS. Los transistores que forman parte de los Darlington de la etapa de salida son los MJE340, que soportan potencias de hasta 20W, mucho mayor que las potencias que entregan estos transistores. Los de la etapa de seguidor, los MMBTA06/56, en cambio, están elegidos para soportar la potencia debida cuando se los polariza con 30V. Estos transistores pueden disipar hasta 310mW, y con las fuentes en 30V disipan 150mW. Sin embargo, con las fuentes en ±40V estos disipan 250mW. 
+Por otro lado, viendo a los transistores de potencia, vemos que estos son mucho más sensibles a los cambios en los valores de la fuente. Cambiando los valores de las fuentes a ±40V se ve que estos transistores disipan casi el doble (180%), para lo cual, si bien funcionaría, habría que cambiar los disipadores para evitar que se queme. Por estas razones, proponemos que la fuentes funcionen en ±30V, con una desviación menor a los 2V para evitar problemas de distorsión o peor, que se queme el circuito. 
+
 
 ### Diseño del PCB
 
@@ -246,6 +272,8 @@ Adicionalmente se agregó un render de como podría verse la placa una vez const
 ![PCB_render](/Imagenes/PCB_render.PNG)
 
 Una consideración importante que no se evidencia en las imágenes del PCB es que el transistor del multiplicador de Vbe se encontrará conectado por cables y acoplado térmicamente a los transistores de salida uniendoló al mismo disipador. Esta desición se tomó debido a que se consideró que no se justificaba complicar el diseño del PCB para acercar este transistor a la etapa de salida.
+
+## Construcción
 
 ### Implementación de la etapa de entrada
 
@@ -272,7 +300,7 @@ Si bien en la medición el valor obtenido es de alrededor de 3.5V, se verificó 
 La implementación de esta etapa de entrada nos permitió percatarnos de un error en el dimensionamiento de los transistores del VAS, los cuales no eran capaces de disipar lo necesario. Esto finalmente se solucionó para el modelo definitivo disminuyendo la corriente de polarización de esta etapa, ya que la diferencia de distorsión no justificaba mantener una corriente de polarización de 45mA. Esta corriente de polarización se modificó mediante el reemplazo del resistor de emisor de la fuente de corriente por uno de 470 Omhs.
   
   
-## Construcción
+
 
 
 [kenwood]: Imagenes/kenwood.png
@@ -290,3 +318,4 @@ La implementación de esta etapa de entrada nos permitió percatarnos de un erro
 [Potencia 0V]: Imagenes/Potencia_0V.PNG
 [potencia max1]: Imagenes/Potencia_max1.PNG
 [potencia max2]: Imagenes/Potencia_max2.PNG
+[Realimentador]: Imagenes/Realimentador.PNG

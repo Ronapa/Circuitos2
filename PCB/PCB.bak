@@ -1728,21 +1728,6 @@ $EndComp
 Wire Wire Line
 	3250 6350 3250 6550
 $Comp
-L Connector:Conn_01x02_Female J1
-U 1 1 5D1D8FF0
-P 600 4550
-F 0 "J1" H 492 4735 50  0000 C CNN
-F 1 "Conn" H 492 4644 50  0000 C CNN
-F 2 "Connectors:PJ320D_3.5mm_Jack" H 600 4550 50  0001 C CNN
-F 3 "~" H 600 4550 50  0001 C CNN
-	1    600  4550
-	-1   0    0    -1  
-$EndComp
-Wire Wire Line
-	800  4550 950  4550
-Wire Wire Line
-	950  4650 800  4650
-$Comp
 L Device:R R43
 U 1 1 5D3BEEE9
 P 3250 6700
@@ -1855,10 +1840,39 @@ Connection ~ 10450 5100
 Wire Wire Line
 	10450 5100 9450 5100
 Wire Wire Line
-	10650 5100 10650 3650
+	-1300 5950 -1300 4500
 Wire Wire Line
-	10350 3650 10650 3650
-Connection ~ 10650 3650
+	10350 3650 10800 3650
 Wire Wire Line
-	10650 3650 10800 3650
+	950  4650 750  4650
+Wire Wire Line
+	950  4550 750  4550
+$Comp
+L Connector_Generic_MountingPin:Conn_01x01_MountingPin J1
+U 1 1 5D48F635
+P 750 4350
+F 0 "J1" H 838 4314 50  0000 L CNN
+F 1 "Conn_01x01_MountingPin" H 838 4223 50  0000 L CNN
+F 2 "" H 750 4350 50  0001 C CNN
+F 3 "~" H 750 4350 50  0001 C CNN
+	1    750  4350
+	1    0    0    -1  
+$EndComp
+Connection ~ 750  4550
+Wire Wire Line
+	750  4550 650  4550
+$Comp
+L Connector_Generic_MountingPin:Conn_01x01_MountingPin J7
+U 1 1 5D491977
+P 750 4850
+F 0 "J7" V 626 4930 50  0000 L CNN
+F 1 "Conn_01x01_MountingPin" V 717 4930 50  0000 L CNN
+F 2 "" H 750 4850 50  0001 C CNN
+F 3 "~" H 750 4850 50  0001 C CNN
+	1    750  4850
+	0    1    1    0   
+$EndComp
+Connection ~ 750  4650
+Wire Wire Line
+	750  4650 650  4650
 $EndSCHEMATC
