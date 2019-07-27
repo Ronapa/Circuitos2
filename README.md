@@ -106,14 +106,21 @@ Las fuentes switching están planteadas para entregar potencia a los transistore
 
 ![Fuente switching][fuente switching]
 
+En las siguientes imagenes se puede ver como al conmutar se tiene un transitorio que se extingue dejando finalmente una señal triangular, al rededor del valor que queremos obtener. 
+
 
 ![switching load transient][switching load transient]
 
 
 ![switching input transient][switching input transient]
 
+La siguiente imagen muestra el estado estacionario de la fuente conmutada, donde se ve una señal triangular de 60mVpico. 
 
 ![switching steady][switching steady]
+
+Este ruido en la fuente podría ser reflejado en la señal de salida, sin embargo las entradas de las fuentes switching al circuito tienen un capacitor que filtra las componentes de alta frecuencia. Finalmente, para la señal restante que entra al circuito, si bien no es perfectamente plana, mediante simulaciones se comprobó que variaciones menores a 1V en las fuentes no se reflejan en la salida. 
+
+A estas especificaciones, además, se le agregó la consideración del costo. Armar una fuente switching es más barato y eficiente que circuitos más complejos que modulen la señal de modo de no tener nada de variaciones en la salida. 
 
 #### Análisis de la amplificación
 
@@ -161,6 +168,7 @@ En resumen, la respuesta en frecuencia resulta adecuada para la aplicación que 
 
 
 ### Potencia y eficiencia
+
 #### Potencia en la carga
 Las especificaciones de potencia planteadas en un prinicpio eran de alrededor de 50Watts sobre una carga de 8Ohms. Para lograr esto tendríamos que  llegar a una excursión de 28Vp sobre la carga. Luego del desarrollo de las etapas y por medio de las simulaciones, la amplitud máxima a la salida previo al recorte de la señal que se logró fue de 24V. Esto equivale a una potencia de 36Watts. Si bien no es lo que nos planteamos en un principio consideramos que es un valor adecuado para un amplificador de audio, más aún teniendo en cuenta que una diferencia del 22% en el valor de la potencia equivale a 1dB de diferencia, por lo que al oído esto no será tan perceptible como uno creería.  
 
@@ -336,7 +344,7 @@ La implementación de esta etapa de entrada nos permitió percatarnos de un erro
 [potencia max1]: Imagenes/Potencia_max1.PNG
 [potencia max2]: Imagenes/Potencia_max2.PNG
 [Realimentador]: Imagenes/Realimentador.png
-[Fuente switching]: Imagenes/Fuente_switching.PNG
+[Fuente switching]: Imagenes/Fuente_Switching.PNG
 [switching load transient]: Imagenes/switching_load_transient.PNG
 [switching input transient]: Imagenes/switching_input_transient.PNG
 [switching steady]: Imagenes/switching_steady.PNG
