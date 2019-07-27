@@ -16,6 +16,8 @@
     * [Etapa VAS y multiplicador de Vbe](https://github.com/Ronapa/Circuitos2/#etapa-vas-y-multiplicador-de-vbe)
     * [Etapa de salida](https://github.com/Ronapa/Circuitos2/#etapa-de-salida)
     * [Switches y conmutación](https://github.com/Ronapa/Circuitos2/#switches-y-conmutación)
+    * [Fuentes switching](https://github.com/Ronapa/Circuitos2/#fuentes-switching)
+    * [Análisis de la amplificación](https://github.com/Ronapa/Circuitos2/#análisis-de-la-amplificación)
   * [Elección de las tencologías utilizadas](https://github.com/Ronapa/Circuitos2/#elección-de-las-tecnologías-utilizadas)
   * [Compensación del circuito y respuesta en frecuencia](https://github.com/Ronapa/Circuitos2/#compensación-del-circuito-y-respuesta-en-frecuencia)
   * [Potencia y eficiencia](https://github.com/Ronapa/Circuitos2/#potencia-y-eficiencia)
