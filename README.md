@@ -100,6 +100,14 @@ La resistencia R26 es un realimentador que muestrea la tensión de la referencia
 
 ![Conmutacion][Conmutación circuitos]
 
+#### Fuentes switching
+
+Las fuentes switching están planteadas para entregar potencia a los transistores de menor potencia. Se eligió esta tecnología por la eficicencia que tiene para bajar la tensión de 30V de la fuente de laboratorio a los 15V que necesitamos en el circuito. En la siguiente imagen se muestra el circuito que compone a la fuente switching, el cual fue simulado en el entorno [Webench Power Designer de Texas Instruments.](https://webench.ti.com/power-designer/switching-regulator)
+![Fuente switching][fuente switching]
+![switching load transient][switching load transient]
+![switching input transient][switching input transient]
+![switching steady][switching steady]
+
 #### Análisis de la amplificación
 
 Para hacer un análisis de la amplificación, primero separamos por etapas, según el diagrama en bloques de la [figura](https://github.com/Ronapa/Circuitos2#dise%C3%B1o). De acuerdo a esto obtuvimos la amplificación de las distintas etapas. Para empezar, la etapa de salida como gana corriente la amplificación en tensión es aproximadamente 1. La amplificación de la etapa de entrada se calcula como 
@@ -321,3 +329,7 @@ La implementación de esta etapa de entrada nos permitió percatarnos de un erro
 [potencia max1]: Imagenes/Potencia_max1.PNG
 [potencia max2]: Imagenes/Potencia_max2.PNG
 [Realimentador]: Imagenes/Realimentador.PNG
+[Fuente switching]: Imagenes/Fuente_switching.PNG
+[switching load transient]: Imagenes/switching_load_transient.png
+[switching input transient]: Imagenes/switching_input_transient.png
+[switching steady]: Imagenes/switching_steady.png
