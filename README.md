@@ -306,6 +306,19 @@ En el comienzo de este diseño se definieron ciertas especificaciones que el cir
 
 Las especificaciones planteadas y el resultado al que llegamos se encuentran a continuación:
 
+| Parámetro                 | Especificación | Valor simulado | Condición                            |
+|---------------------------|----------------|----------------|--------------------------------------|
+| THD                       |     >0.05%     |     0.056%     | señal de 1kHz, 1Vrms, carga de 8Ohms |
+| Potencia en la carga      |    90W(45W)    |    70W(35W)    |         carga de 4Ohms(8Ohms)        |
+| Eficiencia                |      >75%      |       77%      |         señal de 1kHz, 1Vrms         |
+| Impedancia de entrada     |    <10kOhms    |     20kOhms    |       señales de 10Hz a 100kHz       |
+| Impedancia de salida      |    >0.4Ohms    |     10mOhms    |        señales de 10Hz a 20kHz       |
+| Valores posibles de carga |     >4Ohms     |     >4Ohms     |            señales ≤ 1Vrm            |
+| Limitación de corriente   |      7.5A      |       8A       |            carga de 2Ohms            |
+| Potencia máxima disipada  |      >30W      |      27.5W     | señal de 1kHz, 1Vrms, carga de 4Ohms | 
+
+
+
 ## Construcción
 
 ### Implementación de la etapa de entrada
