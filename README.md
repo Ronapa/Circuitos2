@@ -200,7 +200,7 @@ y luego la disipación total por todos los transistores.
 
 ![potencia max1][potencia max1]
 
-Tenemos, entonces, para el caso más extremo los transistores de mayor potencia disipan picos de 55Watts. Asumiendo el peor caso en el que disipen el máximo en un ciclo de trabajo del 50%, podemos tomar que éstos disipan 27.5W, redondeado a 30W para contemplar diferencias de las simulaciones. Con este valor, para lograr obtener una temperatura menor a 150°C en la juntura, se necesita una resistencia térmica de carcasa a ambiente menor a
+Tenemos, entonces, para el caso más extremo los transistores de mayor potencia disipan picos de 55Watts. Asumiendo el peor caso en el que disipen pulsos de máximo valor en un ciclo de trabajo del 50%, podemos tomar que éstos disipan 27.5W, redondeado a 30W para contemplar diferencias de las simulaciones. Con este valor, para lograr obtener una temperatura menor a 150°C en la juntura, se necesita una resistencia térmica de carcasa a ambiente menor a
 
 R_{ca} = (150°C- 30W\*0.833°C/W - 40°C)/30W = 2.83°C/W  .
 
@@ -302,21 +302,29 @@ Una consideración importante que no se evidencia en las imágenes del PCB es qu
 
 ## Especificaciones
 
-En el comienzo de este diseño se definieron ciertas especificaciones que el circuito debía cumplir. De acuerdo a estas especificaciones, y con las limitaciones que se nos plantearon, basamos nuestro objetivo en diseñar el mejor circuito posible. 
+En el comienzo de este diseño se definieron ciertas especificaciones que el circuito debía cumplir. De acuerdo a estas especificaciones, y con las limitaciones que se plantearon, se basó el objetivo en diseñar el mejor circuito posible. 
 
-Las especificaciones planteadas y el resultado al que llegamos se encuentran a continuación:
+Las especificaciones planteadas y el resultado al que llegamos se encuentran a continuación, en todos los casos se polarizó al circuito con una fuente de 30V y la salida de baja potencia con 15V.
 
 | Parámetro                 | Especificación | Valor simulado | Condición                            |
 |---------------------------|----------------|----------------|--------------------------------------|
-| THD                       |     >0.05%     |     0.056%     | señal de 1kHz, 1Vrms, carga de 8Ohms |
+| THD                       |     <0.05%     |     0.056%     | señal de 1kHz, 1Vrms, carga de 8Ohms |
+| Vout con Vin=0            |     <10mV      |      1.6mV     |  carga de 4Ohms, 8Ohms y sin carga   |
 | Potencia en la carga      |    90W(45W)    |    70W(35W)    |         carga de 4Ohms(8Ohms)        |
 | Eficiencia                |      >75%      |       77%      |         señal de 1kHz, 1Vrms         |
-| Impedancia de entrada     |    <10kOhms    |     20kOhms    |       señales de 10Hz a 100kHz       |
-| Impedancia de salida      |    >0.4Ohms    |     10mOhms    |        señales de 10Hz a 20kHz       |
+| Impedancia de entrada     |    >10kOhms    |     20kOhms    |       señales de 10Hz a 100kHz       |
+| Impedancia de salida      |    <0.4Ohms    |     10mOhms    |        señales de 10Hz a 20kHz       |
 | Valores posibles de carga |     >4Ohms     |     >4Ohms     |            señales ≤ 1Vrm            |
-| Limitación de corriente   |      7.5A      |       8A       |            carga de 2Ohms            |
-| Potencia máxima disipada  |      >30W      |      27.5W     | señal de 1kHz, 1Vrms, carga de 4Ohms | 
+| Limitación de corriente   |       7A       |      7,5A      |            carga de 2Ohms            |
+| Potencia máxima disipada  |      <30W      |      27,5W     | señal de 1kHz, 1Vrms, carga de 4Ohms | 
 
+Las especificaciones que no llegamos a cumplir son las de distorsión armónica, potencia en la carga y limitación de corriente.
+
+Por un lado, la causa de tener esta distorsión se encuentra en el hecho de que se tiene la salida de un amplificador clase G-paralelo. Esta configuración mejora la eficiencia respecto de un clase G-serie ya que solo se encuentra en conducción un solo transistor a la vez, pero a la vez introduce una pequeña deformación en la señal al conmutar entre un camino y otro. Sin embargo, esto ocurre cuando la señal sobrepasa el valor de conmutación. Como se planteó antes, en las señales de audio que comunmente se le aplican a este tipo de amplificadores tienen períodos cortos de tiempo en el que la señal es máxima, situandose la mayor parte del tiempo debajo del promedio. Con esto en mente, y considerando que el valor obtenido es cercano al valor planteado inicialmente, se concluye que es un valor válido.
+
+En el caso de la potencia en la carga, el planteo inicial surgió de suponer una caída máxima de 3V en los transistores de potencia, de los cuales se obtenía una excursión máxima de 27Vpico. Esto sin embargo no fue posible con los transistores seleccionados, y logramos una extensión de 24Vpico. El valor de esta tensión pico se debió a que la fuente con la que se energiza el circuito es de 30V, y porque los costos de transistores más eficientes excedían los valores iniciales y encarecían demasiado el circuito completo. 
+
+Por otro lado, en el caso de la corriente de limitación, el valor debía ser tal que no limitara en el caso de corriente máxima, carga de 4Ohms y tensión máxima de 24Vpico. Se planteó, entonces, como caso limite una carga de 3,5Ohms y una tensión máxima a la salida. De acuerdo a esto se tenía que los picos de corriente llegaban a casi 7A. En el circuito logramos limitar la corriente en 7,5A, lo cual se considera un valor aceptable ya que está en condiciones a las que el amplificador no debería llegar. Sin embargo, en el peor de los casos en que se tengan cargas mayores en la salida, y que además se tenga una señal en la entrada, los fusibles en la entrada se introdujeron para proteger al circuito. 
 
 
 ## Construcción
