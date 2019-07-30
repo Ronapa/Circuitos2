@@ -140,6 +140,8 @@ La elección de usar este tipo de realimentación fue por la motivación de quer
 
 24\*(1.2kOhms/(1.2kOhms + 19kOhms)) = 1.42V  .
 
+Finalmente, tenemos que la amplificación es 1/f, donde f es el valor de la realimentación, dada por f = (1.2kOhm)/(1.2kOhm+19kOhm) = 0.0594 . Por lo que tenemos una amplificación de 16.83.
+
 ### Elección de las tecnologías utilizadas.
 Nuestro primer requisito para seleccionar los transistores necesarios fue que la etapa de entrada tenía que ser de montaje superficial y que los transistores de salida debían poder soportar la corriente a entregar a la carga y pudieran ser montados en un disipador.  
 * [**MMBTA56**](https://www.mouser.com/ds/2/149/MMBTA56-889761.pdf) y [**MMBTA06**](https://www.diodes.com/assets/Datasheets/ds30037.pdf)  
