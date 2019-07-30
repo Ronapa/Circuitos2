@@ -31,7 +31,9 @@
     * [Rechazo de ruido de la fuente](https://github.com/Ronapa/Circuitos2/#rechazo-de-ruido-de-la-fuente)
     * [Limitaciones sobre los valores de alimentación](https://github.com/Ronapa/Circuitos2/#limitaciones-sobre-los-valores-de-alimentación)
   * [Diseño del PCB](https://github.com/Ronapa/Circuitos2/#diseño-del-pcb)
+* [Especificaciones](https://github.com/Ronapa/Circuitos2/#especificaciones)
 * [Construcción](https://github.com/Ronapa/Circuitos2/#construcción)
+  * [Implementación de la etapa de entrada](https://github.com/Ronapa/Circuitos2/#implementación-de-la-etapa-de-entrada)
 
 ### Resumen
 El objetivo de este trabajo fue diseñar un amplificador de audio clase G con la etapa de salida conmutada en paralelo. La principal motivación fué la de mejorar la eficiencia del amplificador ya que el amplificador clase G clásico, posee los dos transistores de salida en serie, lo que provoca que cuando está activada la etapa del riel de mayor tensión, la señal también debe circular a través del otro transistor, generando pérdidas de potencia y excursión. Se puso como objetivo diseñar un circuito que amplifica una señal de audio estándar 1VRMS a la máxima tensión posible para cargas de 4 y 8 Ohms. Otra especificación fue la de la potencia, la cual se estimó alrededor de los 45-50W. El amplificador es alimentado con una fuente de ±30V y una de ±15V. Estos valores de tensión se logran con una fuente de laboratorio de ±30V y una fuente switching que otorga los valores de ±15 necesarios. El circuito cuenta con un LED de encendido, y una protección por sobrecorriente. 
@@ -297,6 +299,12 @@ Adicionalmente se agregó un render de como podría verse la placa una vez const
 ![PCB_render](/Imagenes/PCB_render.PNG)
 
 Una consideración importante que no se evidencia en las imágenes del PCB es que el transistor del multiplicador de Vbe se encontrará conectado por cables y acoplado térmicamente a los transistores de salida uniendoló al mismo disipador. Esta desición se tomó debido a que se consideró que no se justificaba complicar el diseño del PCB para acercar este transistor a la etapa de salida.
+
+## Especificaciones
+
+En el comienzo de este diseño se definieron ciertas especificaciones que el circuito debía cumplir. De acuerdo a estas especificaciones, y con las limitaciones que se nos plantearon, basamos nuestro objetivo en diseñar el mejor circuito posible. 
+
+Las especificaciones planteadas y el resultado al que llegamos se encuentran a continuación:
 
 ## Construcción
 
