@@ -176,19 +176,12 @@ Nuestro primer requisito para seleccionar los transistores necesarios fue que la
 ### Compensación del circuito y respuesta en frecuencia
 Para la compensación del circuito se abrió el lazo realimentador y se clocó una inductancia de un valor muy grande al igual que un capacitor de gran valor en serie con la uente. A partir de un analisis de recuencia se obtuvo la ganancia de lazo, la cual permitió determinar si el sistema era estable. A continuación se presenta el esquemático detallando lo anterior:
 
-![Esquematico margen fase](/Imagenes/esquematico_margen_fase.PNG)
-
-El gráfico obtenido es el siguiente:
-
-![grafico compensacion](/Imagenes/grafico_compensacion.PNG)
-
-Posteriormente se graficó la respuesta en frecuencia para el amplificador diseñado. Se realizó un ACSweep con la fuente de señal configurada con 1V AC. Como se puede ver en el gráfico, el amplificador presenta una respuesta plana entre los 20Hz y los 200kHz para el caso de la ganancia. En cuanto a la fase, en los 20 Hz se produce un adelanto de fase de 10° lo cual si bien no es ideal, debido a que se trata de bajas frecuancias este adelanto de fase no representaría mayores inconvenientes. Para el otro extremo de la banda de audio, para los 20kHz se produce un atraso de fase de menos de 10°, el cual es considerablemente bajo por lo que no se percibirá.
-
-![respuesta en frecuencia](/Imagenes/respuesta_en_frecuencia.PNG)
-
-En resumen, la respuesta en frecuencia resulta adecuada para la aplicación que se planteó.
-
-
+![Circuito_compensacion][Circuito_compensacion]
+![Graf_sin_compensar][Graf_sin_compensar]
+![Circuito_compensacion1][Circuito_compensacion1]
+![Graf_compensado1][Graf_compensado1]
+![Circuito_compensacion2][Circuito_compensacion2]
+![Graf_compensado1][Graf_compensado2]
 
 ### Potencia y eficiencia
 
@@ -416,3 +409,9 @@ La implementación de esta etapa de entrada nos permitió percatarnos de un erro
 [Potencia_total_f_ampl]: Imagenes/Potencia_total_f_ampl.PNG
 [Eficiencia_funcion_entrada]: Imagenes/Eficiencia_funcion_entrada.PNG
 [Potencia_f_potencia]: Imagenes/Potencia_f_potencia.PNG
+[Circuito_compensacion]: Imagenes/Circuito_compensacion
+[Graf_sin_compensar]: Imagenes/Graf_sin_compensar
+[Circuito_compensacion1]: Imagenes/Circuito_compensacion1
+[Graf_compensado1]: Imagenes/Graf_compensado1
+[Circuito_compensacion2]: Imagenes/Circuito_compensacion2
+[Graf_compensado1]: Imagenes/Graf_compensado2
