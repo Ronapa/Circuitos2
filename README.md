@@ -43,10 +43,6 @@ El circuito fue diseñado en base al amplificador [Kenwood KA-7X](http://materia
 
 ![Circuito en bloques][Circuito en bloques]
 
-A continuación en la imagen se muestra una parte de la etapa de salida del amplificador Kenwood, del cual tomamos características circuitales para implementar en nuestro diseño. 
-
-![Amplificador Kenwood][kenwood]
-
 
 Nuestro circuito simulado se encuentra a continuación:
 
