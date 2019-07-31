@@ -185,13 +185,13 @@ Para la compensación del circuito se abrió el lazo realimentador y se clocó u
 ![Circuito_compensacion1][Circuito_compensacion1]
 
 
-![Graf_compensado1][Graf_compensado1]
+![Graf_compensado1][Graf_compensado1] 
 
 
 ![Circuito_compensacion2][Circuito_compensacion2]
 
 
-![Graf_compensado1][Graf_compensado2]
+![Graf_compensado2][Graf_compensado2] 
 
 ### Potencia y eficiencia
 
@@ -421,7 +421,7 @@ La implementación de esta etapa de entrada nos permitió percatarnos de un erro
 [Potencia_f_potencia]: Imagenes/Potencia_f_potencia.PNG
 [Circuito_compensacion]: Imagenes/Circuito_compensacion.PNG
 [Graf_sin_compensar]: Imagenes/Graf_sin_compensar.PNG
-[Circuito_compensacion1]: Imagenes/Circuito_compensacion1.PNG
+[Circuito_compensacion1]: Imagenes/Circuito_compensacion_1.PNG
 [Graf_compensado1]: Imagenes/Graf_compensado1.PNG
-[Circuito_compensacion2]: Imagenes/Circuito_compensacion2.PNG
+[Circuito_compensacion2]: Imagenes/Circuito_compensacion_2.PNG
 [Graf_compensado1]: Imagenes/Graf_compensado2.PNG
