@@ -177,10 +177,20 @@ Nuestro primer requisito para seleccionar los transistores necesarios fue que la
 Para la compensación del circuito se abrió el lazo realimentador y se clocó una inductancia de un valor muy grande al igual que un capacitor de gran valor en serie con la uente. A partir de un analisis de recuencia se obtuvo la ganancia de lazo, la cual permitió determinar si el sistema era estable. A continuación se presenta el esquemático detallando lo anterior:
 
 ![Circuito_compensacion][Circuito_compensacion]
+
+
 ![Graf_sin_compensar][Graf_sin_compensar]
+
+
 ![Circuito_compensacion1][Circuito_compensacion1]
+
+
 ![Graf_compensado1][Graf_compensado1]
+
+
 ![Circuito_compensacion2][Circuito_compensacion2]
+
+
 ![Graf_compensado1][Graf_compensado2]
 
 ### Potencia y eficiencia
@@ -409,9 +419,9 @@ La implementación de esta etapa de entrada nos permitió percatarnos de un erro
 [Potencia_total_f_ampl]: Imagenes/Potencia_total_f_ampl.PNG
 [Eficiencia_funcion_entrada]: Imagenes/Eficiencia_funcion_entrada.PNG
 [Potencia_f_potencia]: Imagenes/Potencia_f_potencia.PNG
-[Circuito_compensacion]: Imagenes/Circuito_compensacion
-[Graf_sin_compensar]: Imagenes/Graf_sin_compensar
-[Circuito_compensacion1]: Imagenes/Circuito_compensacion1
-[Graf_compensado1]: Imagenes/Graf_compensado1
-[Circuito_compensacion2]: Imagenes/Circuito_compensacion2
-[Graf_compensado1]: Imagenes/Graf_compensado2
+[Circuito_compensacion]: Imagenes/Circuito_compensacion.PNG
+[Graf_sin_compensar]: Imagenes/Graf_sin_compensar.PNG
+[Circuito_compensacion1]: Imagenes/Circuito_compensacion1.PNG
+[Graf_compensado1]: Imagenes/Graf_compensado1.PNG
+[Circuito_compensacion2]: Imagenes/Circuito_compensacion2.PNG
+[Graf_compensado1]: Imagenes/Graf_compensado2.PNG
