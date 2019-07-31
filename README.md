@@ -170,6 +170,7 @@ Posteriormente se graficó la respuesta en frecuencia para el amplificador dise�
 En resumen, la respuesta en frecuencia resulta adecuada para la aplicación que se planteó.
 
 
+
 ### Potencia y eficiencia
 
 #### Potencia en la carga
@@ -182,6 +183,7 @@ Por otro lado, el circuito consume aproximadamente 500mW cuando no hay senal a l
 
 ![Potencia 0V][Potencia 0V]
 
+Una limitación en cuanto a la potencia que podía entregar el circuito está dada por el instrumental del laboratorio. Las fuentes utilizadas entregan hasta 300Watts en cualquier instante, lo cual limita nuestra corriente total que puede circular por el circuito a 10A. Esto limita la carga máxima que podemos introducirle al circuito a 2,5Ohms. Sin embargo, dentro de las especificaciones planteamos que la carga máxima tenía que ser de 4Ohms, y el circuito limita corriente para valores de carga más altos.
 
 #### Eficiencia del circuito
 La eficiencia a la que llegamos, como era de esperarse, depende de la amplitud a la salida y al valor de la carga. Con la amplitud máxima a la salida y una carga de 8Ohms logramos una eficiencia de 77%. Sin embargo, como planteamos antes, los picos de señal en audio son de corta duración, por lo que en la mayor parte de la amplificación los valores serán menores a estos. De este modo se llega a una eficicencia aún mayor. Para una senal senoidal pura, se logra la eficiencia m'axima cuando la amplitud es maxima a la salida, donde se aprovecha la conmutacion entre las dos v'ias de ditinta tension.    
