@@ -218,6 +218,12 @@ R_{ca} = (150°C- 30W\*0.833°C/W - 40°C)/30W = 2.83°C/W  .
 Este valor incluye la pasta térmica, la arandela dieléctrica y el disipador. De acuerdo a esto, tomando una resistencia térmica de la pasta de [0,48°C/W](http://disipadores.com/accesorios.php#) obtenemos que el valor de los disipadores debe ser menor a [2,35°C/W](http://disipadores.com/media_potencia.php).  
 
 
+A continuación en las siguientes imágenes se encuentran la potencia entregada por la fuente en función de la amplitud de la señal de entrada, de cero al máximo, y la eficiencia del circuito en función de la señal de entrada. La potencia sobre la carga en función de la señal de entrada no se muestra ya que crece linealmente.
+ 
+![Potencia_total_f_ampl][Potencia_total_f_ampl]
+
+![Eficiencia_funcion_entrada][Eficiencia_funcion_entrada]
+
 ## Simulaciones sobres el amplificador
 
 ### Distorsión
@@ -389,3 +395,5 @@ La implementación de esta etapa de entrada nos permitió percatarnos de un erro
 [switching input transient]: Imagenes/switching_input_transient.PNG
 [switching steady]: Imagenes/switching_steady.PNG
 [Diferencia_VAS]: Imagenes/Diferencia_VAS.PNG
+[Potencia_total_f_ampl]: Imagenes/Potencia_total_f_ampl.PNG
+[Eficiencia_funcion_entrada]: Imagenes/Eficiencia_funcion_entrada.PNG
