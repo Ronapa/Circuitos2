@@ -25,7 +25,7 @@
     * [Eficiencia del circuito](https://github.com/Ronapa/Circuitos2/#eficiencia-del-circuito)
     * [Potencia disipada en los transistores](https://github.com/Ronapa/Circuitos2/#potencia-disipada-en-los-transistores)
   * [Ensayos variando la carga](https://github.com/Ronapa/Circuitos2/#ensayos-variando-la-carga)
-  * [Mediciones sobre el amplificador](https://github.com/Ronapa/Circuitos2/#mediciones-sobre-el-amplificador)
+  * [Simulaciones sobre el amplificador](https://github.com/Ronapa/Circuitos2/#simulaciones-sobre-el-amplificador)
     * [Impedancia de entrada y salida](https://github.com/Ronapa/Circuitos2/#impedancia-de-entrada-y-salida)
     * [Limitación de corriente y protecciones](https://github.com/Ronapa/Circuitos2/#limitación-de-corriente-y-protecciones)
     * [Rechazo de ruido de la fuente](https://github.com/Ronapa/Circuitos2/#rechazo-de-ruido-de-la-fuente)
@@ -205,7 +205,7 @@ R_{ca} = (150°C- 30W\*0.833°C/W - 40°C)/30W = 2.83°C/W  .
 Este valor incluye la pasta térmica, la arandela dieléctrica y el disipador. De acuerdo a esto, tomando una resistencia térmica de la pasta de [0,48°C/W](http://disipadores.com/accesorios.php#) obtenemos que el valor de los disipadores debe ser menor a [2,35°C/W](http://disipadores.com/media_potencia.php).  
 
 
-## Mediciones sobres el amplificador
+## Simulaciones sobres el amplificador
 
 ### Distorsión
 
