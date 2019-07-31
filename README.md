@@ -137,15 +137,17 @@ La segunda etapa por otro lado, debería estar cargada por la etapa de salida. S
 
 donde la resistencia que de carga es ![equation](https://latex.codecogs.com/gif.latex?r_o%20%3D%20%5Cfrac%7BVA%7D%7BI_%7BCQB%7D%7D). Finalmente obtenemos que el valor de la amplificación de la etapa del VAS es |a2| = 1080. 
 
+Luego, la amplificación a lazo abierto vale ![equation](https://latex.codecogs.com/gif.latex?%7Ca%7C%20%3D%20%7Ca1%7C%5Ccdot%20%7Ca2%7C%20%5Ccdot%20%7Ca3%7C%20%3D%20230%20%5Ccdot%201080%20%5Ccdot%201%20%3D%20248400%20%3D%20107dB)
+
 La realimentación planteada en nuestro circuito es serie-paralelo, esto es, mide tensión y suma tensión. El realimentador consta de una resistencia conectada directamente a la salida, que se conecta con la terminal negativa del amplificador diferencial a través de un divisor resistivo. 
 
 ![Realimentador][Realimentador]
 
 La elección de usar este tipo de realimentación fue por la motivación de querer estabilizar el valor de la tensión a la salida. De acuerdo a esto, podemos introducirle cargas al circuito menores a una carga límite y mantener una excursión de señal máxima y con la distorsión limitada. Los valores de la realimentación fueron planteado de la siguiente manera: Para empezar, R39 y R9 debían formar un divisor resistivo de modo de copiar el valor de la salida a la entrada con la misma amplitud. Además, para polarizar el circuito debía estar balanceado en las bases de los transistores. Finalmente, los valores de resistencia debían ser valores comerciales. Con esto planteado encontramos que la mejor solución fue elegir una resistencia de 19kOhms con una de 1.2kOhms. Con estos valores, y una salida máxima de 24V, llegamos a que el valor realimentado es de
 
-24\*(1.2kOhms/(1.2kOhms + 19kOhms)) = 1.42V  .
+![equation](https://latex.codecogs.com/gif.latex?24V%20%5Ccdot%20%5Cfrac%7B1.2k%5COmega%7D%7B1.2k%5COmega&plus;19k%5COmega%7D%20%3D%201.42V)  .
 
-Finalmente, tenemos que la amplificación es 1/f, donde f es el valor de la realimentación, dada por f = (1.2kOhm)/(1.2kOhm+19kOhm) = 0.0594 . Por lo que tenemos una amplificación de 16.83.
+Finalmente, tenemos que la amplificación es 1/f, donde f es el valor de la realimentación, dada por ![equation](https://latex.codecogs.com/gif.latex?f%20%3D%20%5Cfrac%7B1.2k%5COmega%7D%7B1.2k%5COmega%20&plus;19k%5COmega%7D%20%3D%200.0594) . Por lo que tenemos una amplificación de 16.83.
 
 ### Elección de las tecnologías utilizadas.
 Nuestro primer requisito para seleccionar los transistores necesarios fue que la etapa de entrada tenía que ser de montaje superficial y que los transistores de salida debían poder soportar la corriente a entregar a la carga y pudieran ser montados en un disipador.  
