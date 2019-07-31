@@ -213,16 +213,18 @@ y luego la disipación total por todos los transistores.
 
 Tenemos, entonces, para el caso más extremo los transistores de mayor potencia disipan picos de 55Watts. Asumiendo el peor caso en el que disipen pulsos de máximo valor en un ciclo de trabajo del 50%, podemos tomar que éstos disipan 27.5W, redondeado a 30W para contemplar diferencias de las simulaciones. Con este valor, para lograr obtener una temperatura menor a 150°C en la juntura, se necesita una resistencia térmica de carcasa a ambiente menor a
 
-R_{ca} = (150°C- 30W\*0.833°C/W - 40°C)/30W = 2.83°C/W  .
+![equation](https://latex.codecogs.com/gif.latex?R_%7Bca%7D%20%3D%20%5Cfrac%7B%28150%5Cdegree%20C-%2030W%5Ccdot%200.833%5Cdegree%20C/W%20-%2040%5Cdegree%20C%29%7D%7B30W%7D%20%3D%202.83%5Cdegree%20C/W) .
 
 Este valor incluye la pasta térmica, la arandela dieléctrica y el disipador. De acuerdo a esto, tomando una resistencia térmica de la pasta de [0,48°C/W](http://disipadores.com/accesorios.php#) obtenemos que el valor de los disipadores debe ser menor a [2,35°C/W](http://disipadores.com/media_potencia.php).  
 
 
-A continuación en las siguientes imágenes se encuentran la potencia entregada por la fuente en función de la amplitud de la señal de entrada, de cero al máximo, y la eficiencia del circuito en función de la señal de entrada. La potencia sobre la carga en función de la señal de entrada no se muestra ya que crece linealmente.
+A continuación en las siguientes imágenes se encuentran la potencia entregada por la fuente en función de la amplitud de la señal de salida, de cero al máximo, y la eficiencia del circuito en función de la señal de salida. La potencia sobre la carga en función de la señal de salida no se muestra ya que crece linealmente.
  
 ![Potencia_total_f_ampl][Potencia_total_f_ampl]
 
 ![Eficiencia_funcion_entrada][Eficiencia_funcion_entrada]
+
+En la segunda imagen se puede apreciar la curva característica de un amplificador clase G, donde hay un quiebre en la eficiencia y luego esta sigue creciendo. En nuestro circuito se llega a la eficiencia máxima cuando cuando se tiene la máxima excursión en la salida definida en las especificaciones. 
 
 ## Simulaciones sobres el amplificador
 
