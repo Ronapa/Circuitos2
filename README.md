@@ -64,7 +64,7 @@ En una base del diferencial se encuentra la señal de entrada mientras que en la
 
 La etapa de entrada esta cargada con la etapa del VAS, conectado mediante la base de Q23. Este transistor está polarizado con 721uA, lo del cual obtenemos 
 
-r_{pi} = 100x26mV/721uA = 3600 Ohms , 
+[!equation](https://latex.codecogs.com/gif.latex?r_%7Bpi%7D%20%3D%20%5Cfrac%7B100%5Ccdot%2026mV%7D%7B721%5Cmu%20A%7D%20%3D%203600%20%5COmega) , 
 
 la cual está en serie con el paralelo de R42 y r_{pi} de Q6 multiplicado por beta, aproximadamente 40kOhms. Finalmente, la etapa de entrada está cargada con 43.6kOhms. 
 
