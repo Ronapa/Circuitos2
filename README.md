@@ -226,6 +226,11 @@ A continuación en las siguientes imágenes se encuentran la potencia entregada 
 
 En la segunda imagen se puede apreciar la curva característica de un amplificador clase G, donde hay un quiebre en la eficiencia y luego esta sigue creciendo. En nuestro circuito se llega a la eficiencia máxima cuando cuando se tiene la máxima excursión en la salida definida en las especificaciones. 
 
+Finalmente, en la siguiente imagen se encuentra la potencia entregada por las fuentes en función de la potencia entregada a la carga. 
+
+![Potencia_f_potencia][Potencia_f_potencia]
+
+
 ## Simulaciones sobres el amplificador
 
 ### Distorsión
@@ -399,3 +404,4 @@ La implementación de esta etapa de entrada nos permitió percatarnos de un erro
 [Diferencia_VAS]: Imagenes/Diferencia_VAS.PNG
 [Potencia_total_f_ampl]: Imagenes/Potencia_total_f_ampl.PNG
 [Eficiencia_funcion_entrada]: Imagenes/Eficiencia_funcion_entrada.PNG
+[Potencia_f_potencia]: Imagenes/Potencia_f_potencia.PNG
