@@ -62,7 +62,7 @@ La etapa de entrada esta cargada con la etapa del VAS, conectado mediante la bas
 
 ![equation](https://latex.codecogs.com/gif.latex?r_%7Bpi%7D%20%3D%20%5Cfrac%7B100%5Ccdot%2026mV%7D%7B721%5Cmu%20A%7D%20%3D%203600%20%5COmega) , 
 
-la cual está en serie con el paralelo de R42 y r_{pi} de Q6 multiplicado por beta, aproximadamente 40kOhms. Finalmente, la etapa de entrada está cargada con 43.6kOhms. 
+la cual está en serie con el paralelo de R42 y r_{pi} de Q6 multiplicado por beta, aproximadamente 4kOhms. Finalmente, la etapa de entrada está cargada con 7.6kOhms. 
 
 ![Etapa de entrada][Etapa Entrada]
 
@@ -127,9 +127,15 @@ A estas especificaciones, además, se le agregó la consideración del costo. Ar
 
 Para hacer un análisis de la amplificación, primero separamos por etapas, según el diagrama en bloques de la [figura](https://github.com/Ronapa/Circuitos2#dise%C3%B1o). De acuerdo a esto obtuvimos la amplificación de las distintas etapas. Para empezar, la etapa de salida como gana corriente la amplificación en tensión es aproximadamente 1. La amplificación de la etapa de entrada se calcula como 
 
-a = -gm\*Rca  
+![equation](https://latex.codecogs.com/gif.latex?a_1%20%3D%20-gm%5Ccdot%20Rca) 
 
-donde Rca es la resistencia que carga a la etapa de entrada. 
+donde Rca es la resistencia que carga a la etapa de entrada. De acuerdo a esto la amplificación de la etapa de entrada es |a1|=230.
+
+La segunda etapa por otro lado, debería estar cargada por la etapa de salida. Sin embargo, como se mencionó en la sección de [Etapa VAS y multiplicador de Vbe](https://github.com/Ronapa/Circuitos2/#etapa-vas-y-multiplicador-de-vbe) se agregaron los circuitos seguidores entre estas etapas para que la etapa de salida no demandara demasiada corriente de esta etapa. De acuerdo a esto, tomando a la impedancia que presenta el multiplicador de Vbe como muy baja, se obtiene que esta etapa está cargada con la *ro* de la fuente de corriente dada por Q8.  La amplificación de esta etapa está dada por
+
+![equation](https://latex.codecogs.com/gif.latex?a_2%20%3D%20-gm%5Ccdot%20Rca)  
+
+donde la resistencia que de carga es ![equation](https://latex.codecogs.com/gif.latex?r_o%20%3D%20%5Cfrac%7BVA%7D%7BI_%7BCQB%7D%7D). Finalmente obtenemos que el valor de la amplificación de la etapa del VAS es |a2| = 1080. 
 
 La realimentación planteada en nuestro circuito es serie-paralelo, esto es, mide tensión y suma tensión. El realimentador consta de una resistencia conectada directamente a la salida, que se conecta con la terminal negativa del amplificador diferencial a través de un divisor resistivo. 
 
