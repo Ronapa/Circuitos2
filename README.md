@@ -161,34 +161,37 @@ Nuestro primer requisito para seleccionar los transistores necesarios fue que la
 * [**MJE340**](https://www.onsemi.com/pub/Collateral/MJE340-D.PDF) y  [**MJE350**](https://www.onsemi.com/pub/Collateral/MJE350-D.PDF)  
   Para el multiplicador de Vbe, que debe estar acoplado térmicamente a los transistores de salida, se eligió un transistor que pudiera ser montado en un disipador. Para este propósito se eligió el transistor **MJE340**(NPN). Además, se eligió la misma tecnología para los transistores que forman el la base del Darlington a la salida de alta potencia. Si bien para este último propósito se podría haber utilizado los transistores de potencia, los transistores elegidos cumplieron con los requerimientos a un costo menor que los de potencia. Esto se debe a que la corriente que manejan estos es mucho menor a la que entregan los transistores de potencia. 
 
-* [Resistores]
+* **Resistores**
  Los resistores con los que implementaremos este circuito, salvo los resistores de 0.1Ohms, son del tipo montaje superficial, o SMD, ya que estos nos permiten tener un diseño compacto y cumplen con las especificaciones de potencia necesaria. Los resistores de 0,1Ohm, como tienen que soportar mayores potencias deben ser resistores de cerámica cementada y son componentes *through-hole*.
  
-* [Capacitores]
+* **Capacitores**
  Para la elección de los capacitores, se intentó poner capacitores de montaje superficial electrolíticos donde se pudo. Sin embargo, valores de capacitancias muy altas hacían que se elevaran mucho los costos para capacitores superficiales, por lo que se optó por capacitores *through-hole*. Los capacitores que no se eligieron como superficiales son el que desacopla la continua de la entrada ([C1=10uF](https://github.com/Ronapa/Circuitos2/#etapa-de-entrada) ), y el que acopla la alterna para la realimentación ([C2=47uF](https://github.com/Ronapa/Circuitos2/#etapa-de-entrada) ).
  
-* [LEDs]
+* **LEDs**
  En nuestro circuito se implementan dos tipos de LEDS, uno es un LED de encendido que indica cuando se energiza el circuito. Los otros dos LEDs se encienden cuando entra en acción la limitación de corriente. El LED de encendido es un LED *through-hole* por el que caen 2,7V. En cambio, los otros son LEDs de montaje superficial por los que caen 1,5V cuando se encienden. 
  
- * [Diodos] 
+ * **Diodos**
   Los diodos que implementamos en los circuitos que se encargan de conmutar entre las dos vías son diodos Shotky de montaje superficial. Se eligió este tipo de diodos por la menor caída de tensión en directa y, más importante, por la velocidad de conmutar entre conducción y modo reverso. 
 
 ### Compensación del circuito y respuesta en frecuencia
 Para la compensación del circuito se abrió el lazo realimentador y se clocó una inductancia de un valor muy grande al igual que un capacitor de gran valor en serie con la uente. A partir de un analisis de recuencia se obtuvo la ganancia de lazo, la cual permitió determinar si el sistema era estable. A continuación se presenta el esquemático detallando lo anterior:
 
-![Esquematico margen fase](/Imagenes/esquematico_margen_fase.PNG)
-
-El gráfico obtenido es el siguiente:
-
-![grafico compensacion](/Imagenes/grafico_compensacion.PNG)
-
-Posteriormente se graficó la respuesta en frecuencia para el amplificador diseñado. Se realizó un ACSweep con la fuente de señal configurada con 1V AC. Como se puede ver en el gráfico, el amplificador presenta una respuesta plana entre los 20Hz y los 200kHz para el caso de la ganancia. En cuanto a la fase, en los 20 Hz se produce un adelanto de fase de 10° lo cual si bien no es ideal, debido a que se trata de bajas frecuancias este adelanto de fase no representaría mayores inconvenientes. Para el otro extremo de la banda de audio, para los 20kHz se produce un atraso de fase de menos de 10°, el cual es considerablemente bajo por lo que no se percibirá.
-
-![respuesta en frecuencia](/Imagenes/respuesta_en_frecuencia.PNG)
-
-En resumen, la respuesta en frecuencia resulta adecuada para la aplicación que se planteó.
+![Circuito_compensacion][Circuito_compensacion]
 
 
+![Graf_sin_compensar][Graf_sin_compensar]
+
+
+![Circuito_compensacion1][Circuito_compensacion1]
+
+
+![Graf_compensado1][Graf_compensado1] 
+
+
+![Circuito_compensacion2][Circuito_compensacion2]
+
+
+![Graf_compensado2][Graf_compensado2]  
 
 ### Potencia y eficiencia
 
@@ -416,3 +419,9 @@ La implementación de esta etapa de entrada nos permitió percatarnos de un erro
 [Potencia_total_f_ampl]: Imagenes/Potencia_total_f_ampl.PNG
 [Eficiencia_funcion_entrada]: Imagenes/Eficiencia_funcion_entrada.PNG
 [Potencia_f_potencia]: Imagenes/Potencia_f_potencia.PNG
+[Circuito_compensacion]: Imagenes/Circuito_compensacion.PNG
+[Graf_sin_compensar]: Imagenes/Graf_sin_compensar.PNG
+[Circuito_compensacion1]: Imagenes/Circuito_compensacion_1.PNG
+[Graf_compensado1]: Imagenes/Graf_compensado1.PNG
+[Circuito_compensacion2]: Imagenes/Circuito_compensacion_2.PNG
+[Graf_compensado2]: Imagenes/Graf_compensado2.PNG
