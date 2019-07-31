@@ -174,19 +174,30 @@ Nuestro primer requisito para seleccionar los transistores necesarios fue que la
   Los diodos que implementamos en los circuitos que se encargan de conmutar entre las dos vías son diodos Shotky de montaje superficial. Se eligió este tipo de diodos por la menor caída de tensión en directa y, más importante, por la velocidad de conmutar entre conducción y modo reverso. 
 
 ### Compensación del circuito y respuesta en frecuencia
-Para la compensación del circuito se abrió el lazo realimentador y se clocó una inductancia de un valor muy grande al igual que un capacitor de gran valor en serie con la uente. A partir de un analisis de recuencia se obtuvo la ganancia de lazo, la cual permitió determinar si el sistema era estable. A continuación se presenta el esquemático detallando lo anterior:
+Para la compensación del circuito se abrió el lazo realimentador y se colocó una inductancia de un valor muy grande al igual que un capacitor de gran valor en serie con la fuente de prueba. A partir de un analisis de frecuencia se obtuvo la ganancia de lazo, la cual permitió determinar si el sistema era estable. A continuación se presenta el esquemático detallando lo anterior:
 
 ![Circuito_compensacion][Circuito_compensacion]
 
+En la figura siguiente se muestra el resultado obtenido y la respuesta al escalón. 
 
 ![Graf_sin_compensar][Graf_sin_compensar]
+
+![Circuito_descompensado][Circuito_descompensado]
+
+De estos gráfico se observa que el circuito no está bien compensado. Para compensar, primero desplazamos el primer polo hacia la izquierda agregando un capacitor en el VAS, como se indica en las siguientes figuras.
 
 
 ![Circuito_compensacion1][Circuito_compensacion1]
 
-
 ![Graf_compensado1][Graf_compensado1] 
 
+Agregando ese capacitor desplazamos el primer polo una década, de 1kHz a 100Hz, de este modo logrando obtener un márgen de fase de 90 grados. A continuación se muestra la respuesta al escalón del circuito con este cambio:
+
+
+![Circuito_compensado1][Circuito_compensado1]
+
+Este márgen de fase todavía puede mejorarse, y se logra compensando al circuito con una capacitancia en paralelo a la resistencia de la realimentación. Esta capacitancia crea un polo en la frecuencia de corte de manera de desplazar la fase del sistema, permitiendonos obtener un márgen de fase distinto. La frecuencia de este polo está dada por https://latex.codecogs.com/gif.latex?f%20%3D%20%5Cfrac%7B1%7D%7B2%5Cpi%20RC%7D. Con R=19kOhm y C=4.7pF obtenemos f= 1.8MHz. Esto desplaza el ángulo en 300kHz unos 12 grados. 
+Con esto obtenemos un márgen de fase de 78 grados.
 
 ![Circuito_compensacion2][Circuito_compensacion2]
 
@@ -425,3 +436,7 @@ La implementación de esta etapa de entrada nos permitió percatarnos de un erro
 [Graf_compensado1]: Imagenes/Graf_compensado1.PNG
 [Circuito_compensacion2]: Imagenes/Circuito_compensacion_2.PNG
 [Graf_compensado2]: Imagenes/Graf_compensado2.PNG
+[Circuito_descompensado]: Imagenes/Circuito_descompensado.PNG
+[Circuito_compensado1]: Imagenes/Circuito_compensado1.PNG
+
+
