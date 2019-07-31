@@ -36,7 +36,7 @@
   * [Implementación de la etapa de entrada](https://github.com/Ronapa/Circuitos2/#implementación-de-la-etapa-de-entrada)
 
 ### Resumen
-El objetivo de este trabajo fue diseñar un amplificador de audio clase G con la etapa de salida conmutada en paralelo. La principal motivación fué la de mejorar la eficiencia del amplificador ya que el amplificador clase G clásico, posee los dos transistores de salida en serie, lo que provoca que cuando está activada la etapa del riel de mayor tensión, la señal también debe circular a través del otro transistor, generando pérdidas de potencia y excursión. Se puso como objetivo diseñar un circuito que amplifica una señal de audio estándar 1VRMS a la máxima tensión posible para cargas de 4 y 8 Ohms. Otra especificación fue la de la potencia, la cual se estimó alrededor de los 45-50W. El amplificador es alimentado con una fuente de ±30V y una de ±15V. Estos valores de tensión se logran con una fuente de laboratorio de ±30V y una fuente switching que otorga los valores de ±15 necesarios. El circuito cuenta con un LED de encendido, y una protección por sobrecorriente. 
+El objetivo de este trabajo fue diseñar un amplificador de audio clase G con la etapa de salida conmutada en paralelo. La principal motivación fué la de mejorar la excursión del amplificador ya que el amplificador clase G clásico, posee los dos transistores de salida en serie, lo que provoca que cuando está activada la etapa del riel de mayor tensión, la señal también debe circular a través del otro transistor, generando disipaciones de potencia innecesaria y pérdida de excursión al tener la caída de colector-emisor de dos transistores. Se puso como objetivo diseñar un circuito que amplifica una señal de audio estándar 1VRMS a la máxima tensión posible para cargas de 4 y 8 Ohms. Otra especificación fue la de la potencia, la cual se estimó alrededor de los 45-50W para una carga de 8Ohms. El amplificador es alimentado con una fuente de ±30V y una de ±15V. Estos valores de tensión se logran con una fuente de laboratorio de ±30V y una fuente switching que otorga los valores de ±15 necesarios. El circuito cuenta con un LED de encendido, y una protección por sobrecorriente. 
 
 ## Diseño
 El circuito fue diseñado en base al amplificador [Kenwood KA-7X](http://materias.fi.uba.ar/6610/Manuales%20de%20servicio%20tecnico/Clase%20G%20y%20H/Kenwood/KA-7X/hfe_kenwood_ka_7x_service.pdf). Este es un amplificador _stereo_ clase G con etapa de salida en paralelo. Nuestro amplificador, en cambio, es de tipo _mono_. El circuito diseñado está basado en etapas definidas por el circuito en bloques de la siguiente figura.
@@ -62,7 +62,7 @@ La etapa de entrada esta cargada con la etapa del VAS, conectado mediante la bas
 
 ![equation](https://latex.codecogs.com/gif.latex?r_%7Bpi%7D%20%3D%20%5Cfrac%7B100%5Ccdot%2026mV%7D%7B721%5Cmu%20A%7D%20%3D%203600%20%5COmega) , 
 
-la cual está en serie con el paralelo de R42 y r_{pi} de Q6 multiplicado por beta, aproximadamente 40kOhms. Finalmente, la etapa de entrada está cargada con 43.6kOhms. 
+la cual está en serie con el paralelo de R42 y r_{pi} de Q6 multiplicado por beta, aproximadamente 4kOhms. Finalmente, la etapa de entrada está cargada con 7.6kOhms. 
 
 ![Etapa de entrada][Etapa Entrada]
 
@@ -73,6 +73,9 @@ Una vez definida preliminarmente la etapa de salida se prosiguió con el VAS, o 
 ![Etapa de VAS][Etapa VAS]
 
 La tensión a la salida de esta etapa, tiene un desnivel de 2Vbe por la caida en los transistores de los seguidores, sin embargo, ajustando el valor de la resistencia R12 logramos que el multiplicador de Vbe equipare este desnivel. Esto se ve en la siguiente imagen, donde se aprecia que esta etapa amplifica tensión y copia la señal a las dos ramas de la salida, con la diferencia de los Vbe necesarios para obtener una señal sin distorsión. 
+
+
+![Diferencia_VAS][Diferencia_VAS]
 
 #### Etapa de salida
 La etapa de salida, como se ve en la imagen, es simétrica para el camino de señal del semicilco positivo y del negativo. A continuación se hará un analisis del camino de señal positiva de esta etapa siendo los resultados análogos para el camino de señal negativa.  
@@ -94,7 +97,7 @@ A continuación se encuentra el circuito que controla la conmutación entre el c
 ![Etapa conmutacion][Etapa Switches]
 
 Primero se plantea un divisor resistivo con R17 y R18, de donde se obtiene una tensión de referencia. La tensión de referencia simulada es de 11.95V. Se eligió este valor para que la señal no se acerque demasiado a 15V antes de conmutar, dado que esto podía producir que algún transistor sature deformando la señal. Cuando la salida supera este valor, Q13 entra en conducción. Cuando esto ocurre, empieza a circular una corriente sobre  R19 y R20, que a su vez polariza a Q14. Este último es el que toma corriente de la base del switch y así cambiando el circuito de señal.  
-La resistencia R26 es un realimentador que muestrea la tensión de la referencia y entrega corriente al transistor Q14 para estabilizar la señal. Finalmente, la rama de C3 y R43 filtra componentes de alta frecuencia dadas por la conmutación rápida. 
+La resistencia R26 es un realimentador que muestrea la tensión de la referencia y entrega corriente al transistor Q14 para estabilizar la señal. Finalmente, la rama de C3 filtra componentes de alta frecuencia dadas por la conmutación rápida. 
 
 ![Conmutacion][Conmutación circuitos]
 
@@ -124,9 +127,17 @@ A estas especificaciones, además, se le agregó la consideración del costo. Ar
 
 Para hacer un análisis de la amplificación, primero separamos por etapas, según el diagrama en bloques de la [figura](https://github.com/Ronapa/Circuitos2#dise%C3%B1o). De acuerdo a esto obtuvimos la amplificación de las distintas etapas. Para empezar, la etapa de salida como gana corriente la amplificación en tensión es aproximadamente 1. La amplificación de la etapa de entrada se calcula como 
 
-a = -gm\*Rca  
+![equation](https://latex.codecogs.com/gif.latex?a_1%20%3D%20-gm%5Ccdot%20Rca) 
 
-donde Rca es la resistencia que carga a la etapa de entrada. 
+donde Rca es la resistencia que carga a la etapa de entrada. De acuerdo a esto la amplificación de la etapa de entrada es |a1|=230.
+
+La segunda etapa por otro lado, debería estar cargada por la etapa de salida. Sin embargo, como se mencionó en la sección de [Etapa VAS y multiplicador de Vbe](https://github.com/Ronapa/Circuitos2/#etapa-vas-y-multiplicador-de-vbe) se agregaron los circuitos seguidores entre estas etapas para que la etapa de salida no demandara demasiada corriente de esta etapa. De acuerdo a esto, tomando a la impedancia que presenta el multiplicador de Vbe como muy baja, se obtiene que esta etapa está cargada con la *ro* de la fuente de corriente dada por Q8.  La amplificación de esta etapa está dada por
+
+![equation](https://latex.codecogs.com/gif.latex?a_2%20%3D%20-gm%5Ccdot%20Rca)  
+
+donde la resistencia que de carga es ![equation](https://latex.codecogs.com/gif.latex?r_o%20%3D%20%5Cfrac%7BVA%7D%7BI_%7BCQB%7D%7D). Finalmente obtenemos que el valor de la amplificación de la etapa del VAS es |a2| = 1080. 
+
+Luego, la amplificación a lazo abierto vale ![equation](https://latex.codecogs.com/gif.latex?%7Ca%7C%20%3D%20%7Ca1%7C%5Ccdot%20%7Ca2%7C%20%5Ccdot%20%7Ca3%7C%20%3D%20230%20%5Ccdot%201080%20%5Ccdot%201%20%3D%20248400%20%3D%20107dB)
 
 La realimentación planteada en nuestro circuito es serie-paralelo, esto es, mide tensión y suma tensión. El realimentador consta de una resistencia conectada directamente a la salida, que se conecta con la terminal negativa del amplificador diferencial a través de un divisor resistivo. 
 
@@ -134,9 +145,9 @@ La realimentación planteada en nuestro circuito es serie-paralelo, esto es, mid
 
 La elección de usar este tipo de realimentación fue por la motivación de querer estabilizar el valor de la tensión a la salida. De acuerdo a esto, podemos introducirle cargas al circuito menores a una carga límite y mantener una excursión de señal máxima y con la distorsión limitada. Los valores de la realimentación fueron planteado de la siguiente manera: Para empezar, R39 y R9 debían formar un divisor resistivo de modo de copiar el valor de la salida a la entrada con la misma amplitud. Además, para polarizar el circuito debía estar balanceado en las bases de los transistores. Finalmente, los valores de resistencia debían ser valores comerciales. Con esto planteado encontramos que la mejor solución fue elegir una resistencia de 19kOhms con una de 1.2kOhms. Con estos valores, y una salida máxima de 24V, llegamos a que el valor realimentado es de
 
-24\*(1.2kOhms/(1.2kOhms + 19kOhms)) = 1.42V  .
+![equation](https://latex.codecogs.com/gif.latex?24V%20%5Ccdot%20%5Cfrac%7B1.2k%5COmega%7D%7B1.2k%5COmega&plus;19k%5COmega%7D%20%3D%201.42V)  .
 
-Finalmente, tenemos que la amplificación es 1/f, donde f es el valor de la realimentación, dada por f = (1.2kOhm)/(1.2kOhm+19kOhm) = 0.0594 . Por lo que tenemos una amplificación de 16.83.
+Finalmente, tenemos que la amplificación es 1/f, donde f es el valor de la realimentación, dada por ![equation](https://latex.codecogs.com/gif.latex?f%20%3D%20%5Cfrac%7B1.2k%5COmega%7D%7B1.2k%5COmega%20&plus;19k%5COmega%7D%20%3D%200.0594) . Por lo que tenemos una amplificación de 16.83.
 
 ### Elección de las tecnologías utilizadas.
 Nuestro primer requisito para seleccionar los transistores necesarios fue que la etapa de entrada tenía que ser de montaje superficial y que los transistores de salida debían poder soportar la corriente a entregar a la carga y pudieran ser montados en un disipador.  
@@ -167,6 +178,7 @@ Posteriormente se graficó la respuesta en frecuencia para el amplificador dise�
 En resumen, la respuesta en frecuencia resulta adecuada para la aplicación que se planteó.
 
 
+
 ### Potencia y eficiencia
 
 #### Potencia en la carga
@@ -179,6 +191,7 @@ Por otro lado, el circuito consume aproximadamente 500mW cuando no hay senal a l
 
 ![Potencia 0V][Potencia 0V]
 
+Una limitación en cuanto a la potencia que podía entregar el circuito está dada por el instrumental del laboratorio. Las fuentes utilizadas entregan hasta 300Watts en cualquier instante, lo cual limita nuestra corriente total que puede circular por el circuito a 10A. Esto limita la carga máxima que podemos introducirle al circuito a 2,5Ohms. Sin embargo, dentro de las especificaciones planteamos que la carga máxima tenía que ser de 4Ohms, y el circuito limita corriente para valores de carga más altos.
 
 #### Eficiencia del circuito
 La eficiencia a la que llegamos, como era de esperarse, depende de la amplitud a la salida y al valor de la carga. Con la amplitud máxima a la salida y una carga de 8Ohms logramos una eficiencia de 77%. Sin embargo, como planteamos antes, los picos de señal en audio son de corta duración, por lo que en la mayor parte de la amplificación los valores serán menores a estos. De este modo se llega a una eficicencia aún mayor. Para una senal senoidal pura, se logra la eficiencia m'axima cuando la amplitud es maxima a la salida, donde se aprovecha la conmutacion entre las dos v'ias de ditinta tension.    
@@ -204,6 +217,12 @@ R_{ca} = (150°C- 30W\*0.833°C/W - 40°C)/30W = 2.83°C/W  .
 
 Este valor incluye la pasta térmica, la arandela dieléctrica y el disipador. De acuerdo a esto, tomando una resistencia térmica de la pasta de [0,48°C/W](http://disipadores.com/accesorios.php#) obtenemos que el valor de los disipadores debe ser menor a [2,35°C/W](http://disipadores.com/media_potencia.php).  
 
+
+A continuación en las siguientes imágenes se encuentran la potencia entregada por la fuente en función de la amplitud de la señal de entrada, de cero al máximo, y la eficiencia del circuito en función de la señal de entrada. La potencia sobre la carga en función de la señal de entrada no se muestra ya que crece linealmente.
+ 
+![Potencia_total_f_ampl][Potencia_total_f_ampl]
+
+![Eficiencia_funcion_entrada][Eficiencia_funcion_entrada]
 
 ## Simulaciones sobres el amplificador
 
@@ -375,3 +394,6 @@ La implementación de esta etapa de entrada nos permitió percatarnos de un erro
 [switching load transient]: Imagenes/switching_load_transient.PNG
 [switching input transient]: Imagenes/switching_input_transient.PNG
 [switching steady]: Imagenes/switching_steady.PNG
+[Diferencia_VAS]: Imagenes/Diferencia_VAS.PNG
+[Potencia_total_f_ampl]: Imagenes/Potencia_total_f_ampl.PNG
+[Eficiencia_funcion_entrada]: Imagenes/Eficiencia_funcion_entrada.PNG
