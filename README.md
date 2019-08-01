@@ -289,11 +289,16 @@ En todos los casos se puede observar que para una tensión de entrada de 830mV a
 
 Para obtener la impedancia de entrada del amplificador se decidió realizar un barrido en frecuencia y obtener la impedancia de entrada para todas las frecuencias. En la siguiente figura se observa la impedancia de entrada para frecuencias entre 0.1Hz y 10GHz. Se puede apreciar que la impedancia de entrada es 20 kOhms para todo el rango entre los 10 y los 100kHz, lo cual abarca toda la banda de audio. Resulta importante destacar que es una característica deseada en un amplificador de audio.
 
+![Rin_circuito](/Imagenes/Rin_circuito.PNG)
+
 ![Impedancia de entrada](/Imagenes/Rin_frecuencia.PNG)
 
 Para el caso de la impedancia de salida, el método fue muy similar al de la impedancia de entrada, solo que esta vez se conectó una fuente de corriente en paralelo con la carga. Se simuló para distintos casos en los cuales se conectaron cargas de 4 u 8 Omhs y también con el amplificador sin carga. Debido a que el amplificador se encuentra realimentado, no hubo grandes variaciones. En este caso la impedancia mantiene un valor de aproximadamente 10 mOhms entre los 20Hz y 1kHz, y luego aumenta a 340mOhms para los 20 kHz.
 
+![Rout_circuito](/Imagenes/Rout_circuito.PNG)
+
 ![Impedancia de salida](/Imagenes/Rout_frecuencia.PNG)
+
 
 #### Limitación de corriente y protecciones
 
