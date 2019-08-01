@@ -236,11 +236,11 @@ y luego la disipación total por todos los transistores.
 
 ![potencia max1][potencia max1]
 
-Tenemos, entonces, para el caso más extremo los transistores de mayor potencia disipan picos de 55Watts. Asumiendo el peor caso en el que disipen pulsos de máximo valor en un ciclo de trabajo del 50%, podemos tomar que éstos disipan 27.5W, redondeado a 30W para contemplar diferencias de las simulaciones. Con este valor, para lograr obtener una temperatura menor a 150°C en la juntura, se necesita una resistencia térmica de carcasa a ambiente menor a
+Se tiene, entonces, para el caso más extremo los transistores de mayor potencia disipan picos de 55 W. Asumiendo el peor caso en el que disipen pulsos de máximo valor en un ciclo de trabajo del 50%, podemos tomar que éstos disipan 27.5W. Sin embargo, como se analizará posteriormente, cuando el amplificador se encuentra con un corto en la salida, la potencia que disipa es alrededor de 40 W, por lo que se dimensionarán los disipadores para esta situación. Con este valor, para lograr obtener una temperatura menor a 150°C en la juntura, y asumiendo una temperatura de ambiente máxima de 45°C, se necesita una resistencia térmica de carcasa a ambiente menor a
 
 ![equation](https://latex.codecogs.com/gif.latex?R_%7Bca%7D%20%3D%20%5Cfrac%7B%28150%5Cdegree%20C-%2030W%5Ccdot%200.833%5Cdegree%20C/W%20-%2040%5Cdegree%20C%29%7D%7B30W%7D%20%3D%202.83%5Cdegree%20C/W) .
 
-Este valor incluye la pasta térmica, la arandela dieléctrica y el disipador. De acuerdo a esto, tomando una resistencia térmica de la pasta de [0,48°C/W](http://disipadores.com/accesorios.php#) obtenemos que el valor de los disipadores debe ser menor a [2,35°C/W](http://disipadores.com/media_potencia.php).  
+Este valor incluye la pasta térmica, la arandela dieléctrica y el disipador. De acuerdo a esto, tomando una resistencia térmica de la pasta de [0,48°C/W](http://disipadores.com/accesorios.php#) obtenemos que el valor de los disipadores debe ser menor a 1,3°C/W. Se determinó que el disipador que satisface estas necesidades es el [4625-ZD-2E](http://disipadores.com/media_potencia.php), el cual para una altura de 75mm posee una resistencia térmica de 1,2°C/W.  
 
 
 A continuación en las siguientes imágenes se encuentran la potencia entregada por la fuente en función de la amplitud de la señal de salida, de cero al máximo, y la eficiencia del circuito en función de la señal de salida. La potencia sobre la carga en función de la señal de salida no se muestra ya que crece linealmente.
