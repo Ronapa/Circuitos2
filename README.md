@@ -263,7 +263,7 @@ Finalmente, en la siguiente imagen se encuentra la potencia entregada por las fu
 Otro parámetro muy importante en un amplificador es la distorsión armónica que presenta. Par ellos se utilizó el comando del LTSpice .FOUR en el cual se le especifica la frecuencia y la cantidad de armónicas que son tenidas en cuenta para el cálculo de la distorsión. El comando arroja dos valores, de los cuales en todos los casos se tomó el de mayor valor. El valor más bajo corresponde solo a la distorsión armónica mientras que el otro tiene en cuenta todas las otras componentes ajenas a la señal de entrada que son amplificadas. A continuación se encuentran los valores obtenidos para 2 valores de carga y 2 frecuencias distintas. Las potencias indicadas son RMS para la señal pico indicada como Vin.
 
 
-4 Ohms 
+4 Ohms:
 
 | Vin   | Vout  | THD 1kHz | THD 10kHz | P   |
 |-------|-------|----------|-----------|-----|
@@ -273,18 +273,15 @@ Otro parámetro muy importante en un amplificador es la distorsión armónica qu
 | 1.27V | 21.3V | 0.063%   | 0.18%     | 58W |
 | 1.41V | 23.7V | 0.056%   | 0.16%     | 70W |
 
+8 Ohms:
 
-8 Ohms 
-
-Vin = 167mV | Vout = 2V | THD 1kHz= 0.012% | THD 10kHz= 0.015% | P = 0.5W
-
-Vin = 526mV | Vout = 9V | THD 1kHz= 0.012% | THD 10kHz= 0.005% | P = 5W
-
-Vin = 832mV |Vout = 14V | THD 1kHz= 0.074% | THD 10kHz= 0.21% | P = 12.5W
-
-Vin = 1.27V | Vout = 21.3V | THD 1kHz= 0.061% | THD 10kHz= 0.17% | P = 29W
-
-Vin = 1.41V | Vout = 23.65V | THD 1kHz= 0.056% | THD 10kHz= 0.16% | P = 35W
+| Vin   | Vout  | THD 1kHz | THD 10kHz | P     |
+|-------|-------|----------|-----------|-------|
+| 167mV | 2V    | 0.012%   | 0.015%    | 500mW |
+| 526mV | 9V    | 0.012%   | 0.05%     | 5W    |
+| 832mV | 14V   | 0.074%   | 0.21%     | 12.5W |
+| 1.27V | 21.3V | 0.061%   | 0.17%     | 29W   |
+| 1.41V | 23.7V | 0.056%   | 0.16%     | 35W   |
 
 En todos los casos se puede observar que para una tensión de entrada de 830mV aproximadamente la distorsión aumenta notablemente. Esto se debe a que comienza a actuar la conmutación de la etapa de salida. También se aprecia que a medida que aumenta la frecuencia la distorsión introducida por este subcircuito es mayor, ya que se producen más cantidad de transiciones entre los transistores. Se trabajó para eliminar lo más posible los transitorios de conmutación pero no se pudo mejorar más. Es posible que si se hubiese tenido en cuenta una tecnología MOS para la conmutación se pudieran haber obtenido mejores resultados.
 
