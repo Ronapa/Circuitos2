@@ -265,15 +265,13 @@ Otro parámetro muy importante en un amplificador es la distorsión armónica qu
 
 4 Ohms 
 
-Vin = 167mV | Vout = 2V | THD 1kHz= 0.012% | THD 10kHz= 0.017% | P = 1W
-
-Vin = 526mV | Vout = 9V | THD 1kHz= 0.012% | THD 10kHz= 0.036% | P = 10W
-
-Vin = 832mV |Vout = 14V | THD 1kHz= 0.072% | THD 10kHz= 0.23% | P = 25W
-
-Vin = 1.27V | Vout = 21.3V | THD 1kHz= 0.063% | THD 10kHz= 0.18% | P = 58W
-
-Vin = 1.41V | Vout = 23.65V | THD 1kHz= 0.058% | THD 10kHz= 0.16% | P = 70W
+| Vin   | Vout  | THD 1kHz | THD 10kHz | P   |
+|-------|-------|----------|-----------|-----|
+| 167mV | 2V    | 0.012%   | 0.017%    | 1W  |
+| 526mV | 9V    | 0.012%   | 0.036%    | 10W |
+| 832mV | 14V   | 0.072%   | 0.23%     | 25W |
+| 1.27V | 21.3V | 0.063%   | 0.18%     | 58W |
+| 1.41V | 23.7V | 0.056%   | 0.16%     | 70W |
 
 
 8 Ohms 
