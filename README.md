@@ -256,7 +256,7 @@ Finalmente, en la siguiente imagen se encuentra la potencia entregada por las fu
 ![Potencia_f_potencia][Potencia_f_potencia]
 
 
-## Simulaciones sobres el amplificador
+## Simulaciones sobre el amplificador
 
 ### Distorsión
 
