@@ -1,6 +1,6 @@
 EESchema Schematic File Version 4
 LIBS:PCB-cache
-EELAYER 29 0
+EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -1017,7 +1017,7 @@ Wire Wire Line
 	9450 1900 9450 1850
 Connection ~ 9450 1850
 Wire Wire Line
-	9450 1850 10550 1850
+	9450 1850 10300 1850
 Wire Wire Line
 	9150 2100 8950 2100
 Wire Wire Line
@@ -1747,10 +1747,10 @@ Wire Wire Line
 Wire Wire Line
 	950  850  950  750 
 Wire Wire Line
-	950  750  1650 750 
+	950  750  1300 750 
 Connection ~ 1650 750 
 Wire Wire Line
-	1050 950  1050 4250
+	1050 950  1050 1450
 Wire Wire Line
 	1050 4250 850  4250
 Wire Wire Line
@@ -1758,8 +1758,6 @@ Wire Wire Line
 Wire Wire Line
 	850  5150 950  5150
 Connection ~ 950  5150
-Wire Wire Line
-	1200 7050 1200 5150
 Connection ~ 1200 5150
 Wire Wire Line
 	1200 5150 1300 5150
@@ -1780,7 +1778,7 @@ $EndComp
 Wire Wire Line
 	900  7050 1200 7050
 Wire Wire Line
-	900  7150 2250 7150
+	900  7150 1850 7150
 $Comp
 L Connector:Screw_Terminal_01x02 J3
 U 1 1 5D3A1EE3
@@ -1828,7 +1826,7 @@ Wire Wire Line
 Wire Wire Line
 	10800 3150 10800 3650
 Wire Wire Line
-	10600 1950 10600 3150
+	10600 1950 10600 2400
 Connection ~ 10350 3650
 Wire Wire Line
 	10350 3650 10350 3700
@@ -1838,11 +1836,11 @@ Wire Wire Line
 	10450 5200 10450 5100
 Connection ~ 10450 5100
 Wire Wire Line
-	10450 5100 9450 5100
+	10450 5100 10350 5100
 Wire Wire Line
 	-1300 5950 -1300 4500
 Wire Wire Line
-	10350 3650 10800 3650
+	10350 3650 10650 3650
 Wire Wire Line
 	950  4650 750  4650
 Wire Wire Line
@@ -1875,4 +1873,101 @@ $EndComp
 Connection ~ 750  4650
 Wire Wire Line
 	750  4650 650  4650
+$Comp
+L pspice:C C13
+U 1 1 5D93BB79
+P 10300 2150
+F 0 "C13" H 10478 2196 50  0000 L CNN
+F 1 "C" H 10478 2105 50  0000 L CNN
+F 2 "Capacitor_THT:C_Radial_D12.5mm_H20.0mm_P5.00mm" H 10300 2150 50  0001 C CNN
+F 3 "~" H 10300 2150 50  0001 C CNN
+	1    10300 2150
+	1    0    0    -1  
+$EndComp
+$Comp
+L pspice:C C14
+U 1 1 5D93ED6D
+P 10350 4650
+F 0 "C14" H 10528 4696 50  0000 L CNN
+F 1 "C" H 10528 4605 50  0000 L CNN
+F 2 "Capacitor_THT:C_Radial_D12.5mm_H20.0mm_P5.00mm" H 10350 4650 50  0001 C CNN
+F 3 "~" H 10350 4650 50  0001 C CNN
+	1    10350 4650
+	1    0    0    -1  
+$EndComp
+$Comp
+L pspice:C C12
+U 1 1 5D940FAA
+P 1850 6850
+F 0 "C12" H 2028 6896 50  0000 L CNN
+F 1 "C" H 2028 6805 50  0000 L CNN
+F 2 "Capacitor_THT:C_Radial_D12.5mm_H20.0mm_P5.00mm" H 1850 6850 50  0001 C CNN
+F 3 "~" H 1850 6850 50  0001 C CNN
+	1    1850 6850
+	1    0    0    -1  
+$EndComp
+$Comp
+L pspice:C C11
+U 1 1 5D941CAC
+P 1300 1200
+F 0 "C11" H 1478 1246 50  0000 L CNN
+F 1 "C" H 1478 1155 50  0000 L CNN
+F 2 "Capacitor_THT:C_Radial_D12.5mm_H20.0mm_P5.00mm" H 1300 1200 50  0001 C CNN
+F 3 "~" H 1300 1200 50  0001 C CNN
+	1    1300 1200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1300 950  1300 750 
+Connection ~ 1300 750 
+Wire Wire Line
+	1300 750  1650 750 
+Wire Wire Line
+	1300 1450 1050 1450
+Connection ~ 1050 1450
+Wire Wire Line
+	1050 1450 1050 4250
+Wire Wire Line
+	1850 7100 1850 7150
+Connection ~ 1850 7150
+Wire Wire Line
+	1850 7150 2250 7150
+Wire Wire Line
+	1850 6600 1550 6600
+Wire Wire Line
+	1550 6600 1550 6900
+Wire Wire Line
+	1550 6900 1200 6900
+Wire Wire Line
+	1200 5150 1200 6900
+Connection ~ 1200 6900
+Wire Wire Line
+	1200 6900 1200 7050
+Wire Wire Line
+	10650 5100 10650 4300
+Connection ~ 10650 3650
+Wire Wire Line
+	10650 3650 10800 3650
+Wire Wire Line
+	10350 4900 10350 5100
+Connection ~ 10350 5100
+Wire Wire Line
+	10350 5100 9450 5100
+Wire Wire Line
+	10350 4400 10350 4300
+Wire Wire Line
+	10350 4300 10650 4300
+Connection ~ 10650 4300
+Wire Wire Line
+	10650 4300 10650 3650
+Wire Wire Line
+	10300 1900 10300 1850
+Connection ~ 10300 1850
+Wire Wire Line
+	10300 1850 10550 1850
+Wire Wire Line
+	10300 2400 10600 2400
+Connection ~ 10600 2400
+Wire Wire Line
+	10600 2400 10600 3150
 $EndSCHEMATC
