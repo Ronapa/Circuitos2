@@ -1929,28 +1929,6 @@ Wire Wire Line
 	1450 1450 1300 1450
 Connection ~ 1300 1450
 $Comp
-L Device:R R46
-U 1 1 5DA42EE5
-P 1100 3850
-F 0 "R46" H 1170 3896 50  0000 L CNN
-F 1 "R" H 1170 3805 50  0000 L CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 1030 3850 50  0001 C CNN
-F 3 "~" H 1100 3850 50  0001 C CNN
-	1    1100 3850
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R R45
-U 1 1 5DA44CEB
-P 800 3850
-F 0 "R45" H 870 3896 50  0000 L CNN
-F 1 "R" H 870 3805 50  0000 L CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 730 3850 50  0001 C CNN
-F 3 "~" H 800 3850 50  0001 C CNN
-	1    800  3850
-	1    0    0    -1  
-$EndComp
-$Comp
 L Jumper:Jumper_3_Bridged12 JP1
 U 1 1 5DA5BC24
 P 800 4200
@@ -1964,14 +1942,7 @@ $EndComp
 Wire Wire Line
 	800  4000 800  4050
 Wire Wire Line
-	800  4050 1100 4050
-Wire Wire Line
-	1100 4050 1100 4000
-Wire Wire Line
 	1050 4200 1100 4200
-Wire Wire Line
-	1100 4200 1100 4050
-Connection ~ 1100 4050
 Wire Wire Line
 	800  4350 800  4550
 Wire Wire Line
@@ -1992,18 +1963,12 @@ Wire Wire Line
 Wire Wire Line
 	1050 3550 1100 3550
 Wire Wire Line
-	1100 3550 1100 3700
-Wire Wire Line
-	950  3550 800  3550
-Wire Wire Line
-	800  3550 800  3700
-Wire Wire Line
-	950  3200 950  3550
-Wire Wire Line
 	850  3200 850  3400
 Wire Wire Line
 	850  3400 1450 3400
 Connection ~ 1450 3400
 Wire Wire Line
 	1450 3400 1450 1450
+Wire Wire Line
+	1100 3550 1100 4200
 $EndSCHEMATC
