@@ -1,6 +1,28 @@
 EESchema-LIBRARY Version 2.4
 #encoding utf-8
 #
+# Connector_AudioJack3
+#
+DEF Connector_AudioJack3 J 0 20 Y Y 1 F N
+F0 "J" 0 350 50 H V C CNN
+F1 "Connector_AudioJack3" 0 250 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+$FPLIST
+ Jack*
+$ENDFPLIST
+DRAW
+S -200 -200 -250 -100 0 1 10 F
+S 100 150 -200 -200 0 1 10 f
+P 4 0 1 10 0 -100 25 -125 50 -100 100 -100 N
+P 5 0 1 10 -75 -100 -50 -125 -25 -100 -25 0 100 0 N
+P 5 0 1 10 100 100 -100 100 -100 -100 -125 -125 -150 -100 N
+X ~ R 200 0 100 L 50 50 1 1 P
+X ~ S 200 100 100 L 50 50 1 1 P
+X ~ T 200 -100 100 L 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
 # Connector_Conn_01x02_Female
 #
 DEF Connector_Conn_01x02_Female J 0 40 Y N 1 F N
@@ -18,26 +40,6 @@ P 2 1 1 6 -50 -100 -20 -100 N
 P 2 1 1 6 -50 0 -20 0 N
 X Pin_1 1 -200 0 150 R 50 50 1 1 P
 X Pin_2 2 -200 -100 150 R 50 50 1 1 P
-ENDDRAW
-ENDDEF
-#
-# Connector_Generic_MountingPin_Conn_01x01_MountingPin
-#
-DEF Connector_Generic_MountingPin_Conn_01x01_MountingPin J 0 40 Y N 1 F N
-F0 "J" 0 100 50 H V C CNN
-F1 "Connector_Generic_MountingPin_Conn_01x01_MountingPin" 50 -100 50 H V L CNN
-F2 "" 0 0 50 H I C CNN
-F3 "" 0 0 50 H I C CNN
-$FPLIST
- Connector*:*_1x??-1MP*
-$ENDFPLIST
-DRAW
-T 0 0 -65 15 0 1 1 Mounting Normal 0 C C
-S -50 5 0 -5 1 1 6 N
-S -50 50 50 -50 1 1 10 f
-P 2 1 1 6 -40 -80 40 -80 N
-X Pin_1 1 -200 0 150 R 50 50 1 1 P
-X MountPin MP 0 -200 120 U 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
@@ -179,6 +181,28 @@ DRAW
 S -40 -100 40 100 0 1 10 N
 X ~ 1 0 150 50 D 50 50 1 1 P
 X ~ 2 0 -150 50 U 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# Jumper_Jumper_3_Bridged12
+#
+DEF Jumper_Jumper_3_Bridged12 JP 0 0 Y N 1 F N
+F0 "JP" -100 -100 50 H V C CNN
+F1 "Jumper_Jumper_3_Bridged12" 0 110 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+$FPLIST
+ SolderJumper*Bridged12*
+$ENDFPLIST
+DRAW
+A -65 -50 89 1282 518 0 1 0 N -120 20 -10 20
+C -130 0 20 0 0 0 N
+C 0 0 20 0 0 0 N
+C 130 0 20 0 0 0 N
+P 2 0 1 0 0 -50 0 -20 N
+X A 1 -250 0 100 R 50 50 1 1 P
+X C 2 0 -150 100 U 50 50 1 1 I
+X B 3 250 0 100 L 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #

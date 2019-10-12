@@ -1,6 +1,6 @@
 EESchema Schematic File Version 4
 LIBS:PCB-cache
-EELAYER 30 0
+EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -1489,10 +1489,6 @@ Wire Wire Line
 Wire Wire Line
 	1350 4550 1300 4550
 Connection ~ 1300 4550
-Wire Wire Line
-	950  4650 950  5150
-Wire Wire Line
-	950  5150 1200 5150
 Connection ~ 1300 5150
 Wire Wire Line
 	1300 5150 1300 5050
@@ -1752,14 +1748,6 @@ Connection ~ 1650 750
 Wire Wire Line
 	1050 950  1050 1450
 Wire Wire Line
-	1050 4250 850  4250
-Wire Wire Line
-	850  4250 850  5150
-Wire Wire Line
-	850  5150 950  5150
-Connection ~ 950  5150
-Connection ~ 1200 5150
-Wire Wire Line
 	1200 5150 1300 5150
 Wire Wire Line
 	2250 7150 2250 7050
@@ -1838,41 +1826,7 @@ Connection ~ 10450 5100
 Wire Wire Line
 	10450 5100 10350 5100
 Wire Wire Line
-	-1300 5950 -1300 4500
-Wire Wire Line
 	10350 3650 10650 3650
-Wire Wire Line
-	950  4650 750  4650
-Wire Wire Line
-	950  4550 750  4550
-$Comp
-L Connector_Generic_MountingPin:Conn_01x01_MountingPin J1
-U 1 1 5D48F635
-P 750 4350
-F 0 "J1" H 838 4314 50  0000 L CNN
-F 1 "Conn_01x01_MountingPin" H 838 4223 50  0000 L CNN
-F 2 "" H 750 4350 50  0001 C CNN
-F 3 "~" H 750 4350 50  0001 C CNN
-	1    750  4350
-	1    0    0    -1  
-$EndComp
-Connection ~ 750  4550
-Wire Wire Line
-	750  4550 650  4550
-$Comp
-L Connector_Generic_MountingPin:Conn_01x01_MountingPin J7
-U 1 1 5D491977
-P 750 4850
-F 0 "J7" V 626 4930 50  0000 L CNN
-F 1 "Conn_01x01_MountingPin" V 717 4930 50  0000 L CNN
-F 2 "" H 750 4850 50  0001 C CNN
-F 3 "~" H 750 4850 50  0001 C CNN
-	1    750  4850
-	0    1    1    0   
-$EndComp
-Connection ~ 750  4650
-Wire Wire Line
-	750  4650 650  4650
 $Comp
 L pspice:C C13
 U 1 1 5D93BB79
@@ -1924,9 +1878,6 @@ Wire Wire Line
 	1300 750  1650 750 
 Wire Wire Line
 	1300 1450 1050 1450
-Connection ~ 1050 1450
-Wire Wire Line
-	1050 1450 1050 4250
 Wire Wire Line
 	1850 7100 1850 7150
 Connection ~ 1850 7150
@@ -1970,4 +1921,89 @@ Wire Wire Line
 Connection ~ 10600 2400
 Wire Wire Line
 	10600 2400 10600 3150
+Wire Wire Line
+	1300 5150 1450 5150
+Wire Wire Line
+	1450 5150 1450 3400
+Wire Wire Line
+	1450 1450 1300 1450
+Connection ~ 1300 1450
+$Comp
+L Device:R R46
+U 1 1 5DA42EE5
+P 1100 3850
+F 0 "R46" H 1170 3896 50  0000 L CNN
+F 1 "R" H 1170 3805 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 1030 3850 50  0001 C CNN
+F 3 "~" H 1100 3850 50  0001 C CNN
+	1    1100 3850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R45
+U 1 1 5DA44CEB
+P 800 3850
+F 0 "R45" H 870 3896 50  0000 L CNN
+F 1 "R" H 870 3805 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 730 3850 50  0001 C CNN
+F 3 "~" H 800 3850 50  0001 C CNN
+	1    800  3850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Jumper:Jumper_3_Bridged12 JP1
+U 1 1 5DA5BC24
+P 800 4200
+F 0 "JP1" H 800 4404 50  0000 C CNN
+F 1 "Jumper_3_Bridged12" H 800 4313 50  0000 C CNN
+F 2 "Connector:Fan_Pin_Header_Straight_1x03" H 800 4200 50  0001 C CNN
+F 3 "~" H 800 4200 50  0001 C CNN
+	1    800  4200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	800  4000 800  4050
+Wire Wire Line
+	800  4050 1100 4050
+Wire Wire Line
+	1100 4050 1100 4000
+Wire Wire Line
+	1050 4200 1100 4200
+Wire Wire Line
+	1100 4200 1100 4050
+Connection ~ 1100 4050
+Wire Wire Line
+	800  4350 800  4550
+Wire Wire Line
+	800  4550 950  4550
+$Comp
+L Connector:AudioJack3 J1
+U 1 1 5DAA0416
+P 950 3000
+F 0 "J1" V 886 3188 50  0000 L CNN
+F 1 "AudioJack3" V 977 3188 50  0000 L CNN
+F 2 "Connector:PJ320D_3.5mm_Jack" H 950 3000 50  0001 C CNN
+F 3 "~" H 950 3000 50  0001 C CNN
+	1    950  3000
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	1050 3200 1050 3550
+Wire Wire Line
+	1050 3550 1100 3550
+Wire Wire Line
+	1100 3550 1100 3700
+Wire Wire Line
+	950  3550 800  3550
+Wire Wire Line
+	800  3550 800  3700
+Wire Wire Line
+	950  3200 950  3550
+Wire Wire Line
+	850  3200 850  3400
+Wire Wire Line
+	850  3400 1450 3400
+Connection ~ 1450 3400
+Wire Wire Line
+	1450 3400 1450 1450
 $EndSCHEMATC
