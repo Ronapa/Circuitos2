@@ -1826,8 +1826,6 @@ Connection ~ 10450 5100
 Wire Wire Line
 	10450 5100 10350 5100
 Wire Wire Line
-	-1300 5950 -1300 4500
-Wire Wire Line
 	10350 3650 10650 3650
 $Comp
 L pspice:C C13
@@ -1931,10 +1929,10 @@ Wire Wire Line
 	1450 1450 1300 1450
 Connection ~ 1300 1450
 $Comp
-L Device:R R?
+L Device:R R46
 U 1 1 5DA42EE5
 P 1100 3850
-F 0 "R?" H 1170 3896 50  0000 L CNN
+F 0 "R46" H 1170 3896 50  0000 L CNN
 F 1 "R" H 1170 3805 50  0000 L CNN
 F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 1030 3850 50  0001 C CNN
 F 3 "~" H 1100 3850 50  0001 C CNN
@@ -1942,10 +1940,10 @@ F 3 "~" H 1100 3850 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R R?
+L Device:R R45
 U 1 1 5DA44CEB
 P 800 3850
-F 0 "R?" H 870 3896 50  0000 L CNN
+F 0 "R45" H 870 3896 50  0000 L CNN
 F 1 "R" H 870 3805 50  0000 L CNN
 F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 730 3850 50  0001 C CNN
 F 3 "~" H 800 3850 50  0001 C CNN
@@ -1953,12 +1951,12 @@ F 3 "~" H 800 3850 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Jumper:Jumper_3_Bridged12 JP?
+L Jumper:Jumper_3_Bridged12 JP1
 U 1 1 5DA5BC24
 P 800 4200
-F 0 "JP?" H 800 4404 50  0000 C CNN
+F 0 "JP1" H 800 4404 50  0000 C CNN
 F 1 "Jumper_3_Bridged12" H 800 4313 50  0000 C CNN
-F 2 "" H 800 4200 50  0001 C CNN
+F 2 "Connector:Fan_Pin_Header_Straight_1x03" H 800 4200 50  0001 C CNN
 F 3 "~" H 800 4200 50  0001 C CNN
 	1    800  4200
 	1    0    0    -1  
@@ -1979,12 +1977,12 @@ Wire Wire Line
 Wire Wire Line
 	800  4550 950  4550
 $Comp
-L Connector:AudioJack3 J?
+L Connector:AudioJack3 J1
 U 1 1 5DAA0416
 P 950 3000
-F 0 "J?" V 886 3188 50  0000 L CNN
+F 0 "J1" V 886 3188 50  0000 L CNN
 F 1 "AudioJack3" V 977 3188 50  0000 L CNN
-F 2 "" H 950 3000 50  0001 C CNN
+F 2 "Connector:PJ320D_3.5mm_Jack" H 950 3000 50  0001 C CNN
 F 3 "~" H 950 3000 50  0001 C CNN
 	1    950  3000
 	0    1    1    0   
