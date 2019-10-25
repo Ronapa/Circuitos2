@@ -2006,4 +2006,9 @@ Wire Wire Line
 Connection ~ 1450 3400
 Wire Wire Line
 	1450 3400 1450 1450
+Wire Wire Line
+	550  4200 550  3550
+Wire Wire Line
+	550  3550 800  3550
+Connection ~ 800  3550
 $EndSCHEMATC

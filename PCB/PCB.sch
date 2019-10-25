@@ -1982,7 +1982,7 @@ U 1 1 5DAA0416
 P 950 3000
 F 0 "J1" V 886 3188 50  0000 L CNN
 F 1 "AudioJack3" V 977 3188 50  0000 L CNN
-F 2 "Connector:PJ320D_3.5mm_Jack" H 950 3000 50  0001 C CNN
+F 2 "Connector_Audio:Jack_3.5mm_CUI_SJ-3523-SMT_Horizontal" H 950 3000 50  0001 C CNN
 F 3 "~" H 950 3000 50  0001 C CNN
 	1    950  3000
 	0    1    1    0   
