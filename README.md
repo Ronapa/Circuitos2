@@ -406,23 +406,23 @@ La implementación de esta etapa de entrada nos permitió percatarnos de un erro
 ## Problemas y Plan 
  * Temas del PCB: 
  
-  ** Falta potenciometro en multiplicador de Vbe -> No soldamos R12 de [acá](https://github.com/Ronapa/Circuitos2/blob/master/Imagenes/PCB_dise%C3%B1o.png) y ponemo un pote colgando en el aire 
-  ** No entran lo capacitores de acople de las fuentes en la placa -> Les colgamos unos cables y los soldamos de abajo sobresalidos (si o sí tienen que ir de abajo por el disipador) 
-  ** El modelo del plug jack no coincide el comprado con el de la placa -> Mandamos cables para que ande, si hace falta con la pistola de plástico lo pegamos a la placa, es más decorativo que otra cosa a esta altura el jack 
-  ** Se redujo la Re de la fuente de corriente a 470Ohm -> hay que tener en cuenta este cambio al soldar 
-  ** Tuvimos en cuenta dónde se conectan las switching? 
+    * Falta potenciometro en multiplicador de Vbe -> No soldamos R12 de [acá](https://github.com/Ronapa/Circuitos2/blob/master/Imagenes/PCB_dise%C3%B1o.png) y ponemo un pote colgando en el aire 
+    * No entran lo capacitores de acople de las fuentes en la placa -> Les colgamos unos cables y los soldamos de abajo sobresalidos (si o sí tienen que ir de abajo por el disipador) 
+    * El modelo del plug jack no coincide el comprado con el de la placa -> Mandamos cables para que ande, si hace falta con la pistola de plástico lo pegamos a la placa, es más decorativo que otra cosa a esta altura el jack 
+    * Se redujo la Re de la fuente de corriente a 470Ohm -> hay que tener en cuenta este cambio al soldar 
+    * Tuvimos en cuenta dónde se conectan las switching? 
   
  * Falta comprar:  
  
-  ** Diodos shotky, fijarse bien el código que sea el BAT54, no el BAT54A 
-  ** NPN de potencia, 2SA1943, o similar 
-  ** Disipadores 
-  ** Un capacitor de acople de fuentes más 
+    * Diodos shotky, fijarse bien el código que sea el BAT54, no el BAT54A 
+    * NPN de potencia, 2SA1943, o similar 
+    * Disipadores 
+    * Un capacitor de acople de fuentes más 
  
  * Opciones de como seguir: 
  
-  * *Nueva placa:* Si hacemos una nueva placa hay que tener en cuenta los capacitores de acople, el footprint del jack y agregar el potenciometro en el xVbe. Si es barato hacerlo en francia yo lo cambio y lo mando a hacer. Habría que poner jumpers para ir soldando y probando de a partes, así si algo no funca lo vemos en el momento.  
-  * *Seguimos con la que tenemos:* Si seguimos con la que tenemos tenemos que resolver un par de temas que seguro van a ser con cables en el aire. Se nos va a complicar un poco el tema de debuggear si hay algún problema al estar todo junto pero podemos ir haciendo como ya hicimos, vemos las distintas partes en "prototipos" que vamos armando en una proto y rezamos que se repita en la placa.  
+    * *Nueva placa:* Si hacemos una nueva placa hay que tener en cuenta los capacitores de acople, el footprint del jack y agregar el potenciometro en el xVbe. Si es barato hacerlo en francia yo lo cambio y lo mando a hacer. Habría que poner jumpers para ir soldando y probando de a partes, así si algo no funca lo vemos en el momento.  
+    * *Seguimos con la que tenemos:* Si seguimos con la que tenemos tenemos que resolver un par de temas que seguro van a ser con cables en el aire. Se nos va a complicar un poco el tema de debuggear si hay algún problema al estar todo junto pero podemos ir haciendo como ya hicimos, vemos las distintas partes en "prototipos" que vamos armando en una proto y rezamos que se repita en la placa.  
   
 
 
