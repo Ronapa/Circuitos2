@@ -425,9 +425,10 @@ La implementación de esta etapa de entrada nos permitió percatarnos de un erro
     * *Seguimos con la que tenemos:* Si seguimos con la que tenemos tenemos que resolver un par de temas que seguro van a ser con cables en el aire. Se nos va a complicar un poco el tema de debuggear si hay algún problema al estar todo junto pero podemos ir haciendo como ya hicimos, vemos las distintas partes en "prototipos" que vamos armando en una proto y rezamos que se repita en la placa. No podemos controlar el volumen desde el ampli pero tampoco es algo necesario eso. 
     
  * Fuentes Switching:
-  Las hacemos?, no las hacemos?, ya el circuito en sí nos conmuta así que el enunciado lo cumplimos... De cualquier manera se puede dejar para el final y plantear todo el circuito con fuentes de laboratorio y conectarlas al final. Necesitariamos una de +15 y otra de -15, podemos pedir prestadas? tenemos simulado [acá](https://github.com/Ronapa/Circuitos2#fuentes-switching) la de +15.
-  
+    Las hacemos?, no las hacemos?, ya el circuito en sí nos conmuta así que el enunciado lo cumplimos... De cualquier manera se puede dejar para el final y plantear todo el circuito con fuentes de laboratorio y conectarlas al final. Necesitariamos una de +15 y otra de -15, podemos pedir prestadas? tenemos simulado [acá](https://github.com/Ronapa/Circuitos2#fuentes-switching) la de +15.
 
+ * Cambios:
+     Se cambió la R de realimentación por 18k, la de 19k no existe. Hay que hacer un update a los valores en el informe. Según la simulación este cambio no afecta mucho, baja un poco la amplificación y mejora apenas el tema de la distorsión. 
 
 [kenwood]: Imagenes/kenwood.png
 [Nuestro Circuito]: Imagenes/Circuito_completo.png
