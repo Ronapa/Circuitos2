@@ -421,8 +421,11 @@ La implementación de esta etapa de entrada nos permitió percatarnos de un erro
  
  * Opciones de como seguir: 
  
-    * *Nueva placa:* Si hacemos una nueva placa hay que tener en cuenta los capacitores de acople, el footprint del jack y agregar el potenciometro en el xVbe. Si es barato hacerlo en francia yo lo cambio y lo mando a hacer. Habría que poner jumpers para ir soldando y probando de a partes, así si algo no funca lo vemos en el momento.  
-    * *Seguimos con la que tenemos:* Si seguimos con la que tenemos tenemos que resolver un par de temas que seguro van a ser con cables en el aire. Se nos va a complicar un poco el tema de debuggear si hay algún problema al estar todo junto pero podemos ir haciendo como ya hicimos, vemos las distintas partes en "prototipos" que vamos armando en una proto y rezamos que se repita en la placa.  
+    * *Nueva placa:* Si hacemos una nueva placa hay que tener en cuenta los capacitores de acople, el footprint del jack y agregar el potenciometro en el xVbe. Si es barato hacerlo en francia yo lo cambio y lo mando a hacer. Habría que poner jumpers para ir soldando y probando de a partes, así si algo no funca lo vemos en el momento.  También le podemos agregar el coso ese para modular que ya era un circuito integrado, y un control de volumen. 
+    * *Seguimos con la que tenemos:* Si seguimos con la que tenemos tenemos que resolver un par de temas que seguro van a ser con cables en el aire. Se nos va a complicar un poco el tema de debuggear si hay algún problema al estar todo junto pero podemos ir haciendo como ya hicimos, vemos las distintas partes en "prototipos" que vamos armando en una proto y rezamos que se repita en la placa. No podemos controlar el volumen desde el ampli pero tampoco es algo necesario eso. 
+    
+ * Fuentes Switching:
+  Las hacemos?, no las hacemos?, ya el circuito en sí nos conmuta así que el enunciado lo cumplimos... De cualquier manera se puede dejar para el final y plantear todo el circuito con fuentes de laboratorio y conectarlas al final. Necesitariamos una de +15 y otra de -15, podemos pedir prestadas? tenemos simulado [acá](https://github.com/Ronapa/Circuitos2#fuentes-switching) la de +15.
   
 
 
