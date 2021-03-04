@@ -291,7 +291,7 @@ F 3 "~" H 4600 1150 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 Wire Wire Line
-	3400 2300 1650 2300
+	3400 2300 3050 2300
 Wire Wire Line
 	1650 2300 1650 1950
 Wire Wire Line
@@ -432,17 +432,6 @@ Wire Wire Line
 	5600 750  4600 750 
 Connection ~ 4600 750 
 $Comp
-L Device:Q_PNP_BCE Q11
-U 1 1 5D2954EB
-P 4950 5500
-F 0 "Q11" H 5140 5454 50  0000 L CNN
-F 1 "MMBTA56" H 5140 5545 50  0000 L CNN
-F 2 "Package_TO_SOT_SMD:SOT-23_Handsoldering" H 5150 5600 50  0001 C CNN
-F 3 "~" H 4950 5500 50  0001 C CNN
-	1    4950 5500
-	1    0    0    1   
-$EndComp
-$Comp
 L Device:Q_PNP_BCE Q13
 U 1 1 5D296033
 P 5500 5150
@@ -461,8 +450,6 @@ Wire Wire Line
 	5050 5300 5050 5150
 Wire Wire Line
 	5050 5150 5300 5150
-Wire Wire Line
-	4750 5500 4600 5500
 Wire Wire Line
 	4250 5500 4250 5650
 Wire Wire Line
@@ -485,26 +472,14 @@ $EndComp
 $Comp
 L Device:C C5
 U 1 1 5D1CF540
-P 4600 4300
-F 0 "C5" H 4485 4254 50  0000 R CNN
-F 1 "4.7u" H 4485 4345 50  0000 R CNN
-F 2 "Capacitors_THT:CP_Radial_D5.0mm_P2.00mm" H 4638 4150 50  0001 C CNN
-F 3 "~" H 4600 4300 50  0001 C CNN
-	1    4600 4300
+P 4500 4300
+F 0 "C5" H 4385 4254 50  0000 R CNN
+F 1 "4.7u" H 4385 4345 50  0000 R CNN
+F 2 "Capacitors_THT:CP_Radial_D5.0mm_P2.00mm" H 4538 4150 50  0001 C CNN
+F 3 "~" H 4500 4300 50  0001 C CNN
+	1    4500 4300
 	-1   0    0    1   
 $EndComp
-Wire Wire Line
-	4250 2850 4600 2850
-Wire Wire Line
-	4600 4150 4600 2850
-Connection ~ 4600 2850
-Wire Wire Line
-	4600 2850 4750 2850
-Wire Wire Line
-	4600 4450 4600 5500
-Connection ~ 4600 5500
-Wire Wire Line
-	4600 5500 4250 5500
 Wire Wire Line
 	6150 1050 6300 1050
 Wire Wire Line
@@ -1359,7 +1334,7 @@ Wire Wire Line
 Wire Wire Line
 	6300 6000 6100 6000
 Wire Wire Line
-	6100 6000 6100 4800
+	6100 6000 6100 5700
 Connection ~ 6100 4800
 Wire Wire Line
 	6100 4800 6300 4800
@@ -1371,7 +1346,7 @@ Wire Wire Line
 Wire Wire Line
 	5600 750  5600 2050
 Wire Wire Line
-	4750 2850 4750 2400
+	4750 2850 4750 2650
 $Comp
 L Device:C C10
 U 1 1 5D33952F
@@ -1389,16 +1364,14 @@ U 1 1 5D339E10
 P 5700 4000
 F 0 "R41" H 5770 4046 50  0000 L CNN
 F 1 "R" H 5770 3955 50  0000 L CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 5630 4000 50  0001 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder" V 5630 4000 50  0001 C CNN
 F 3 "~" H 5700 4000 50  0001 C CNN
 	1    5700 4000
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	3200 4550 5700 4550
+	3200 4550 3650 4550
 Connection ~ 3200 4550
-Wire Wire Line
-	5700 3500 8850 3500
 Wire Wire Line
 	5700 3500 5700 3700
 Wire Wire Line
@@ -1693,7 +1666,7 @@ Wire Wire Line
 Wire Wire Line
 	1550 6900 1200 6900
 Wire Wire Line
-	1200 5150 1200 6900
+	1200 5150 1200 5450
 Connection ~ 1200 6900
 Wire Wire Line
 	1200 6900 1200 7050
@@ -2085,4 +2058,185 @@ F 3 "~" H 9350 4800 50  0001 C CNN
 	1    9350 4800
 	1    0    0    1   
 $EndComp
+$Comp
+L Connector_Generic:Conn_01x01 J7
+U 1 1 6041B19D
+P 3650 4850
+F 0 "J7" V 3522 4930 50  0000 L CNN
+F 1 "REALIMENTACION" V 3613 4930 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical" H 3650 4850 50  0001 C CNN
+F 3 "~" H 3650 4850 50  0001 C CNN
+	1    3650 4850
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3650 4650 3650 4550
+Connection ~ 3650 4550
+Wire Wire Line
+	3650 4550 4900 4550
+$Comp
+L Connector_Generic:Conn_01x02 J8
+U 1 1 60445CB4
+P 4550 2650
+F 0 "J8" H 4468 2325 50  0000 C CNN
+F 1 "Conn_01x02" H 4468 2416 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 4550 2650 50  0001 C CNN
+F 3 "~" H 4550 2650 50  0001 C CNN
+	1    4550 2650
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	4750 2550 4750 2400
+$Comp
+L Connector_Generic:Conn_01x02 J9
+U 1 1 6044B24A
+P 4650 5300
+F 0 "J9" V 4614 5112 50  0000 R CNN
+F 1 "Conn_01x02" V 4523 5112 50  0000 R CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 4650 5300 50  0001 C CNN
+F 3 "~" H 4650 5300 50  0001 C CNN
+	1    4650 5300
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:Q_PNP_BCE Q11
+U 1 1 5D2954EB
+P 4950 5500
+F 0 "Q11" H 5140 5454 50  0000 L CNN
+F 1 "MMBTA56" H 5140 5545 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23_Handsoldering" H 5150 5600 50  0001 C CNN
+F 3 "~" H 4950 5500 50  0001 C CNN
+	1    4950 5500
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	4250 2850 4500 2850
+Wire Wire Line
+	4250 5500 4500 5500
+Wire Wire Line
+	4500 4150 4500 2850
+Connection ~ 4500 2850
+Wire Wire Line
+	4500 2850 4750 2850
+Wire Wire Line
+	4500 4450 4500 5500
+Connection ~ 4500 5500
+Wire Wire Line
+	4500 5500 4650 5500
+Wire Wire Line
+	5700 3500 8850 3500
+$Comp
+L Connector_Generic:Conn_01x02 J10
+U 1 1 605ABBC7
+P 5000 4750
+F 0 "J10" V 4872 4830 50  0000 L CNN
+F 1 "Conn_01x02" V 4963 4830 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 5000 4750 50  0001 C CNN
+F 3 "~" H 5000 4750 50  0001 C CNN
+	1    5000 4750
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5000 4550 5700 4550
+$Comp
+L Connector_Generic:Conn_01x01 J11
+U 1 1 605D1B60
+P 900 5450
+F 0 "J11" H 818 5225 50  0000 C CNN
+F 1 "Conn_01x01" H 818 5316 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical" H 900 5450 50  0001 C CNN
+F 3 "~" H 900 5450 50  0001 C CNN
+	1    900  5450
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	1100 5450 1200 5450
+Connection ~ 1200 5450
+Wire Wire Line
+	1200 5450 1200 6900
+$Comp
+L Connector_Generic:Conn_01x02 J12
+U 1 1 605FAD79
+P 3050 2500
+F 0 "J12" V 2922 2580 50  0000 L CNN
+F 1 "Conn_01x02" V 3013 2580 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 3050 2500 50  0001 C CNN
+F 3 "~" H 3050 2500 50  0001 C CNN
+	1    3050 2500
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	2950 2300 1650 2300
+$Comp
+L Connector_Generic:Conn_01x01 J13
+U 1 1 6060A035
+P 5950 2100
+F 0 "J13" H 5868 1875 50  0000 C CNN
+F 1 "Conn_01x01" H 5868 1966 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical" H 5950 2100 50  0001 C CNN
+F 3 "~" H 5950 2100 50  0001 C CNN
+	1    5950 2100
+	-1   0    0    1   
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x01 J15
+U 1 1 6060BA67
+P 6700 2400
+F 0 "J15" H 6780 2442 50  0000 L CNN
+F 1 "Conn_01x01" H 6780 2351 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical" H 6700 2400 50  0001 C CNN
+F 3 "~" H 6700 2400 50  0001 C CNN
+	1    6700 2400
+	1    0    0    -1  
+$EndComp
+Connection ~ 6500 2400
+$Comp
+L Connector_Generic:Conn_01x01 J14
+U 1 1 6060D613
+P 6700 1350
+F 0 "J14" H 6780 1392 50  0000 L CNN
+F 1 "Conn_01x01" H 6780 1301 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical" H 6700 1350 50  0001 C CNN
+F 3 "~" H 6700 1350 50  0001 C CNN
+	1    6700 1350
+	1    0    0    -1  
+$EndComp
+Connection ~ 6500 1350
+$Comp
+L Connector_Generic:Conn_01x01 J16
+U 1 1 60618A0C
+P 5900 5700
+F 0 "J16" H 5818 5475 50  0000 C CNN
+F 1 "Conn_01x01" H 5818 5566 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical" H 5900 5700 50  0001 C CNN
+F 3 "~" H 5900 5700 50  0001 C CNN
+	1    5900 5700
+	-1   0    0    1   
+$EndComp
+Connection ~ 6100 5700
+Wire Wire Line
+	6100 5700 6100 4800
+$Comp
+L Connector_Generic:Conn_01x01 J17
+U 1 1 6061A47D
+P 6300 4450
+F 0 "J17" H 6218 4225 50  0000 C CNN
+F 1 "Conn_01x01" H 6218 4316 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical" H 6300 4450 50  0001 C CNN
+F 3 "~" H 6300 4450 50  0001 C CNN
+	1    6300 4450
+	-1   0    0    1   
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x01 J18
+U 1 1 6061B724
+P 6700 5700
+F 0 "J18" H 6780 5742 50  0000 L CNN
+F 1 "Conn_01x01" H 6780 5651 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical" H 6700 5700 50  0001 C CNN
+F 3 "~" H 6700 5700 50  0001 C CNN
+	1    6700 5700
+	1    0    0    -1  
+$EndComp
+Connection ~ 6500 5700
 $EndSCHEMATC
