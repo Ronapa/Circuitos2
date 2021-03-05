@@ -363,14 +363,14 @@ L Device:C C1
 U 1 1 5D239A3E
 P 1100 4550
 F 0 "C1" V 1352 4550 50  0000 C CNN
-F 1 "C" V 1261 4550 50  0000 C CNN
+F 1 "10u" V 1261 4550 50  0000 C CNN
 F 2 "Capacitor_THT:CP_Radial_D5.0mm_P2.50mm" H 1138 4400 50  0001 C CNN
 F 3 "~" H 1100 4550 50  0001 C CNN
 	1    1100 4550
 	0    -1   -1   0   
 $EndComp
 Wire Wire Line
-	3250 5850 3950 5850
+	3250 5850 3550 5850
 Wire Wire Line
 	3250 7050 4250 7050
 Wire Wire Line
@@ -1700,7 +1700,7 @@ Wire Wire Line
 Wire Wire Line
 	1300 5150 1450 5150
 Wire Wire Line
-	1450 5150 1450 3400
+	1450 5150 1450 4300
 Wire Wire Line
 	1450 1450 1300 1450
 Connection ~ 1300 1450
@@ -1710,15 +1710,13 @@ U 1 1 5DA5BC24
 P 800 4200
 F 0 "JP1" H 800 4404 50  0000 C CNN
 F 1 "Jumper_3_Bridged12" H 800 4313 50  0000 C CNN
-F 2 "Connector:Fan_Pin_Header_Straight_1x03" H 800 4200 50  0001 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 800 4200 50  0001 C CNN
 F 3 "~" H 800 4200 50  0001 C CNN
 	1    800  4200
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
 	800  4000 800  4050
-Wire Wire Line
-	1050 4200 1100 4200
 Wire Wire Line
 	800  4350 800  4550
 Wire Wire Line
@@ -1729,15 +1727,11 @@ U 1 1 5DAA0416
 P 950 3000
 F 0 "J1" V 886 3188 50  0000 L CNN
 F 1 "AudioJack3" V 977 3188 50  0000 L CNN
-F 2 "Connector:PJ320D_3.5mm_Jack" H 950 3000 50  0001 C CNN
+F 2 "Connector_Audio:Jack_3.5mm_CUI_SJ-3523-SMT_Horizontal" H 950 3000 50  0001 C CNN
 F 3 "~" H 950 3000 50  0001 C CNN
 	1    950  3000
 	0    1    1    0   
 $EndComp
-Wire Wire Line
-	1050 3200 1050 3550
-Wire Wire Line
-	1050 3550 1100 3550
 Wire Wire Line
 	850  3200 850  3400
 Wire Wire Line
@@ -1745,8 +1739,6 @@ Wire Wire Line
 Connection ~ 1450 3400
 Wire Wire Line
 	1450 3400 1450 1450
-Wire Wire Line
-	1100 3550 1100 4200
 $Comp
 L Device:R_POT M_VBE1
 U 1 1 603E68C0
@@ -2230,12 +2222,86 @@ $EndComp
 $Comp
 L Connector_Generic:Conn_01x01 J18
 U 1 1 6061B724
-P 6700 5750
-F 0 "J18" H 6780 5792 50  0000 L CNN
-F 1 "Conn_01x01" H 6780 5701 50  0000 L CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical" H 6700 5750 50  0001 C CNN
-F 3 "~" H 6700 5750 50  0001 C CNN
-	1    6700 5750
+P 6700 5700
+F 0 "J18" H 6780 5742 50  0000 L CNN
+F 1 "Conn_01x01" H 6780 5651 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical" H 6700 5700 50  0001 C CNN
+F 3 "~" H 6700 5700 50  0001 C CNN
+	1    6700 5700
 	1    0    0    -1  
 $EndComp
+Connection ~ 6500 5700
+$Comp
+L Connector_Generic:Conn_01x02 J19
+U 1 1 60433C35
+P 3550 5650
+F 0 "J19" V 3514 5462 50  0000 R CNN
+F 1 "Conn_01x02" V 3423 5462 50  0000 R CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 3550 5650 50  0001 C CNN
+F 3 "~" H 3550 5650 50  0001 C CNN
+	1    3550 5650
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	3650 5850 3950 5850
+$Comp
+L Device:R R48
+U 1 1 6048C1CE
+P 900 3700
+F 0 "R48" H 970 3746 50  0000 L CNN
+F 1 "4.7k" H 970 3655 50  0000 L CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder" V 830 3700 50  0001 C CNN
+F 3 "~" H 900 3700 50  0001 C CNN
+	1    900  3700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R49
+U 1 1 6048D0B5
+P 1200 3700
+F 0 "R49" H 1270 3746 50  0000 L CNN
+F 1 "4.7k" H 1270 3655 50  0000 L CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder" V 1130 3700 50  0001 C CNN
+F 3 "~" H 1200 3700 50  0001 C CNN
+	1    1200 3700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	900  3550 900  3200
+Wire Wire Line
+	900  3200 950  3200
+Wire Wire Line
+	1050 3200 1200 3200
+Wire Wire Line
+	1200 3200 1200 3550
+Wire Wire Line
+	900  3850 1200 3850
+Wire Wire Line
+	1200 3850 1200 3900
+Wire Wire Line
+	1050 4200 1200 4200
+Connection ~ 1200 3850
+$Comp
+L Device:R R50
+U 1 1 604FC014
+P 1350 4050
+F 0 "R50" H 1420 4096 50  0000 L CNN
+F 1 "47k" H 1420 4005 50  0000 L CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder" V 1280 4050 50  0001 C CNN
+F 3 "~" H 1350 4050 50  0001 C CNN
+	1    1350 4050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1200 3900 1350 3900
+Connection ~ 1200 3900
+Wire Wire Line
+	1200 3900 1200 4200
+Wire Wire Line
+	1350 4200 1350 4300
+Wire Wire Line
+	1350 4300 1450 4300
+Connection ~ 1450 4300
+Wire Wire Line
+	1450 4300 1450 3400
 $EndSCHEMATC
