@@ -1,0 +1,798 @@
+Warning: Multiple definitions of model "2n3055" Type: BJT
+Warning: Multiple definitions of model "2n5401" Type: BJT
+Direct Newton iteration failed to find .op point.  (Use ".option noopiter" to skip.)
+Starting Gmin stepping
+Gmin = 10
+Gmin = 1.07374
+Gmin = 0.115292
+Gmin = 0.0123794
+Gmin = 0.00132923
+Gmin = 0.000142725
+vernier = 0.5
+vernier = 0.25
+Gmin = 4.89078e-005
+vernier = 0.125
+vernier = 0.0625
+vernier = 0.03125
+vernier = 0.015625
+vernier = 0.0078125
+vernier = 0.00390625
+vernier = 0.00195313
+vernier = 0.000976563
+vernier = 0.000488281
+Gmin = 0
+Gmin = 0
+Gmin stepping failed
+
+Starting source stepping with srcstepmethod=0
+Source Step = 3.0303%
+Source Step = 9.84848%
+Source Step = 17.4242%
+Source Step = 25%
+Source Step = 32.5758%
+Source Step = 40.1515%
+vernier = 0.375
+Source Step = 50.7576%
+Source Step = 62.1212%
+Source Step = 73.4848%
+Source Step = 84.8485%
+Source Step = 96.2121%
+vernier = 0.5625
+Source stepping succeeded in finding the operating point.
+
+.step ventrada=0
+N-Period=1
+Fourier components of V(v_out)
+DC component:-0.00156261
+
+Harmonic Frequency    Fourier    Normalized   Phase   Normalized
+ Number    [Hz]      Component    Component  [degree] Phase [deg]
+    1    2.000e+01   1.143e-10   1.000e+00       3.18°       0.00°
+    2    4.000e+01   5.481e-11   4.796e-01       1.32°      -1.86°
+    3    6.000e+01   3.815e-11   3.338e-01       0.79°      -2.39°
+    4    8.000e+01   2.927e-11   2.561e-01       1.45°      -1.73°
+    5    1.000e+02   2.134e-11   1.867e-01      -5.96°      -9.14°
+    6    1.200e+02   2.041e-11   1.786e-01      -1.62°      -4.80°
+    7    1.400e+02   1.588e-11   1.390e-01       0.94°      -2.24°
+    8    1.600e+02   1.305e-11   1.142e-01       0.84°      -2.34°
+    9    1.800e+02   1.236e-11   1.082e-01      -0.56°      -3.74°
+   10    2.000e+02   1.237e-11   1.083e-01       1.09°      -2.09°
+Total Harmonic Distortion: 72.765938%(135.820179%)
+
+
+.step ventrada=0.05
+N-Period=1
+Fourier components of V(v_out)
+DC component:-0.000830033
+
+Harmonic Frequency    Fourier    Normalized   Phase   Normalized
+ Number    [Hz]      Component    Component  [degree] Phase [deg]
+    1    2.000e+01   8.327e-01   1.000e+00       9.83°       0.00°
+    2    4.000e+01   2.765e-05   3.320e-05       2.00°      -7.83°
+    3    6.000e+01   2.454e-05   2.947e-05     -84.93°     -94.76°
+    4    8.000e+01   1.379e-05   1.656e-05       0.81°      -9.01°
+    5    1.000e+02   2.241e-05   2.691e-05     -62.68°     -72.51°
+    6    1.200e+02   9.151e-06   1.099e-05       0.20°      -9.63°
+    7    1.400e+02   2.120e-05   2.545e-05     -44.37°     -54.19°
+    8    1.600e+02   6.852e-06   8.228e-06      -0.55°     -10.38°
+    9    1.800e+02   2.006e-05   2.409e-05     -27.22°     -37.05°
+   10    2.000e+02   5.506e-06   6.612e-06      -1.40°     -11.23°
+Total Harmonic Distortion: 0.006656%(0.022233%)
+
+.step ventrada=0.1
+N-Period=1
+Fourier components of V(v_out)
+DC component:-9.15864e-005
+
+Harmonic Frequency    Fourier    Normalized   Phase   Normalized
+ Number    [Hz]      Component    Component  [degree] Phase [deg]
+    1    2.000e+01   1.665e+00   1.000e+00       9.83°       0.00°
+    2    4.000e+01   5.535e-05   3.323e-05       2.05°      -7.77°
+    3    6.000e+01   3.237e-05   1.944e-05     -51.18°     -61.01°
+    4    8.000e+01   2.780e-05   1.669e-05       0.67°      -9.16°
+    5    1.000e+02   2.975e-05   1.786e-05     -43.50°     -53.33°
+    6    1.200e+02   1.854e-05   1.113e-05       0.34°      -9.49°
+    7    1.400e+02   2.794e-05   1.678e-05     -32.80°     -42.63°
+    8    1.600e+02   1.391e-05   8.353e-06       0.13°      -9.69°
+    9    1.800e+02   2.616e-05   1.571e-05     -20.70°     -30.53°
+   10    2.000e+02   1.114e-05   6.690e-06      -0.02°      -9.84°
+Total Harmonic Distortion: 0.005335%(0.014013%)
+
+.step ventrada=0.15
+N-Period=1
+Fourier components of V(v_out)
+DC component:0.000646834
+
+Harmonic Frequency    Fourier    Normalized   Phase   Normalized
+ Number    [Hz]      Component    Component  [degree] Phase [deg]
+    1    2.000e+01   2.498e+00   1.000e+00       9.83°       0.00°
+    2    4.000e+01   8.292e-05   3.319e-05       2.27°      -7.56°
+    3    6.000e+01   4.633e-05   1.854e-05     -33.65°     -43.48°
+    4    8.000e+01   4.176e-05   1.671e-05       0.64°      -9.19°
+    5    1.000e+02   3.887e-05   1.556e-05     -32.45°     -42.27°
+    6    1.200e+02   2.786e-05   1.115e-05       0.36°      -9.47°
+    7    1.400e+02   3.522e-05   1.410e-05     -25.87°     -35.69°
+    8    1.600e+02   2.091e-05   8.371e-06       0.23°      -9.59°
+    9    1.800e+02   3.233e-05   1.294e-05     -16.76°     -26.59°
+   10    2.000e+02   1.674e-05   6.702e-06       0.18°      -9.65°
+Total Harmonic Distortion: 0.005072%(0.011008%)
+
+.step ventrada=0.2
+N-Period=1
+Fourier components of V(v_out)
+DC component:0.00138523
+
+Harmonic Frequency    Fourier    Normalized   Phase   Normalized
+ Number    [Hz]      Component    Component  [degree] Phase [deg]
+    1    2.000e+01   3.331e+00   1.000e+00       9.83°       0.00°
+    2    4.000e+01   1.104e-04   3.313e-05       2.50°      -7.32°
+    3    6.000e+01   6.256e-05   1.878e-05     -24.51°     -34.34°
+    4    8.000e+01   5.570e-05   1.672e-05       0.64°      -9.19°
+    5    1.000e+02   4.882e-05   1.466e-05     -25.65°     -35.48°
+    6    1.200e+02   3.717e-05   1.116e-05       0.37°      -9.46°
+    7    1.400e+02   4.276e-05   1.284e-05     -21.32°     -31.15°
+    8    1.600e+02   2.790e-05   8.375e-06       0.26°      -9.57°
+    9    1.800e+02   3.853e-05   1.157e-05     -14.11°     -23.93°
+   10    2.000e+02   2.233e-05   6.704e-06       0.22°      -9.60°
+Total Harmonic Distortion: 0.004983%(0.009459%)
+
+.step ventrada=0.25
+N-Period=1
+Fourier components of V(v_out)
+DC component:0.00212359
+
+Harmonic Frequency    Fourier    Normalized   Phase   Normalized
+ Number    [Hz]      Component    Component  [degree] Phase [deg]
+    1    2.000e+01   4.164e+00   1.000e+00       9.83°       0.00°
+    2    4.000e+01   1.377e-04   3.307e-05       2.75°      -7.08°
+    3    6.000e+01   7.973e-05   1.915e-05     -19.13°     -28.96°
+    4    8.000e+01   6.964e-05   1.672e-05       0.63°      -9.19°
+    5    1.000e+02   5.918e-05   1.421e-05     -21.15°     -30.97°
+    6    1.200e+02   4.647e-05   1.116e-05       0.37°      -9.45°
+    7    1.400e+02   5.044e-05   1.211e-05     -18.12°     -27.95°
+    8    1.600e+02   3.488e-05   8.376e-06       0.27°      -9.56°
+    9    1.800e+02   4.475e-05   1.075e-05     -12.19°     -22.02°
+   10    2.000e+02   2.792e-05   6.704e-06       0.23°      -9.59°
+Total Harmonic Distortion: 0.004944%(0.008523%)
+
+.step ventrada=0.3
+N-Period=1
+Fourier components of V(v_out)
+DC component:0.00286192
+
+Harmonic Frequency    Fourier    Normalized   Phase   Normalized
+ Number    [Hz]      Component    Component  [degree] Phase [deg]
+    1    2.000e+01   4.997e+00   1.000e+00       9.83°       0.00°
+    2    4.000e+01   1.650e-04   3.301e-05       3.00°      -6.83°
+    3    6.000e+01   9.739e-05   1.949e-05     -15.63°     -25.45°
+    4    8.000e+01   8.357e-05   1.673e-05       0.63°      -9.20°
+    5    1.000e+02   6.979e-05   1.397e-05     -17.97°     -27.80°
+    6    1.200e+02   5.577e-05   1.116e-05       0.37°      -9.46°
+    7    1.400e+02   5.822e-05   1.165e-05     -15.76°     -25.59°
+    8    1.600e+02   4.186e-05   8.378e-06       0.27°      -9.56°
+    9    1.800e+02   5.100e-05   1.021e-05     -10.74°     -20.57°
+   10    2.000e+02   3.350e-05   6.705e-06       0.24°      -9.59°
+Total Harmonic Distortion: 0.004924%(0.007916%)
+
+.step ventrada=0.35
+N-Period=1
+Fourier components of V(v_out)
+DC component:0.00360023
+
+Harmonic Frequency    Fourier    Normalized   Phase   Normalized
+ Number    [Hz]      Component    Component  [degree] Phase [deg]
+    1    2.000e+01   5.829e+00   1.000e+00       9.83°       0.00°
+    2    4.000e+01   1.921e-04   3.295e-05       3.25°      -6.58°
+    3    6.000e+01   1.153e-04   1.978e-05     -13.17°     -23.00°
+    4    8.000e+01   9.751e-05   1.673e-05       0.63°      -9.20°
+    5    1.000e+02   8.055e-05   1.382e-05     -15.61°     -25.44°
+    6    1.200e+02   6.506e-05   1.116e-05       0.37°      -9.46°
+    7    1.400e+02   6.606e-05   1.133e-05     -13.95°     -23.77°
+    8    1.600e+02   4.884e-05   8.378e-06       0.27°      -9.56°
+    9    1.800e+02   5.725e-05   9.820e-06      -9.61°     -19.43°
+   10    2.000e+02   3.909e-05   6.705e-06       0.23°      -9.59°
+Total Harmonic Distortion: 0.004912%(0.007485%)
+
+.step ventrada=0.4
+N-Period=1
+Fourier components of V(v_out)
+DC component:0.0043385
+
+Harmonic Frequency    Fourier    Normalized   Phase   Normalized
+ Number    [Hz]      Component    Component  [degree] Phase [deg]
+    1    2.000e+01   6.662e+00   1.000e+00       9.83°       0.00°
+    2    4.000e+01   2.191e-04   3.289e-05       3.50°      -6.32°
+    3    6.000e+01   1.334e-04   2.003e-05     -11.35°     -21.18°
+    4    8.000e+01   1.114e-04   1.673e-05       0.63°      -9.19°
+    5    1.000e+02   9.140e-05   1.372e-05     -13.80°     -23.62°
+    6    1.200e+02   7.436e-05   1.116e-05       0.37°      -9.45°
+    7    1.400e+02   7.393e-05   1.110e-05     -12.51°     -22.34°
+    8    1.600e+02   5.581e-05   8.377e-06       0.26°      -9.56°
+    9    1.800e+02   6.350e-05   9.531e-06      -8.69°     -18.52°
+   10    2.000e+02   4.467e-05   6.705e-06       0.23°      -9.60°
+Total Harmonic Distortion: 0.004904%(0.007170%)
+
+.step ventrada=0.45
+N-Period=1
+Fourier components of V(v_out)
+DC component:0.00507674
+
+Harmonic Frequency    Fourier    Normalized   Phase   Normalized
+ Number    [Hz]      Component    Component  [degree] Phase [deg]
+    1    2.000e+01   7.495e+00   1.000e+00       9.83°       0.00°
+    2    4.000e+01   2.461e-04   3.283e-05       3.76°      -6.07°
+    3    6.000e+01   1.517e-04   2.024e-05      -9.95°     -19.78°
+    4    8.000e+01   1.254e-04   1.673e-05       0.63°      -9.20°
+    5    1.000e+02   1.023e-04   1.365e-05     -12.36°     -22.19°
+    6    1.200e+02   8.365e-05   1.116e-05       0.37°      -9.46°
+    7    1.400e+02   8.183e-05   1.092e-05     -11.34°     -21.17°
+    8    1.600e+02   6.279e-05   8.378e-06       0.26°      -9.56°
+    9    1.800e+02   6.974e-05   9.305e-06      -7.94°     -17.76°
+   10    2.000e+02   5.026e-05   6.705e-06       0.23°      -9.60°
+Total Harmonic Distortion: 0.004898%(0.006926%)
+
+.step ventrada=0.5
+N-Period=1
+Fourier components of V(v_out)
+DC component:0.00581496
+
+Harmonic Frequency    Fourier    Normalized   Phase   Normalized
+ Number    [Hz]      Component    Component  [degree] Phase [deg]
+    1    2.000e+01   8.328e+00   1.000e+00       9.83°       0.00°
+    2    4.000e+01   2.729e-04   3.277e-05       4.02°      -5.81°
+    3    6.000e+01   1.700e-04   2.042e-05      -8.83°     -18.66°
+    4    8.000e+01   1.393e-04   1.673e-05       0.64°      -9.19°
+    5    1.000e+02   1.133e-04   1.360e-05     -11.19°     -21.02°
+    6    1.200e+02   9.294e-05   1.116e-05       0.38°      -9.45°
+    7    1.400e+02   8.975e-05   1.078e-05     -10.38°     -20.20°
+    8    1.600e+02   6.975e-05   8.376e-06       0.26°      -9.56°
+    9    1.800e+02   7.600e-05   9.126e-06      -7.31°     -17.13°
+   10    2.000e+02   5.583e-05   6.704e-06       0.22°      -9.61°
+Total Harmonic Distortion: 0.004893%(0.006739%)
+
+.step ventrada=0.55
+N-Period=1
+Fourier components of V(v_out)
+DC component:0.00655314
+
+Harmonic Frequency    Fourier    Normalized   Phase   Normalized
+ Number    [Hz]      Component    Component  [degree] Phase [deg]
+    1    2.000e+01   9.161e+00   1.000e+00       9.83°       0.00°
+    2    4.000e+01   2.996e-04   3.271e-05       4.28°      -5.55°
+    3    6.000e+01   1.884e-04   2.057e-05      -7.92°     -17.75°
+    4    8.000e+01   1.532e-04   1.673e-05       0.63°      -9.19°
+    5    1.000e+02   1.243e-04   1.357e-05     -10.22°     -20.05°
+    6    1.200e+02   1.022e-04   1.116e-05       0.37°      -9.45°
+    7    1.400e+02   9.768e-05   1.066e-05      -9.56°     -19.39°
+    8    1.600e+02   7.673e-05   8.376e-06       0.26°      -9.57°
+    9    1.800e+02   8.225e-05   8.979e-06      -6.77°     -16.59°
+   10    2.000e+02   6.141e-05   6.704e-06       0.22°      -9.61°
+Total Harmonic Distortion: 0.004890%(0.006584%)
+
+.step ventrada=0.6
+N-Period=1
+Fourier components of V(v_out)
+DC component:0.00729129
+
+Harmonic Frequency    Fourier    Normalized   Phase   Normalized
+ Number    [Hz]      Component    Component  [degree] Phase [deg]
+    1    2.000e+01   9.993e+00   1.000e+00       9.83°       0.00°
+    2    4.000e+01   3.263e-04   3.265e-05       4.53°      -5.29°
+    3    6.000e+01   2.069e-04   2.070e-05      -7.16°     -16.98°
+    4    8.000e+01   1.672e-04   1.673e-05       0.63°      -9.19°
+    5    1.000e+02   1.353e-04   1.354e-05      -9.41°     -19.23°
+    6    1.200e+02   1.115e-04   1.116e-05       0.37°      -9.46°
+    7    1.400e+02   1.056e-04   1.057e-05      -8.86°     -18.69°
+    8    1.600e+02   8.371e-05   8.377e-06       0.26°      -9.57°
+    9    1.800e+02   8.850e-05   8.856e-06      -6.30°     -16.13°
+   10    2.000e+02   6.700e-05   6.704e-06       0.21°      -9.61°
+Total Harmonic Distortion: 0.004886%(0.006455%)
+
+.step ventrada=0.65
+N-Period=1
+Fourier components of V(v_out)
+DC component:0.00802941
+
+Harmonic Frequency    Fourier    Normalized   Phase   Normalized
+ Number    [Hz]      Component    Component  [degree] Phase [deg]
+    1    2.000e+01   1.083e+01   1.000e+00       9.83°       0.00°
+    2    4.000e+01   3.528e-04   3.259e-05       4.79°      -5.03°
+    3    6.000e+01   2.254e-04   2.082e-05      -6.51°     -16.33°
+    4    8.000e+01   1.811e-04   1.673e-05       0.63°      -9.20°
+    5    1.000e+02   1.463e-04   1.352e-05      -8.71°     -18.54°
+    6    1.200e+02   1.208e-04   1.116e-05       0.37°      -9.46°
+    7    1.400e+02   1.136e-04   1.049e-05      -8.26°     -18.09°
+    8    1.600e+02   9.069e-05   8.377e-06       0.26°      -9.57°
+    9    1.800e+02   9.474e-05   8.751e-06      -5.90°     -15.73°
+   10    2.000e+02   7.259e-05   6.705e-06       0.21°      -9.61°
+Total Harmonic Distortion: 0.004883%(0.006344%)
+
+.step ventrada=0.7
+N-Period=1
+Fourier components of V(v_out)
+DC component:0.00876751
+
+Harmonic Frequency    Fourier    Normalized   Phase   Normalized
+ Number    [Hz]      Component    Component  [degree] Phase [deg]
+    1    2.000e+01   1.166e+01   1.000e+00       9.83°       0.00°
+    2    4.000e+01   3.792e-04   3.253e-05       5.06°      -4.76°
+    3    6.000e+01   2.440e-04   2.093e-05      -5.95°     -15.78°
+    4    8.000e+01   1.951e-04   1.673e-05       0.64°      -9.19°
+    5    1.000e+02   1.574e-04   1.350e-05      -8.11°     -17.94°
+    6    1.200e+02   1.301e-04   1.116e-05       0.38°      -9.45°
+    7    1.400e+02   1.215e-04   1.042e-05      -7.74°     -17.57°
+    8    1.600e+02   9.764e-05   8.375e-06       0.26°      -9.57°
+    9    1.800e+02   1.010e-04   8.663e-06      -5.55°     -15.37°
+   10    2.000e+02   7.814e-05   6.703e-06       0.21°      -9.62°
+Total Harmonic Distortion: 0.004880%(0.006258%)
+
+.step ventrada=0.75
+N-Period=1
+Fourier components of V(v_out)
+DC component:0.00950556
+
+Harmonic Frequency    Fourier    Normalized   Phase   Normalized
+ Number    [Hz]      Component    Component  [degree] Phase [deg]
+    1    2.000e+01   1.249e+01   1.000e+00       9.83°       0.00°
+    2    4.000e+01   4.056e-04   3.247e-05       5.33°      -4.50°
+    3    6.000e+01   2.627e-04   2.103e-05      -5.46°     -15.28°
+    4    8.000e+01   2.090e-04   1.673e-05       0.64°      -9.19°
+    5    1.000e+02   1.685e-04   1.349e-05      -7.59°     -17.42°
+    6    1.200e+02   1.394e-04   1.116e-05       0.37°      -9.45°
+    7    1.400e+02   1.295e-04   1.037e-05      -7.28°     -17.10°
+    8    1.600e+02   1.046e-04   8.375e-06       0.26°      -9.57°
+    9    1.800e+02   1.073e-04   8.586e-06      -5.23°     -15.06°
+   10    2.000e+02   8.373e-05   6.703e-06       0.20°      -9.62°
+Total Harmonic Distortion: 0.004878%(0.006182%)
+
+.step ventrada=0.8
+N-Period=1
+Fourier components of V(v_out)
+DC component:0.0102438
+
+Harmonic Frequency    Fourier    Normalized   Phase   Normalized
+ Number    [Hz]      Component    Component  [degree] Phase [deg]
+    1    2.000e+01   1.332e+01   1.000e+00       9.83°       0.00°
+    2    4.000e+01   4.321e-04   3.243e-05       5.52°      -4.30°
+    3    6.000e+01   2.818e-04   2.115e-05      -4.93°     -14.75°
+    4    8.000e+01   2.225e-04   1.670e-05       0.74°      -9.09°
+    5    1.000e+02   1.794e-04   1.346e-05      -7.33°     -17.15°
+    6    1.200e+02   1.493e-04   1.120e-05       0.32°      -9.50°
+    7    1.400e+02   1.374e-04   1.031e-05      -6.58°     -16.41°
+    8    1.600e+02   1.109e-04   8.322e-06       0.19°      -9.64°
+    9    1.800e+02   1.139e-04   8.544e-06      -5.27°     -15.09°
+   10    2.000e+02   8.988e-05   6.745e-06       0.47°      -9.35°
+Total Harmonic Distortion: 0.004877%(0.020981%)
+
+.step ventrada=0.85
+N-Period=1
+Fourier components of V(v_out)
+DC component:0.0109814
+
+Harmonic Frequency    Fourier    Normalized   Phase   Normalized
+ Number    [Hz]      Component    Component  [degree] Phase [deg]
+    1    2.000e+01   1.416e+01   1.000e+00       9.83°       0.00°
+    2    4.000e+01   4.569e-04   3.228e-05       6.24°      -3.59°
+    3    6.000e+01   3.079e-04   2.175e-05      -3.80°     -13.62°
+    4    8.000e+01   2.383e-04   1.683e-05       0.51°      -9.31°
+    5    1.000e+02   1.911e-04   1.350e-05      -6.93°     -16.76°
+    6    1.200e+02   1.579e-04   1.115e-05      -0.00°      -9.83°
+    7    1.400e+02   1.404e-04   9.914e-06      -8.02°     -17.84°
+    8    1.600e+02   1.169e-04   8.254e-06       0.69°      -9.14°
+    9    1.800e+02   1.233e-04   8.711e-06      -2.86°     -12.68°
+   10    2.000e+02   9.692e-05   6.846e-06       0.42°      -9.40°
+Total Harmonic Distortion: 0.004893%(0.011435%)
+
+.step ventrada=0.9
+N-Period=1
+Fourier components of V(v_out)
+DC component:0.0117193
+
+Harmonic Frequency    Fourier    Normalized   Phase   Normalized
+ Number    [Hz]      Component    Component  [degree] Phase [deg]
+    1    2.000e+01   1.499e+01   1.000e+00       9.83°       0.00°
+    2    4.000e+01   4.830e-04   3.222e-05       6.50°      -3.33°
+    3    6.000e+01   3.252e-04   2.170e-05      -3.56°     -13.39°
+    4    8.000e+01   2.518e-04   1.680e-05       0.57°      -9.25°
+    5    1.000e+02   2.038e-04   1.359e-05      -5.83°     -15.66°
+    6    1.200e+02   1.680e-04   1.121e-05       0.18°      -9.65°
+    7    1.400e+02   1.500e-04   1.001e-05      -8.07°     -17.89°
+    8    1.600e+02   1.243e-04   8.294e-06       0.10°      -9.73°
+    9    1.800e+02   1.257e-04   8.382e-06      -4.22°     -14.05°
+   10    2.000e+02   1.002e-04   6.684e-06       0.56°      -9.27°
+Total Harmonic Distortion: 0.004884%(0.009210%)
+
+.step ventrada=0.95
+N-Period=1
+Fourier components of V(v_out)
+DC component:0.0124572
+
+Harmonic Frequency    Fourier    Normalized   Phase   Normalized
+ Number    [Hz]      Component    Component  [degree] Phase [deg]
+    1    2.000e+01   1.582e+01   1.000e+00       9.83°       0.00°
+    2    4.000e+01   5.089e-04   3.216e-05       6.78°      -3.05°
+    3    6.000e+01   3.428e-04   2.167e-05      -3.36°     -13.18°
+    4    8.000e+01   2.655e-04   1.678e-05       0.61°      -9.22°
+    5    1.000e+02   2.157e-04   1.363e-05      -5.09°     -14.92°
+    6    1.200e+02   1.774e-04   1.121e-05       0.28°      -9.55°
+    7    1.400e+02   1.593e-04   1.007e-05      -7.40°     -17.23°
+    8    1.600e+02   1.320e-04   8.340e-06       0.06°      -9.77°
+    9    1.800e+02   1.310e-04   8.277e-06      -5.44°     -15.26°
+   10    2.000e+02   1.051e-04   6.641e-06       0.10°      -9.72°
+Total Harmonic Distortion: 0.004879%(0.008916%)
+
+.step ventrada=1
+N-Period=1
+Fourier components of V(v_out)
+DC component:0.0131951
+
+Harmonic Frequency    Fourier    Normalized   Phase   Normalized
+ Number    [Hz]      Component    Component  [degree] Phase [deg]
+    1    2.000e+01   1.666e+01   1.000e+00       9.83°       0.00°
+    2    4.000e+01   5.347e-04   3.210e-05       7.05°      -2.77°
+    3    6.000e+01   3.606e-04   2.165e-05      -3.18°     -13.00°
+    4    8.000e+01   2.793e-04   1.677e-05       0.62°      -9.21°
+    5    1.000e+02   2.273e-04   1.364e-05      -4.56°     -14.39°
+    6    1.200e+02   1.866e-04   1.120e-05       0.31°      -9.52°
+    7    1.400e+02   1.683e-04   1.011e-05      -6.56°     -16.38°
+    8    1.600e+02   1.394e-04   8.372e-06       0.14°      -9.69°
+    9    1.800e+02   1.374e-04   8.250e-06      -6.00°     -15.83°
+   10    2.000e+02   1.109e-04   6.656e-06      -0.10°      -9.93°
+Total Harmonic Distortion: 0.004875%(0.008678%)
+
+.step ventrada=1.05
+N-Period=1
+Fourier components of V(v_out)
+DC component:0.0139329
+
+Harmonic Frequency    Fourier    Normalized   Phase   Normalized
+ Number    [Hz]      Component    Component  [degree] Phase [deg]
+    1    2.000e+01   1.749e+01   1.000e+00       9.83°       0.00°
+    2    4.000e+01   5.604e-04   3.204e-05       7.34°      -2.49°
+    3    6.000e+01   3.786e-04   2.165e-05      -3.01°     -12.83°
+    4    8.000e+01   2.932e-04   1.677e-05       0.63°      -9.19°
+    5    1.000e+02   2.385e-04   1.364e-05      -4.19°     -14.02°
+    6    1.200e+02   1.958e-04   1.120e-05       0.32°      -9.50°
+    7    1.400e+02   1.770e-04   1.012e-05      -5.73°     -15.56°
+    8    1.600e+02   1.466e-04   8.385e-06       0.22°      -9.61°
+    9    1.800e+02   1.442e-04   8.245e-06      -6.02°     -15.84°
+   10    2.000e+02   1.167e-04   6.672e-06      -0.11°      -9.94°
+Total Harmonic Distortion: 0.004871%(0.008465%)
+
+.step ventrada=1.1
+N-Period=1
+Fourier components of V(v_out)
+DC component:0.0146707
+
+Harmonic Frequency    Fourier    Normalized   Phase   Normalized
+ Number    [Hz]      Component    Component  [degree] Phase [deg]
+    1    2.000e+01   1.832e+01   1.000e+00       9.83°       0.00°
+    2    4.000e+01   5.859e-04   3.198e-05       7.63°      -2.20°
+    3    6.000e+01   3.967e-04   2.165e-05      -2.84°     -12.67°
+    4    8.000e+01   3.072e-04   1.677e-05       0.66°      -9.17°
+    5    1.000e+02   2.496e-04   1.362e-05      -3.93°     -13.75°
+    6    1.200e+02   2.051e-04   1.119e-05       0.34°      -9.49°
+    7    1.400e+02   1.854e-04   1.012e-05      -5.00°     -14.82°
+    8    1.600e+02   1.538e-04   8.394e-06       0.26°      -9.57°
+    9    1.800e+02   1.509e-04   8.238e-06      -5.71°     -15.54°
+   10    2.000e+02   1.225e-04   6.686e-06      -0.06°      -9.89°
+Total Harmonic Distortion: 0.004867%(0.008310%)
+
+.step ventrada=1.15
+N-Period=1
+Fourier components of V(v_out)
+DC component:0.0154085
+
+Harmonic Frequency    Fourier    Normalized   Phase   Normalized
+ Number    [Hz]      Component    Component  [degree] Phase [deg]
+    1    2.000e+01   1.915e+01   1.000e+00       9.83°       0.00°
+    2    4.000e+01   6.114e-04   3.192e-05       7.92°      -1.90°
+    3    6.000e+01   4.150e-04   2.167e-05      -2.67°     -12.50°
+    4    8.000e+01   3.212e-04   1.677e-05       0.66°      -9.17°
+    5    1.000e+02   2.606e-04   1.360e-05      -3.77°     -13.60°
+    6    1.200e+02   2.142e-04   1.118e-05       0.33°      -9.50°
+    7    1.400e+02   1.935e-04   1.010e-05      -4.39°     -14.21°
+    8    1.600e+02   1.608e-04   8.393e-06       0.30°      -9.53°
+    9    1.800e+02   1.574e-04   8.220e-06      -5.19°     -15.02°
+   10    2.000e+02   1.283e-04   6.696e-06       0.06°      -9.77°
+Total Harmonic Distortion: 0.004863%(0.008204%)
+
+.step ventrada=1.2
+N-Period=1
+Fourier components of V(v_out)
+DC component:0.0161463
+
+Harmonic Frequency    Fourier    Normalized   Phase   Normalized
+ Number    [Hz]      Component    Component  [degree] Phase [deg]
+    1    2.000e+01   1.999e+01   1.000e+00       9.83°       0.00°
+    2    4.000e+01   6.367e-04   3.186e-05       8.22°      -1.61°
+    3    6.000e+01   4.335e-04   2.169e-05      -2.49°     -12.32°
+    4    8.000e+01   3.353e-04   1.678e-05       0.67°      -9.16°
+    5    1.000e+02   2.715e-04   1.358e-05      -3.66°     -13.48°
+    6    1.200e+02   2.234e-04   1.118e-05       0.32°      -9.50°
+    7    1.400e+02   2.015e-04   1.008e-05      -3.88°     -13.71°
+    8    1.600e+02   1.678e-04   8.393e-06       0.31°      -9.52°
+    9    1.800e+02   1.638e-04   8.194e-06      -4.63°     -14.46°
+   10    2.000e+02   1.340e-04   6.702e-06       0.14°      -9.69°
+Total Harmonic Distortion: 0.004858%(0.008162%)
+
+.step ventrada=1.25
+N-Period=1
+Fourier components of V(v_out)
+DC component:0.0168839
+
+Harmonic Frequency    Fourier    Normalized   Phase   Normalized
+ Number    [Hz]      Component    Component  [degree] Phase [deg]
+    1    2.000e+01   2.082e+01   1.000e+00       9.83°       0.00°
+    2    4.000e+01   6.618e-04   3.179e-05       8.52°      -1.31°
+    3    6.000e+01   4.521e-04   2.172e-05      -2.30°     -12.13°
+    4    8.000e+01   3.494e-04   1.678e-05       0.69°      -9.14°
+    5    1.000e+02   2.825e-04   1.357e-05      -3.59°     -13.41°
+    6    1.200e+02   2.326e-04   1.117e-05       0.33°      -9.50°
+    7    1.400e+02   2.095e-04   1.006e-05      -3.47°     -13.29°
+    8    1.600e+02   1.748e-04   8.396e-06       0.32°      -9.50°
+    9    1.800e+02   1.701e-04   8.168e-06      -4.08°     -13.91°
+   10    2.000e+02   1.396e-04   6.706e-06       0.19°      -9.64°
+Total Harmonic Distortion: 0.004854%(0.008218%)
+
+.step ventrada=1.3
+N-Period=1
+Fourier components of V(v_out)
+DC component:0.0176216
+
+Harmonic Frequency    Fourier    Normalized   Phase   Normalized
+ Number    [Hz]      Component    Component  [degree] Phase [deg]
+    1    2.000e+01   2.165e+01   1.000e+00       9.83°       0.00°
+    2    4.000e+01   6.870e-04   3.173e-05       8.83°      -1.00°
+    3    6.000e+01   4.711e-04   2.176e-05      -2.09°     -11.92°
+    4    8.000e+01   3.638e-04   1.680e-05       0.68°      -9.15°
+    5    1.000e+02   2.936e-04   1.356e-05      -3.60°     -13.42°
+    6    1.200e+02   2.417e-04   1.116e-05       0.28°      -9.55°
+    7    1.400e+02   2.172e-04   1.003e-05      -3.18°     -13.00°
+    8    1.600e+02   1.816e-04   8.389e-06       0.30°      -9.53°
+    9    1.800e+02   1.760e-04   8.128e-06      -3.58°     -13.41°
+   10    2.000e+02   1.451e-04   6.701e-06       0.26°      -9.56°
+Total Harmonic Distortion: 0.004850%(0.008627%)
+
+.step ventrada=1.35
+N-Period=1
+Fourier components of V(v_out)
+DC component:0.0183395
+
+Harmonic Frequency    Fourier    Normalized   Phase   Normalized
+ Number    [Hz]      Component    Component  [degree] Phase [deg]
+    1    2.000e+01   2.249e+01   1.000e+00       9.83°       0.00°
+    2    4.000e+01   7.122e-04   3.167e-05       9.21°      -0.62°
+    3    6.000e+01   4.910e-04   2.183e-05      -1.82°     -11.65°
+    4    8.000e+01   3.791e-04   1.686e-05       0.62°      -9.21°
+    5    1.000e+02   3.053e-04   1.358e-05      -3.82°     -13.64°
+    6    1.200e+02   2.509e-04   1.116e-05      -0.04°      -9.86°
+    7    1.400e+02   2.244e-04   9.982e-06      -3.24°     -13.06°
+    8    1.600e+02   1.875e-04   8.340e-06      -0.00°      -9.83°
+    9    1.800e+02   1.807e-04   8.036e-06      -3.31°     -13.14°
+   10    2.000e+02   1.492e-04   6.635e-06       0.34°      -9.49°
+Total Harmonic Distortion: 0.004849%(0.009725%)
+
+.step ventrada=1.4
+N-Period=1
+Fourier components of V(v_out)
+DC component:0.0189321
+
+Harmonic Frequency    Fourier    Normalized   Phase   Normalized
+ Number    [Hz]      Component    Component  [degree] Phase [deg]
+    1    2.000e+01   2.332e+01   1.000e+00       9.83°       0.00°
+    2    4.000e+01   7.322e-04   3.140e-05       9.69°      -0.14°
+    3    6.000e+01   5.080e-04   2.178e-05      -1.48°     -11.31°
+    4    8.000e+01   3.924e-04   1.683e-05       0.59°      -9.24°
+    5    1.000e+02   3.157e-04   1.354e-05      -4.14°     -13.97°
+    6    1.200e+02   2.588e-04   1.110e-05      -0.42°     -10.25°
+    7    1.400e+02   2.304e-04   9.883e-06      -3.44°     -13.27°
+    8    1.600e+02   1.923e-04   8.248e-06      -0.50°     -10.33°
+    9    1.800e+02   1.842e-04   7.901e-06      -3.42°     -13.25°
+   10    2.000e+02   1.516e-04   6.502e-06       0.08°      -9.74°
+Total Harmonic Distortion: 0.004817%(0.010897%)
+
+.step ventrada=1.45
+N-Period=1
+Fourier components of V(v_out)
+DC component:0.0193392
+
+Harmonic Frequency    Fourier    Normalized   Phase   Normalized
+ Number    [Hz]      Component    Component  [degree] Phase [deg]
+    1    2.000e+01   2.415e+01   1.000e+00       9.83°       0.00°
+    2    4.000e+01   7.342e-04   3.040e-05      11.09°       1.26°
+    3    6.000e+01   5.110e-04   2.116e-05      -2.13°     -11.95°
+    4    8.000e+01   4.111e-04   1.702e-05      -0.40°     -10.23°
+    5    1.000e+02   3.277e-04   1.357e-05      -2.65°     -12.48°
+    6    1.200e+02   2.525e-04   1.045e-05       0.24°      -9.59°
+    7    1.400e+02   2.322e-04   9.616e-06      -6.31°     -16.14°
+    8    1.600e+02   2.073e-04   8.585e-06      -1.08°     -10.91°
+    9    1.800e+02   1.857e-04   7.689e-06      -0.25°     -10.07°
+   10    2.000e+02   1.421e-04   5.882e-06      -1.61°     -11.44°
+Total Harmonic Distortion: 0.004706%(0.011761%)
+
+
+
+Measurement: pout
+  step   AVG(v(v_out)*i(r12)) FROM  TO
+     1   6.10436e-007   0  0.5
+     2   0.0863407   0  0.5
+     3   0.345388 0  0.5
+     4   0.777144 0  0.5
+     5   1.38161  0  0.5
+     6   2.15878  0  0.5
+     7   3.10866  0  0.5
+     8   4.23125  0  0.5
+     9   5.52655  0  0.5
+    10   6.99456  0  0.5
+    11   8.63527  0  0.5
+    12   10.4487  0  0.5
+    13   12.4348  0  0.5
+    14   14.5937  0  0.5
+    15   16.9252  0  0.5
+    16   19.4295  0  0.5
+    17   22.1064  0  0.5
+    18   24.9561  0  0.5
+    19   27.9784  0  0.5
+    20   31.1735  0  0.5
+    21   34.5413  0  0.5
+    22   38.0818  0  0.5
+    23   41.795   0  0.5
+    24   45.6809  0  0.5
+    25   49.7395  0  0.5
+    26   53.9709  0  0.5
+    27   58.3749  0  0.5
+    28   62.9517  0  0.5
+    29   67.6983  0  0.5
+    30   72.5984  0  0.5
+
+Measurement: pin1
+  step   AVG( -v(+v_high)*i(v7) - v(+v_low)*i(v8)) FROM  TO
+     1   0.201855 0  0.5
+     2   1.19344  0  0.5
+     3   2.18779  0  0.5
+     4   3.18226  0  0.5
+     5   4.17689  0  0.5
+     6   5.1717   0  0.5
+     7   6.1667   0  0.5
+     8   7.16189  0  0.5
+     9   8.15729  0  0.5
+    10   9.1529   0  0.5
+    11   10.1487  0  0.5
+    12   11.1448  0  0.5
+    13   12.1411  0  0.5
+    14   13.1376  0  0.5
+    15   14.1344  0  0.5
+    16   15.1313  0  0.5
+    17   16.1405  0  0.5
+    18   24.4254  0  0.5
+    19   28.175   0  0.5
+    20   30.9231  0  0.5
+    21   33.4695  0  0.5
+    22   35.9008  0  0.5
+    23   38.2541  0  0.5
+    24   40.5517  0  0.5
+    25   42.8068  0  0.5
+    26   45.0284  0  0.5
+    27   47.2228  0  0.5
+    28   49.3948  0  0.5
+    29   51.5356  0  0.5
+    30   53.6366  0  0.5
+
+Measurement: pin2
+  step   AVG(- v(-v_high)*i(v9) - v(-v_low)*i(v10))   FROM  TO
+     1   0.2949   0  0.5
+     2   1.30136  0  0.5
+     3   2.31111  0  0.5
+     4   3.3211   0  0.5
+     5   4.33132  0  0.5
+     6   5.34177  0  0.5
+     7   6.35247  0  0.5
+     8   7.3634   0  0.5
+     9   8.37457  0  0.5
+    10   9.38599  0  0.5
+    11   10.3976  0  0.5
+    12   11.4095  0  0.5
+    13   12.4217  0  0.5
+    14   13.4341  0  0.5
+    15   14.4468  0  0.5
+    16   15.4598  0  0.5
+    17   18.5972  0  0.5
+    18   26.7427  0  0.5
+    19   29.6346  0  0.5
+    20   32.2618  0  0.5
+    21   34.7503  0  0.5
+    22   37.151   0  0.5
+    23   39.4899  0  0.5
+    24   41.7826  0  0.5
+    25   44.0392  0  0.5
+    26   46.267   0  0.5
+    27   48.4712  0  0.5
+    28   50.6557  0  0.5
+    29   52.8321  0  0.5
+    30   54.9997  0  0.5
+
+Measurement: ef
+  step   (pout/(pin1 + pin2))*100
+     1   0.000122885
+     2   3.46083
+     3   7.67717
+     4   11.9499
+     5   16.2385
+     6   20.5335
+     7   24.8312
+     8   29.1302
+     9   33.4297
+    10   37.7291
+    11   42.0282
+    12   46.3268
+    13   50.6246
+    14   54.9218
+    15   59.218
+    16   63.5134
+    17   63.6382
+    18   48.7727
+    19   48.3975
+    20   49.337
+    21   50.6324
+    22   52.1299
+    23   53.7598
+    24   55.4823
+    25   57.2732
+    26   59.1167
+    27   61.0016
+    28   62.9199
+    29   64.8651
+    30   66.8271
+
+Measurement: ptrans
+  step   AVG(v(+v_high,n024)*ic(q26)+v(n010,n024)*ib(q26))  FROM  TO
+     1   6.96403e-009   0  0.5
+     2   6.483e-009  0  0.5
+     3   5.99629e-009   0  0.5
+     4   5.39845e-009   0  0.5
+     5   4.918e-009  0  0.5
+     6   4.69218e-009   0  0.5
+     7   3.98575e-009   0  0.5
+     8   3.52921e-009   0  0.5
+     9   3.08326e-009   0  0.5
+    10   2.92849e-009   0  0.5
+    11   1.98447e-009   0  0.5
+    12   1.16782e-009   0  0.5
+    13   1.5554e-009 0  0.5
+    14   1.25384e-010   0  0.5
+    15   6.6472e-011 0  0.5
+    16   -5.95646e-011  0  0.5
+    17   -1.35738e-010  0  0.5
+    18   7.97854  0  0.5
+    19   10.5712  0  0.5
+    20   11.9159  0  0.5
+    21   12.9299  0  0.5
+    22   13.7139  0  0.5
+    23   14.3125  0  0.5
+    24   14.7525  0  0.5
+    25   15.0506  0  0.5
+    26   15.2179  0  0.5
+    27   15.2628  0  0.5
+    28   15.1911  0  0.5
+    29   15.0071  0  0.5
+    30   14.7156  0  0.5
+
+
+Date: Sun Jun 13 13:24:31 2021
+Total elapsed time: 999.100 seconds.
+
+tnom = 27
+temp = 27
+method = modified trap
+totiter = 1154950
+traniter = 1152587
+tranpoints = 569798
+accept = 563813
+rejected = 5985
+matrix size = 175
+fillins = 315
+solver = Normal
+Thread vector: 8.9/5.4[2] 3.0/2.1[2] 1.2/1.1[1] 0.6/2.4[1]  2592/500
+Matrix Compiler1: 31.81 KB object code size  4.7/2.1/[1.8]
+Matrix Compiler2: 21.19 KB object code size  1.8/2.1/[1.2]
